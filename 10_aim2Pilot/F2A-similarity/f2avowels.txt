@@ -1,0 +1,24 @@
+load('f2avowels.mat')
+clusterAnalysis(cmx)
+Cluster Analysis: 
+cophenetic correlation = 0.9818
+Spearman's rank correlation = 0.8364
+TotalCorrect  lowestCorrectCluster, linkVal,  clusters
+81.333, 46.667, 0.0000, (ee|i|A|I|e|er|a|ah|aw|oh|ow|oy|uh|oo|OO)
+85.000, 46.667, 0.4405, (oh|OO|e|a|uh|ahaw|oo|i|ow|ee|A|oy|I|er)
+88.111, 56.667, 0.4493, (e|a|uh|ahaw|oo|ohOO|i|ow|ee|A|oy|I|er)
+91.333, 63.333, 0.5990, (uh|ahaw|oo|ohOO|i|ea|ow|ee|A|oy|I|er)
+94.333, 76.667, 0.7108, (oo|ohOO|i|ea|ow|ahawuh|ee|A|oy|I|er)
+96.444, 90.000, 0.8179, (i|ea|ow|ohooOO|ahawuh|ee|A|oy|I|er)
+97.778, 93.333, 0.8976, (ow|ohooOO|ahawuh|ee|A|oy|I|iea|er)
+98.556, 97.083, 0.9624, (ahawuh|ohowooOO|ee|A|oy|I|iea|er)
+99.556, 98.333, 0.9750, (ee|A|oy|ahawohowuhooOO|I|iea|er)
+99.667, 98.333, 0.9835, (oy|ahawohowuhooOO|I|iea|eeA|er)
+99.889, 99.444, 0.9904, (I|iea|ahawohowoyuhooOO|eeA|er)
+100.000, 100.000, 0.9945, (ahawohowoyuhooOO|iIea|eeA|er)
+100.000, 100.000, 1.0000, (eeA|iIeaahawohowoyuhooOO|er)
+100.000, 100.000, 1.0000, (er|eeiAIeaahawohowoyuhooOO)
+100.000, 100.000, 1.0000, (eeiAIeeraahawohowoyuhooOO)
+clear
+clc
+xjview

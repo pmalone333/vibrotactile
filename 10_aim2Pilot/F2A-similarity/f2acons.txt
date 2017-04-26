@@ -1,0 +1,237 @@
+p  b  m  f  v  T  D  w  r  C  j  s  Z  t  d  s  z  k  g  n  l  h  a
+p  64  21  0  0  0  1  1  9  0  0  0  0  0  8  15  0  0  1  0  0  0  0  0
+b  1  98  9  1  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  5  3  1
+m  0  0  117  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  2
+f  19  7  3  46  22  7  2  0  0  0  0  0  0  0  2  0  0  0  0  2  0  7  3
+v  48  10  0  11  23  4  3  1  0  0  0  0  2  0  1  0  0  1  1  0  12  2  1
+T  2  9  1  14  12  16  15  0  0  2  0  0  0  1  3  21  9  1  4  4  1  3  2
+D  13  0  0  4  0  10  12  0  0  0  0  0  1  7  4  7  9  14  9  19  2  6  3
+w  0  0  0  0  0  0  0  112  4  0  0  0  0  0  0  0  0  0  0  0  4  0  0
+r  0  0  0  0  0  0  0  0  119  0  0  0  0  0  0  0  0  0  0  0  1  0  0
+C  0  0  0  0  0  0  0  0  0  94  24  1  1  0  0  0  0  0  0  0  0  0  0
+j  0  0  0  0  0  0  1  0  0  54  59  0  3  0  0  0  0  0  3  0  0  0  0
+s  0  0  0  0  0  0  1  0  0  5  1  81  30  0  0  0  2  0  0  0  0  0  0
+Z  0  0  0  0  0  0  1  0  0  14  19  34  51  0  0  0  1  0  0  0  0  0  0
+t  0  0  0  0  0  1  3  0  0  0  0  0  0  57  44  0  0  11  4  0  0  0  0
+d  0  0  0  0  0  0  1  0  0  0  0  0  0  1  112  0  0  0  5  0  1  0  0
+s  0  0  0  14  5  10  10  0  0  0  0  2  4  0  0  49  9  1  0  16  0  0  0
+z  1  0  0  10  7  16  6  0  0  6  2  0  5  2  0  12  5  8  1  14  1  17  7
+k  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  92  28  0  0  0  0
+g  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  21  99  0  0  0  0
+n  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  120  0  0  0
+l  0  0  0  0  0  0  0  0  73  0  0  1  0  0  0  0  0  0  0  0  46  0  0
+h  8  0  2  10  31  0  1  13  1  0  0  0  0  2  0  0  0  6  0  3  3  35  5
+a  2  4  41  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  4  8  7  52
+load('f2acons.mat')
+clusterAnalysis(cmx)
+Cluster Analysis: 
+cophenetic correlation = 0.9103
+Spearman's rank correlation = 0.7353
+TotalCorrect  lowestCorrectCluster, linkVal,  clusters
+100.000, 100.000, 0.3247, (pbmfvTDwrCjsZtdszkgnlha)
+98.768, 98.125, 0.3473, (CjsZ|pbmfvTDwrtdszkgnlha)
+97.645, 93.333, 0.3738, (w|pbmfvTDrtdszkgnlha|CjsZ)
+96.377, 93.333, 0.3899, (rl|pbmfvTDtdszkgnha|w|CjsZ)
+92.790, 87.847, 0.4175, (tdkg|pbmfvTDsznha|rl|w|CjsZ)
+90.833, 83.250, 0.4682, (ma|pbfvTDsznh|tdkg|rl|w|CjsZ)
+90.109, 83.250, 0.5882, (kg|td|ma|pbfvTDsznh|rl|w|CjsZ)
+85.580, 71.875, 0.6055, (fvTDsznh|pb|kg|td|ma|rl|w|CjsZ)
+83.986, 71.875, 0.6084, (Cj|sZ|fvTDsznh|pb|kg|td|ma|rl|w)
+83.188, 53.333, 0.6659, (p|b|Cj|sZ|fvTDsznh|kg|td|ma|rl|w)
+81.087, 53.333, 0.6795, (n|fvTDszh|p|b|Cj|sZ|kg|td|ma|rl|w)
+77.138, 45.000, 0.6855, (TDsz|fvh|n|p|b|Cj|sZ|kg|td|ma|rl|w)
+74.457, 38.333, 0.7439, (r|l|TDsz|fvh|n|p|b|Cj|sZ|kg|td|ma|w)
+72.899, 38.333, 0.7534, (m|a|r|l|TDsz|fvh|n|p|b|Cj|sZ|kg|td|w)
+71.268, 38.333, 0.8323, (t|d|m|a|r|l|TDsz|fvh|n|p|b|Cj|sZ|kg|w)
+69.493, 38.333, 0.8403, (k|g|t|d|m|a|r|l|TDsz|fvh|n|p|b|Cj|sZ|w)
+67.681, 29.167, 0.8830, (h|fv|k|g|t|d|m|a|r|l|TDsz|n|p|b|Cj|sZ|w)
+65.181, 27.222, 0.8885, (s|TDz|h|fv|k|g|t|d|m|a|r|l|n|p|b|Cj|sZ|w)
+62.862, 27.222, 0.9087, (s|Z|s|TDz|h|fv|k|g|t|d|m|a|r|l|n|p|b|Cj|w)
+61.667, 19.167, 0.9455, (f|v|s|Z|s|TDz|h|k|g|t|d|m|a|r|l|n|p|b|Cj|w)
+59.855, 13.333, 0.9569, (T|Dz|f|v|s|Z|s|h|k|g|t|d|m|a|r|l|n|p|b|Cj|w)
+57.029, 13.333, 0.9695, (C|j|T|Dz|f|v|s|Z|s|h|k|g|t|d|m|a|r|l|n|p|b|w)
+56.486, 4.167, 0.0000, (p|b|m|f|v|T|D|w|r|C|j|s|Z|t|d|s|z|k|g|n|l|h|a)
+diary off
+load('f2acons.mat')
+load('f2avcons.mat')
+load('f2acons.mat')
+64/120
+
+ans =
+
+    0.5333
+
+load('f2acons.mat')
+diary 'f2acons.txt'
+load('f2acons.mat')
+clusterAnalysis(cmx)
+Cluster Analysis: 
+cophenetic correlation = 0.9269
+Spearman's rank correlation = 0.6700
+TotalCorrect  lowestCorrectCluster, linkVal,  clusters
+56.486, 4.167, 0.0000, (p|b|m|f|v|T|D|w|r|C|j|s|Z|t|d|s|z|k|g|n|l|h|a)
+59.312, 4.167, 0.3627, (s|Z|r|l|T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|w|n)
+61.630, 4.167, 0.4352, (r|l|T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|n)
+64.312, 4.167, 0.4792, (T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|rl|n)
+65.217, 10.000, 0.4894, (f|v|s|Tz|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|rl|n)
+66.413, 10.000, 0.5071, (s|Tz|D|k|g|t|d|h|fv|m|a|p|b|Cj|sZ|w|rl|n)
+68.297, 10.000, 0.5183, (D|Tsz|k|g|t|d|h|fv|m|a|p|b|Cj|sZ|w|rl|n)
+70.362, 29.167, 0.5705, (k|g|t|d|h|fv|m|a|TDsz|p|b|Cj|sZ|w|rl|n)
+72.138, 29.167, 0.5927, (t|d|h|fv|m|a|TDsz|p|b|Cj|sZ|kg|w|rl|n)
+73.768, 29.167, 0.6384, (h|fv|m|a|TDsz|p|b|Cj|sZ|kg|td|w|rl|n)
+75.580, 43.333, 0.6419, (m|a|TDsz|fvh|p|b|Cj|sZ|kg|td|w|rl|n)
+77.138, 45.000, 0.6686, (TDsz|fvh|p|b|Cj|sZ|kg|td|ma|w|rl|n)
+81.087, 53.333, 0.7494, (p|b|Cj|sZ|fvTDszh|kg|td|ma|w|rl|n)
+81.884, 60.952, 0.8289, (Cj|sZ|fvTDszh|pb|kg|td|ma|w|rl|n)
+83.478, 60.952, 0.8363, (fvTDszh|pb|kg|td|ma|w|rl|n|CjsZ)
+88.007, 76.019, 0.8715, (kg|td|ma|pbfvTDszh|w|rl|n|CjsZ)
+88.732, 76.019, 0.9272, (ma|pbfvTDszh|w|rl|n|tdkg|CjsZ)
+90.543, 82.045, 0.9285, (w|rl|n|pbmfvTDszha|tdkg|CjsZ)
+90.833, 82.045, 0.9480, (n|pbmfvTDszha|tdkg|CjsZ|wrl)
+93.080, 87.847, 0.9554, (tdkg|pbmfvTDsznha|CjsZ|wrl)
+96.667, 95.729, 0.9611, (CjsZ|pbmfvTDtdszkgnha|wrl)
+97.862, 97.583, 0.9850, (wrl|pbmfvTDCjsZtdszkgnha)
+100.000, 100.000, 0.9891, (pbmfvTDwrCjsZtdszkgnlha)
+diary off
+load('f2acons.mat')
+clusterAnalysis(cmx)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pdist', 'C:\Program Files\MATLAB\R2016b\toolbox\stats\stats\pdist.m', 367)" style="font-weight:bold">pdist</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2016b\toolbox\stats\stats\pdist.m',367,0)">line 367</a>)
+The distance function 'phisquared' was not found.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('clusterAnalysis', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\clusterAnalysis.m', 16)" style="font-weight:bold">clusterAnalysis</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\clusterAnalysis.m',16,0)">line 16</a>)
+    pdst = pdist(cmx,'@phisquared');
+} 
+clusterAnalysis(cmx)
+Cluster Analysis: 
+cophenetic correlation = 0.9269
+Spearman's rank correlation = 0.6700
+TotalCorrect  lowestCorrectCluster, linkVal,  clusters
+56.486, 4.167, 0.0000, (p|b|m|f|v|T|D|w|r|C|j|s|Z|t|d|s|z|k|g|n|l|h|a)
+59.312, 4.167, 0.3627, (s|Z|r|l|T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|w|n)
+61.630, 4.167, 0.4352, (r|l|T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|n)
+64.312, 4.167, 0.4792, (T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|rl|n)
+65.217, 10.000, 0.4894, (f|v|s|Tz|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|rl|n)
+66.413, 10.000, 0.5071, (s|Tz|D|k|g|t|d|h|fv|m|a|p|b|Cj|sZ|w|rl|n)
+68.297, 10.000, 0.5183, (D|Tsz|k|g|t|d|h|fv|m|a|p|b|Cj|sZ|w|rl|n)
+70.362, 29.167, 0.5705, (k|g|t|d|h|fv|m|a|TDsz|p|b|Cj|sZ|w|rl|n)
+72.138, 29.167, 0.5927, (t|d|h|fv|m|a|TDsz|p|b|Cj|sZ|kg|w|rl|n)
+73.768, 29.167, 0.6384, (h|fv|m|a|TDsz|p|b|Cj|sZ|kg|td|w|rl|n)
+75.580, 43.333, 0.6419, (m|a|TDsz|fvh|p|b|Cj|sZ|kg|td|w|rl|n)
+77.138, 45.000, 0.6686, (TDsz|fvh|p|b|Cj|sZ|kg|td|ma|w|rl|n)
+81.087, 53.333, 0.7494, (p|b|Cj|sZ|fvTDszh|kg|td|ma|w|rl|n)
+81.884, 60.952, 0.8289, (Cj|sZ|fvTDszh|pb|kg|td|ma|w|rl|n)
+83.478, 60.952, 0.8363, (fvTDszh|pb|kg|td|ma|w|rl|n|CjsZ)
+88.007, 76.019, 0.8715, (kg|td|ma|pbfvTDszh|w|rl|n|CjsZ)
+88.732, 76.019, 0.9272, (ma|pbfvTDszh|w|rl|n|tdkg|CjsZ)
+90.543, 82.045, 0.9285, (w|rl|n|pbmfvTDszha|tdkg|CjsZ)
+90.833, 82.045, 0.9480, (n|pbmfvTDszha|tdkg|CjsZ|wrl)
+93.080, 87.847, 0.9554, (tdkg|pbmfvTDsznha|CjsZ|wrl)
+96.667, 95.729, 0.9611, (CjsZ|pbmfvTDtdszkgnha|wrl)
+97.862, 97.583, 0.9850, (wrl|pbmfvTDCjsZtdszkgnha)
+100.000, 100.000, 0.9891, (pbmfvTDwrCjsZtdszkgnlha)
+PhLexTrans('test')
+{Undefined function or variable 'LoadPhlex'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PhLexTrans', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\PhLexTrans.m', 14)" style="font-weight:bold">PhLexTrans</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\PhLexTrans.m',14,0)">line 14</a>)
+        PhLexMap = LoadPhlex(lexfile);
+} 
+PhLexTrans('test')
+lexicon file does not exist
+{Output argument "PhLexMap" (and maybe others) not assigned during call to "LoadPhlex".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PhLexTrans', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\PhLexTrans.m', 14)" style="font-weight:bold">PhLexTrans</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\PhLexTrans.m',14,0)">line 14</a>)
+        PhLexMap = LoadPhlex(lexfile);
+} 
+test = PhLexTrans('test')
+lexicon file does not exist
+{Output argument "PhLexMap" (and maybe others) not assigned during call to "LoadPhlex".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('PhLexTrans', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\PhLexTrans.m', 14)" style="font-weight:bold">PhLexTrans</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\PhLexTrans.m',14,0)">line 14</a>)
+        PhLexMap = LoadPhlex(lexfile);
+} 
+test = PhLexTrans('test')
+
+test =
+
+tEst
+
+load('f2acons.mat')
+clusterAnalysis(cmx)
+Cluster Analysis: 
+cophenetic correlation = 0.9269
+Spearman's rank correlation = 0.6700
+TotalCorrect  lowestCorrectCluster, linkVal,  clusters
+56.486, 4.167, 0.0000, (p|b|m|f|v|T|D|w|r|C|j|s|Z|t|d|s|z|k|g|n|l|h|a)
+59.312, 4.167, 0.3627, (s|Z|r|l|T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|w|n)
+61.630, 4.167, 0.4352, (r|l|T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|n)
+64.312, 4.167, 0.4792, (T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|rl|n)
+65.217, 10.000, 0.4894, (f|v|s|Tz|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|rl|n)
+66.413, 10.000, 0.5071, (s|Tz|D|k|g|t|d|h|fv|m|a|p|b|Cj|sZ|w|rl|n)
+68.297, 10.000, 0.5183, (D|Tsz|k|g|t|d|h|fv|m|a|p|b|Cj|sZ|w|rl|n)
+70.362, 29.167, 0.5705, (k|g|t|d|h|fv|m|a|TDsz|p|b|Cj|sZ|w|rl|n)
+72.138, 29.167, 0.5927, (t|d|h|fv|m|a|TDsz|p|b|Cj|sZ|kg|w|rl|n)
+73.768, 29.167, 0.6384, (h|fv|m|a|TDsz|p|b|Cj|sZ|kg|td|w|rl|n)
+75.580, 43.333, 0.6419, (m|a|TDsz|fvh|p|b|Cj|sZ|kg|td|w|rl|n)
+77.138, 45.000, 0.6686, (TDsz|fvh|p|b|Cj|sZ|kg|td|ma|w|rl|n)
+81.087, 53.333, 0.7494, (p|b|Cj|sZ|fvTDszh|kg|td|ma|w|rl|n)
+81.884, 60.952, 0.8289, (Cj|sZ|fvTDszh|pb|kg|td|ma|w|rl|n)
+83.478, 60.952, 0.8363, (fvTDszh|pb|kg|td|ma|w|rl|n|CjsZ)
+88.007, 76.019, 0.8715, (kg|td|ma|pbfvTDszh|w|rl|n|CjsZ)
+88.732, 76.019, 0.9272, (ma|pbfvTDszh|w|rl|n|tdkg|CjsZ)
+90.543, 82.045, 0.9285, (w|rl|n|pbmfvTDszha|tdkg|CjsZ)
+90.833, 82.045, 0.9480, (n|pbmfvTDszha|tdkg|CjsZ|wrl)
+93.080, 87.847, 0.9554, (tdkg|pbmfvTDsznha|CjsZ|wrl)
+96.667, 95.729, 0.9611, (CjsZ|pbmfvTDtdszkgnha|wrl)
+97.862, 97.583, 0.9850, (wrl|pbmfvTDCjsZtdszkgnha)
+100.000, 100.000, 0.9891, (pbmfvTDwrCjsZtdszkgnlha)
+clusterAnalysis(cmx)
+<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\clusterAnalysis.m',21,1)">21  </a>    link = linkage(cmx, 'average', '@phisquared');
+23*23
+
+ans =
+
+   529
+
+529-23
+
+ans =
+
+   506
+
+506/2
+
+ans =
+
+   253
+
+dbquit
+clusterAnalysis(cmx)
+<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\clusterAnalysis.m',21,1)">21  </a>    link = linkage(cmx, 'average', '@phisquared');
+if system_dependent('IsDebugMode')==1, dbcont; end
+Cluster Analysis: 
+cophenetic correlation = 0.9269
+Spearman's rank correlation = 0.6700
+TotalCorrect  lowestCorrectCluster, linkVal,  clusters
+56.486, 4.167, 0.0000, (p|b|m|f|v|T|D|w|r|C|j|s|Z|t|d|s|z|k|g|n|l|h|a)
+59.312, 4.167, 0.3627, (s|Z|r|l|T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|w|n)
+61.630, 4.167, 0.4352, (r|l|T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|n)
+64.312, 4.167, 0.4792, (T|z|f|v|s|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|rl|n)
+65.217, 10.000, 0.4894, (f|v|s|Tz|D|k|g|t|d|h|m|a|p|b|Cj|sZ|w|rl|n)
+66.413, 10.000, 0.5071, (s|Tz|D|k|g|t|d|h|fv|m|a|p|b|Cj|sZ|w|rl|n)
+68.297, 10.000, 0.5183, (D|Tsz|k|g|t|d|h|fv|m|a|p|b|Cj|sZ|w|rl|n)
+70.362, 29.167, 0.5705, (k|g|t|d|h|fv|m|a|TDsz|p|b|Cj|sZ|w|rl|n)
+72.138, 29.167, 0.5927, (t|d|h|fv|m|a|TDsz|p|b|Cj|sZ|kg|w|rl|n)
+73.768, 29.167, 0.6384, (h|fv|m|a|TDsz|p|b|Cj|sZ|kg|td|w|rl|n)
+75.580, 43.333, 0.6419, (m|a|TDsz|fvh|p|b|Cj|sZ|kg|td|w|rl|n)
+77.138, 45.000, 0.6686, (TDsz|fvh|p|b|Cj|sZ|kg|td|ma|w|rl|n)
+81.087, 53.333, 0.7494, (p|b|Cj|sZ|fvTDszh|kg|td|ma|w|rl|n)
+81.884, 60.952, 0.8289, (Cj|sZ|fvTDszh|pb|kg|td|ma|w|rl|n)
+83.478, 60.952, 0.8363, (fvTDszh|pb|kg|td|ma|w|rl|n|CjsZ)
+88.007, 76.019, 0.8715, (kg|td|ma|pbfvTDszh|w|rl|n|CjsZ)
+88.732, 76.019, 0.9272, (ma|pbfvTDszh|w|rl|n|tdkg|CjsZ)
+90.543, 82.045, 0.9285, (w|rl|n|pbmfvTDszha|tdkg|CjsZ)
+90.833, 82.045, 0.9480, (n|pbmfvTDszha|tdkg|CjsZ|wrl)
+93.080, 87.847, 0.9554, (tdkg|pbmfvTDsznha|CjsZ|wrl)
+96.667, 95.729, 0.9611, (CjsZ|pbmfvTDtdszkgnha|wrl)
+97.862, 97.583, 0.9850, (wrl|pbmfvTDCjsZtdszkgnha)
+100.000, 100.000, 0.9891, (pbmfvTDwrCjsZtdszkgnlha)

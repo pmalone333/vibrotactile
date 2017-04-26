@@ -1,0 +1,1872 @@
+load('f2vowels.mat')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+Unable to read file 'f2vowels.mat'. No such file or directory.
+} 
+diary 'f2avowels.txt'
+load('f2vowels.mat')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+Unable to read file 'f2vowels.mat'. No such file or directory.
+} 
+clusterAnalysis(cmx)
+Cluster Analysis: 
+cophenetic correlation = 0.9818
+Spearman's rank correlation = 0.8364
+TotalCorrect  lowestCorrectCluster, linkVal,  clusters
+81.333, 46.667, 0.0000, (i|I|e|A|E|R|@|a|c|o|W|O|^|U|u)
+85.000, 46.667, 0.4405, (o|u|E|@|^|ac|U|I|W|i|e|O|A|R)
+88.111, 56.667, 0.4493, (E|@|^|ac|U|ou|I|W|i|e|O|A|R)
+91.333, 63.333, 0.5990, (^|ac|U|ou|I|E@|W|i|e|O|A|R)
+94.333, 76.667, 0.7108, (U|ou|I|E@|W|ac^|i|e|O|A|R)
+96.444, 90.000, 0.8179, (I|E@|W|oUu|ac^|i|e|O|A|R)
+97.778, 93.333, 0.8976, (W|oUu|ac^|i|e|O|A|IE@|R)
+98.556, 97.083, 0.9624, (ac^|oWUu|i|e|O|A|IE@|R)
+99.556, 98.333, 0.9750, (i|e|O|acoW^Uu|A|IE@|R)
+99.667, 98.333, 0.9835, (O|acoW^Uu|A|IE@|ie|R)
+99.889, 99.444, 0.9904, (A|IE@|acoWO^Uu|ie|R)
+100.000, 100.000, 0.9945, (acoWO^Uu|IAE@|ie|R)
+100.000, 100.000, 1.0000, (ie|IAE@acoWO^Uu|R)
+100.000, 100.000, 1.0000, (R|iIeAE@acoWO^Uu)
+100.000, 100.000, 1.0000, (iIeAER@acoWO^Uu)
+convertPhLex2PEC
+contains(wordsPhLex{1}(1),'CjsZ')
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+wordsPhLex{1}(1)
+
+ans =
+
+s
+
+help contains
+ <strong>contains</strong> True if pattern is found in text.
+    TF = <strong>contains</strong>(S,PATTERN) returns true if <strong>contains</strong> finds PATTERN in any
+    element of string array S. TF is the same size as S.
+ 
+    S can be a string array, a character vector, or a cell array of
+    character vectors. So can PATTERN. PATTERN and S need not be the same
+    size. If PATTERN is nonscalar, <strong>contains</strong> returns true if it finds any
+    element of PATTERN in S.
+  
+    TF = <strong>contains</strong>(S,PATTERN,'IgnoreCase',IGNORE) ignores case when searching 
+    for PATTERN in S if IGNORE is true. The default value of IGNORE is false.
+  
+    Examples
+        S = string('data.tar.gz');
+        P = string('tar');
+        contains(S,P)                   returns  1
+ 
+        S = string({'abstracts.docx','data.tar.gz'});
+        P = 'tar';         
+        contains(S,P)                   returns  [0 1]
+ 
+        S = string('data.tar.gz');
+        P = {'docx','tar'};
+        contains(S,P)                   returns  1
+ 
+        S = string({'DATA.TAR.GZ','SUMMARY.PPT'});
+        P = string('tar');
+        contains(S,P,'IgnoreCase',true) returns  [1 0]
+ 
+    See also <a href="matlab:help endsWith">endsWith</a>, <a href="matlab:help startsWith">startsWith</a>.
+
+    <a href="matlab:doc contains">Reference page for contains</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('contains')">Other functions named contains</a>
+
+clear
+convertPhLex2PEC
+{Subscripted assignment dimension mismatch.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('convertPhLex2PEC', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m', 14)" style="font-weight:bold">convertPhLex2PEC</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m',14,0)">line 14</a>)
+       elseif contains('CjsZ',wordsPhLex{i_word}(i_let)),wordsPECs{i_word}(i_let) = 'CjsZ';
+} 
+opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m',14,0)
+contains(wordsPhLex{1}(1),'s')
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+contains('Cjsz',wordsPhLex{1}(1))
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+contains('x',wordsPhLex{1}(1))
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+contains('s',wordsPhLex{1}(1))
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+clear
+convertPhLex2PEC
+{Subscripted assignment dimension mismatch.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('convertPhLex2PEC', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m', 14)" style="font-weight:bold">convertPhLex2PEC</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m',14,0)">line 14</a>)
+       elseif contains('CjsZ',wordsPhLex{i_word}(i_let)),wordsPECs{i_word}(i_let) = 'CjsZ';
+} 
+opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m',14,0)
+contains('CjsZ',wordsPhLex{i_word}(i_let))
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+wordsPECs{i_word}(i_let) = 'CjsZ'
+{Subscripted assignment dimension mismatch.
+} 
+wordsPECs{i_word}(i_let)
+{Index exceeds matrix dimensions.
+} 
+clear
+convertPhLex2PEC
+{Subscripted assignment dimension mismatch.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('convertPhLex2PEC', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m', 14)" style="font-weight:bold">convertPhLex2PEC</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m',14,0)">line 14</a>)
+       elseif contains('CjsZ',wordsPhLex{i_word}(i_let)),wordsPECs{i_word}(i_let) = 'CjsZ';
+} 
+wordsPECs{i_word}(i_let)
+{Index exceeds matrix dimensions.
+} 
+wordsPECs{i_word}
+
+ans =
+
+     []
+
+wordsPECs{1}{1} = 'test'
+
+wordsPECs =
+
+  460×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {1×1 cell}
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+
+wordsPECs{1}{2} = '2'
+
+wordsPECs =
+
+  460×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {1×2 cell}
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+
+clear
+convertPhLex2PEC
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('contains', 'C:\Program Files\MATLAB\R2016b\toolbox\matlab\strfun\contains.m', 46)" style="font-weight:bold">contains</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2016b\toolbox\matlab\strfun\contains.m',46,0)">line 46</a>)
+Unrecognized parameter name 'rl'. Parameter name must be 'IgnoreCase'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('convertPhLex2PEC', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m', 12)" style="font-weight:bold">convertPhLex2PEC</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m',12,0)">line 12</a>)
+       elseif contains('rl',wordsPhLex{i_word}(i_let),'rl'),wordsPECs{i_word}{i_let} = 'rl';
+} 
+opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC.m',12,0)
+clear
+convertPhLex2PEC
+clear
+
+convertPhLex2PEC
+clear
+convertPhLex2PEC
+clear
+load('D1S2MRT.mat')
+edit filterWordsByTrainedVCV
+help break
+ <strong>break</strong> Terminate execution of WHILE or FOR loop.
+    <strong>break</strong> terminates the execution of FOR and WHILE loops.
+    In nested loops, <strong>break</strong> exits from the innermost loop only.
+ 
+    <strong>break</strong> is not defined outside of a FOR or WHILE loop.
+    Use RETURN in this context instead.
+ 
+    See also <a href="matlab:help for">for</a>, <a href="matlab:help while">while</a>, <a href="matlab:help return">return</a>, <a href="matlab:help continue">continue</a>.
+
+    <a href="matlab:doc break">Reference page for break</a>
+
+help contains
+ <strong>contains</strong> True if pattern is found in text.
+    TF = <strong>contains</strong>(S,PATTERN) returns true if <strong>contains</strong> finds PATTERN in any
+    element of string array S. TF is the same size as S.
+ 
+    S can be a string array, a character vector, or a cell array of
+    character vectors. So can PATTERN. PATTERN and S need not be the same
+    size. If PATTERN is nonscalar, <strong>contains</strong> returns true if it finds any
+    element of PATTERN in S.
+  
+    TF = <strong>contains</strong>(S,PATTERN,'IgnoreCase',IGNORE) ignores case when searching 
+    for PATTERN in S if IGNORE is true. The default value of IGNORE is false.
+  
+    Examples
+        S = string('data.tar.gz');
+        P = string('tar');
+        contains(S,P)                   returns  1
+ 
+        S = string({'abstracts.docx','data.tar.gz'});
+        P = 'tar';         
+        contains(S,P)                   returns  [0 1]
+ 
+        S = string('data.tar.gz');
+        P = {'docx','tar'};
+        contains(S,P)                   returns  1
+ 
+        S = string({'DATA.TAR.GZ','SUMMARY.PPT'});
+        P = string('tar');
+        contains(S,P,'IgnoreCase',true) returns  [1 0]
+ 
+    See also <a href="matlab:help endsWith">endsWith</a>, <a href="matlab:help startsWith">startsWith</a>.
+
+    <a href="matlab:doc contains">Reference page for contains</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('contains')">Other functions named contains</a>
+
+contains('tegegsgebdfbt','test')
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+contains('tegegsgebdfbt','teg')
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+filterWordsByTrainedVCV
+wordsPhLex{i_word}(i_let)
+
+ans =
+
+f
+
+filterWordsByTrainedVCV
+contains('tbkmvdnpfzgsac^',wordsPhLex{i_word}(i_let))
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+wordsPhLex{i_word}(i_let))
+ wordsPhLex{i_word}(i_let))
+                          
+{Error: Unbalanced or unexpected parenthesis or bracket.
+} 
+wordsPhLex{i_word}(i_let)
+
+ans =
+
+A
+
+wordsPhLex{1}(1)
+
+ans =
+
+s
+
+contains('tbkmvdnpfzgsac^',wordsPhLex{1}(1))
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+filterWordsByTrainedVCV
+save('wordsFilteredByVCV')
+filterWordsByTrainedVCV
+filterWordsByTrainedVCV
+save('wordsFilteredByVCV')
+convertPhLex2PEC
+edit convertPECs2LECs
+test = sort(wordsPECs,1)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sort')" style="font-weight:bold">sort</a>
+DIM and MODE arguments not supported for cell arrays.
+} 
+test = sort(wordsPECs,2)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sort')" style="font-weight:bold">sort</a>
+DIM and MODE arguments not supported for cell arrays.
+} 
+test = sort(wordsPECs)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sort')" style="font-weight:bold">sort</a>
+Input argument must be a cell array of character vectors.
+} 
+test = ['bbb', 'aaaa', 'zzz'
+]
+
+test =
+
+bbbaaaazzz
+
+test = ['bbb'; 'aaaa'; 'zzz']
+{Dimensions of matrices being concatenated are not consistent.
+} 
+test = {'bbb'; 'aaaa'; 'zzz'}
+
+test =
+
+  3×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'bbb'
+    'aaaa'
+    'zzz'
+
+sort(test)
+
+ans =
+
+  3×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'aaaa'
+    'bbb'
+    'zzz'
+
+clear
+convertPhLex2PEC2
+{Undefined function or variable 'words_filtered_phlex'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('convertPhLex2PEC2', 'C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC2.m', 3)" style="font-weight:bold">convertPhLex2PEC2</a> (<a href="matlab: opentoline('C:\Users\Patrick Malone\Google Drive\Code\github\Vibrotactile\10_aim2Pilot\F2A-similarity\convertPhLex2PEC2.m',3,0)">line 3</a>)
+wordsPECs = cell(length(words_filtered_phlex),1);
+} 
+filterWordsByTrainedVCV
+convertPhLex2PEC2
+filterWordsByTrainedVCV
+words_filtered = words_filtered'
+
+words_filtered =
+
+  58×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'pus'
+    'mop'
+    'top'
+    'bop'
+    'cop'
+    'pop'
+    'dust'
+    'must'
+    'gust'
+    'bust'
+    'gun'
+    'pun'
+    'bun'
+    'nun'
+    'sun'
+    'fun'
+    'sub'
+    'sop'
+    'suck'
+    'sud'
+    'sup'
+    'bum'
+    'sum'
+    'putt'
+    'puck'
+    'pub'
+    'pup'
+    'puff'
+    'pun'
+    'pug'
+    'dub'
+    'dun'
+    'dud'
+    'duck'
+    'dug'
+    'bus'
+    'buff'
+    'bun'
+    'buck'
+    'but'
+    'buzz'
+    'bug'
+    'cuff'
+    'cud'
+    'cup'
+    'cub'
+    'cut'
+    'cuss'
+    'tot'
+    'not'
+    'got'
+    'pot'
+    'sot'
+    'paw'
+    'saw'
+    'sum'
+    'putt'
+    'puck'
+
+wordsPECs{:,2} = words_filtered
+{Expected one output from a curly brace or dot indexing expression, but there were 58 results.
+} 
+wordsPECs(:,2) = words_filtered
+
+wordsPECs =
+
+  58×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'pbfvTDszhac^pbfvTDszh'      'pus' 
+    'mamapbfvTDszh'              'mop' 
+    'tdmapbfvTDszh'              'top' 
+    'pbfvTDszhmapbfvTDszh'       'bop' 
+    'kgmapbfvTDszh'              'cop' 
+    'pbfvTDszhmapbfvTDszh'       'pop' 
+    'tdac^pbfvTDszhtd'           'dust'
+    'maac^pbfvTDszhtd'           'must'
+    'kgac^pbfvTDszhtd'           'gust'
+    'pbfvTDszhac^pbfvTDszhtd'    'bust'
+    'kgac^n'                     'gun' 
+    'pbfvTDszhac^n'              'pun' 
+    'pbfvTDszhac^n'              'bun' 
+    'nac^n'                      'nun' 
+    'pbfvTDszhac^n'              'sun' 
+    'pbfvTDszhac^n'              'fun' 
+    'pbfvTDszhac^pbfvTDszh'      'sub' 
+    'pbfvTDszhmapbfvTDszh'       'sop' 
+    'pbfvTDszhac^kg'             'suck'
+    'pbfvTDszhac^td'             'sud' 
+    'pbfvTDszhac^pbfvTDszh'      'sup' 
+    'pbfvTDszhac^ma'             'bum' 
+    'pbfvTDszhac^ma'             'sum' 
+    'pbfvTDszhac^td'             'putt'
+    'pbfvTDszhac^kg'             'puck'
+    'pbfvTDszhac^pbfvTDszh'      'pub' 
+    'pbfvTDszhac^pbfvTDszh'      'pup' 
+    'pbfvTDszhac^pbfvTDszh'      'puff'
+    'pbfvTDszhac^n'              'pun' 
+    'pbfvTDszhac^kg'             'pug' 
+    'tdac^pbfvTDszh'             'dub' 
+    'tdac^n'                     'dun' 
+    'tdac^td'                    'dud' 
+    'tdac^kg'                    'duck'
+    'tdac^kg'                    'dug' 
+    'pbfvTDszhac^pbfvTDszh'      'bus' 
+    'pbfvTDszhac^pbfvTDszh'      'buff'
+    'pbfvTDszhac^n'              'bun' 
+    'pbfvTDszhac^kg'             'buck'
+    'pbfvTDszhac^td'             'but' 
+    'pbfvTDszhac^pbfvTDszh'      'buzz'
+    'pbfvTDszhac^kg'             'bug' 
+    'kgac^pbfvTDszh'             'cuff'
+    'kgac^td'                    'cud' 
+    'kgac^pbfvTDszh'             'cup' 
+    'kgac^pbfvTDszh'             'cub' 
+    'kgac^td'                    'cut' 
+    'kgac^pbfvTDszh'             'cuss'
+    'tdmatd'                     'tot' 
+    'nmatd'                      'not' 
+    'kgmatd'                     'got' 
+    'pbfvTDszhmatd'              'pot' 
+    'pbfvTDszhmatd'              'sot' 
+    'pbfvTDszhac^'               'paw' 
+    'pbfvTDszhac^'               'saw' 
+    'pbfvTDszhac^ma'             'sum' 
+    'pbfvTDszhac^td'             'putt'
+    'pbfvTDszhac^kg'             'puck'
+
+test = sort(words_filtered,1)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sort')" style="font-weight:bold">sort</a>
+DIM and MODE arguments not supported for cell arrays.
+} 
+test = sort(words_filtered)
+
+test =
+
+  58×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'bop'
+    'buck'
+    'buff'
+    'bug'
+    'bum'
+    'bun'
+    'bun'
+    'bus'
+    'bust'
+    'but'
+    'buzz'
+    'cop'
+    'cub'
+    'cud'
+    'cuff'
+    'cup'
+    'cuss'
+    'cut'
+    'dub'
+    'duck'
+    'dud'
+    'dug'
+    'dun'
+    'dust'
+    'fun'
+    'got'
+    'gun'
+    'gust'
+    'mop'
+    'must'
+    'not'
+    'nun'
+    'paw'
+    'pop'
+    'pot'
+    'pub'
+    'puck'
+    'puck'
+    'puff'
+    'pug'
+    'pun'
+    'pun'
+    'pup'
+    'pus'
+    'putt'
+    'putt'
+    'saw'
+    'sop'
+    'sot'
+    'sub'
+    'suck'
+    'sud'
+    'sum'
+    'sum'
+    'sun'
+    'sup'
+    'top'
+    'tot'
+
+test = sort(words_PECs)
+{Undefined function or variable 'words_PECs'.
+} 
+test = sort(wordsPECs)
+
+test =
+
+  58×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'kgac^n'                     'bop' 
+    'kgac^pbfvTDszh'             'buck'
+    'kgac^pbfvTDszh'             'buff'
+    'kgac^pbfvTDszh'             'bug' 
+    'kgac^pbfvTDszh'             'bum' 
+    'kgac^pbfvTDszhtd'           'bun' 
+    'kgac^td'                    'bun' 
+    'kgac^td'                    'bus' 
+    'kgmapbfvTDszh'              'bust'
+    'kgmatd'                     'but' 
+    'maac^pbfvTDszhtd'           'buzz'
+    'mamapbfvTDszh'              'cop' 
+    'nac^n'                      'cub' 
+    'nmatd'                      'cud' 
+    'pbfvTDszhac^'               'cuff'
+    'pbfvTDszhac^'               'cup' 
+    'pbfvTDszhac^kg'             'cuss'
+    'pbfvTDszhac^kg'             'cut' 
+    'pbfvTDszhac^kg'             'dub' 
+    'pbfvTDszhac^kg'             'duck'
+    'pbfvTDszhac^kg'             'dud' 
+    'pbfvTDszhac^kg'             'dug' 
+    'pbfvTDszhac^ma'             'dun' 
+    'pbfvTDszhac^ma'             'dust'
+    'pbfvTDszhac^ma'             'fun' 
+    'pbfvTDszhac^n'              'got' 
+    'pbfvTDszhac^n'              'gun' 
+    'pbfvTDszhac^n'              'gust'
+    'pbfvTDszhac^n'              'mop' 
+    'pbfvTDszhac^n'              'must'
+    'pbfvTDszhac^n'              'not' 
+    'pbfvTDszhac^pbfvTDszh'      'nun' 
+    'pbfvTDszhac^pbfvTDszh'      'paw' 
+    'pbfvTDszhac^pbfvTDszh'      'pop' 
+    'pbfvTDszhac^pbfvTDszh'      'pot' 
+    'pbfvTDszhac^pbfvTDszh'      'pub' 
+    'pbfvTDszhac^pbfvTDszh'      'puck'
+    'pbfvTDszhac^pbfvTDszh'      'puck'
+    'pbfvTDszhac^pbfvTDszh'      'puff'
+    'pbfvTDszhac^pbfvTDszh'      'pug' 
+    'pbfvTDszhac^pbfvTDszhtd'    'pun' 
+    'pbfvTDszhac^td'             'pun' 
+    'pbfvTDszhac^td'             'pup' 
+    'pbfvTDszhac^td'             'pus' 
+    'pbfvTDszhac^td'             'putt'
+    'pbfvTDszhmapbfvTDszh'       'putt'
+    'pbfvTDszhmapbfvTDszh'       'saw' 
+    'pbfvTDszhmapbfvTDszh'       'sop' 
+    'pbfvTDszhmatd'              'sot' 
+    'pbfvTDszhmatd'              'sub' 
+    'tdac^kg'                    'suck'
+    'tdac^kg'                    'sud' 
+    'tdac^n'                     'sum' 
+    'tdac^pbfvTDszh'             'sum' 
+    'tdac^pbfvTDszhtd'           'sun' 
+    'tdac^td'                    'sup' 
+    'tdmapbfvTDszh'              'top' 
+    'tdmatd'                     'tot' 
+
+test = sort(wordsPECs,1)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sort')" style="font-weight:bold">sort</a>
+DIM and MODE arguments not supported for cell arrays.
+} 
+test = sort(wordsPECs)
+
+test =
+
+  58×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'kgac^n'                     'bop' 
+    'kgac^pbfvTDszh'             'buck'
+    'kgac^pbfvTDszh'             'buff'
+    'kgac^pbfvTDszh'             'bug' 
+    'kgac^pbfvTDszh'             'bum' 
+    'kgac^pbfvTDszhtd'           'bun' 
+    'kgac^td'                    'bun' 
+    'kgac^td'                    'bus' 
+    'kgmapbfvTDszh'              'bust'
+    'kgmatd'                     'but' 
+    'maac^pbfvTDszhtd'           'buzz'
+    'mamapbfvTDszh'              'cop' 
+    'nac^n'                      'cub' 
+    'nmatd'                      'cud' 
+    'pbfvTDszhac^'               'cuff'
+    'pbfvTDszhac^'               'cup' 
+    'pbfvTDszhac^kg'             'cuss'
+    'pbfvTDszhac^kg'             'cut' 
+    'pbfvTDszhac^kg'             'dub' 
+    'pbfvTDszhac^kg'             'duck'
+    'pbfvTDszhac^kg'             'dud' 
+    'pbfvTDszhac^kg'             'dug' 
+    'pbfvTDszhac^ma'             'dun' 
+    'pbfvTDszhac^ma'             'dust'
+    'pbfvTDszhac^ma'             'fun' 
+    'pbfvTDszhac^n'              'got' 
+    'pbfvTDszhac^n'              'gun' 
+    'pbfvTDszhac^n'              'gust'
+    'pbfvTDszhac^n'              'mop' 
+    'pbfvTDszhac^n'              'must'
+    'pbfvTDszhac^n'              'not' 
+    'pbfvTDszhac^pbfvTDszh'      'nun' 
+    'pbfvTDszhac^pbfvTDszh'      'paw' 
+    'pbfvTDszhac^pbfvTDszh'      'pop' 
+    'pbfvTDszhac^pbfvTDszh'      'pot' 
+    'pbfvTDszhac^pbfvTDszh'      'pub' 
+    'pbfvTDszhac^pbfvTDszh'      'puck'
+    'pbfvTDszhac^pbfvTDszh'      'puck'
+    'pbfvTDszhac^pbfvTDszh'      'puff'
+    'pbfvTDszhac^pbfvTDszh'      'pug' 
+    'pbfvTDszhac^pbfvTDszhtd'    'pun' 
+    'pbfvTDszhac^td'             'pun' 
+    'pbfvTDszhac^td'             'pup' 
+    'pbfvTDszhac^td'             'pus' 
+    'pbfvTDszhac^td'             'putt'
+    'pbfvTDszhmapbfvTDszh'       'putt'
+    'pbfvTDszhmapbfvTDszh'       'saw' 
+    'pbfvTDszhmapbfvTDszh'       'sop' 
+    'pbfvTDszhmatd'              'sot' 
+    'pbfvTDszhmatd'              'sub' 
+    'tdac^kg'                    'suck'
+    'tdac^kg'                    'sud' 
+    'tdac^n'                     'sum' 
+    'tdac^pbfvTDszh'             'sum' 
+    'tdac^pbfvTDszhtd'           'sun' 
+    'tdac^td'                    'sup' 
+    'tdmapbfvTDszh'              'top' 
+    'tdmatd'                     'tot' 
+
+wordsPECs2 = wordsPECs(:,2)
+
+wordsPECs2 =
+
+  58×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'pus'
+    'mop'
+    'top'
+    'bop'
+    'cop'
+    'pop'
+    'dust'
+    'must'
+    'gust'
+    'bust'
+    'gun'
+    'pun'
+    'bun'
+    'nun'
+    'sun'
+    'fun'
+    'sub'
+    'sop'
+    'suck'
+    'sud'
+    'sup'
+    'bum'
+    'sum'
+    'putt'
+    'puck'
+    'pub'
+    'pup'
+    'puff'
+    'pun'
+    'pug'
+    'dub'
+    'dun'
+    'dud'
+    'duck'
+    'dug'
+    'bus'
+    'buff'
+    'bun'
+    'buck'
+    'but'
+    'buzz'
+    'bug'
+    'cuff'
+    'cud'
+    'cup'
+    'cub'
+    'cut'
+    'cuss'
+    'tot'
+    'not'
+    'got'
+    'pot'
+    'sot'
+    'paw'
+    'saw'
+    'sum'
+    'putt'
+    'puck'
+
+wordsPECs2(:,2) = wordsPECs(:,1)
+
+wordsPECs2 =
+
+  58×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'pus'     'pbfvTDszhac^pbfvTDszh'  
+    'mop'     'mamapbfvTDszh'          
+    'top'     'tdmapbfvTDszh'          
+    'bop'     'pbfvTDszhmapbfvTDszh'   
+    'cop'     'kgmapbfvTDszh'          
+    'pop'     'pbfvTDszhmapbfvTDszh'   
+    'dust'    'tdac^pbfvTDszhtd'       
+    'must'    'maac^pbfvTDszhtd'       
+    'gust'    'kgac^pbfvTDszhtd'       
+    'bust'    'pbfvTDszhac^pbfvTDszhtd'
+    'gun'     'kgac^n'                 
+    'pun'     'pbfvTDszhac^n'          
+    'bun'     'pbfvTDszhac^n'          
+    'nun'     'nac^n'                  
+    'sun'     'pbfvTDszhac^n'          
+    'fun'     'pbfvTDszhac^n'          
+    'sub'     'pbfvTDszhac^pbfvTDszh'  
+    'sop'     'pbfvTDszhmapbfvTDszh'   
+    'suck'    'pbfvTDszhac^kg'         
+    'sud'     'pbfvTDszhac^td'         
+    'sup'     'pbfvTDszhac^pbfvTDszh'  
+    'bum'     'pbfvTDszhac^ma'         
+    'sum'     'pbfvTDszhac^ma'         
+    'putt'    'pbfvTDszhac^td'         
+    'puck'    'pbfvTDszhac^kg'         
+    'pub'     'pbfvTDszhac^pbfvTDszh'  
+    'pup'     'pbfvTDszhac^pbfvTDszh'  
+    'puff'    'pbfvTDszhac^pbfvTDszh'  
+    'pun'     'pbfvTDszhac^n'          
+    'pug'     'pbfvTDszhac^kg'         
+    'dub'     'tdac^pbfvTDszh'         
+    'dun'     'tdac^n'                 
+    'dud'     'tdac^td'                
+    'duck'    'tdac^kg'                
+    'dug'     'tdac^kg'                
+    'bus'     'pbfvTDszhac^pbfvTDszh'  
+    'buff'    'pbfvTDszhac^pbfvTDszh'  
+    'bun'     'pbfvTDszhac^n'          
+    'buck'    'pbfvTDszhac^kg'         
+    'but'     'pbfvTDszhac^td'         
+    'buzz'    'pbfvTDszhac^pbfvTDszh'  
+    'bug'     'pbfvTDszhac^kg'         
+    'cuff'    'kgac^pbfvTDszh'         
+    'cud'     'kgac^td'                
+    'cup'     'kgac^pbfvTDszh'         
+    'cub'     'kgac^pbfvTDszh'         
+    'cut'     'kgac^td'                
+    'cuss'    'kgac^pbfvTDszh'         
+    'tot'     'tdmatd'                 
+    'not'     'nmatd'                  
+    'got'     'kgmatd'                 
+    'pot'     'pbfvTDszhmatd'          
+    'sot'     'pbfvTDszhmatd'          
+    'paw'     'pbfvTDszhac^'           
+    'saw'     'pbfvTDszhac^'           
+    'sum'     'pbfvTDszhac^ma'         
+    'putt'    'pbfvTDszhac^td'         
+    'puck'    'pbfvTDszhac^kg'         
+
+test = sort(wordsPECs2)
+
+test =
+
+  58×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'bop'     'kgac^n'                 
+    'buck'    'kgac^pbfvTDszh'         
+    'buff'    'kgac^pbfvTDszh'         
+    'bug'     'kgac^pbfvTDszh'         
+    'bum'     'kgac^pbfvTDszh'         
+    'bun'     'kgac^pbfvTDszhtd'       
+    'bun'     'kgac^td'                
+    'bus'     'kgac^td'                
+    'bust'    'kgmapbfvTDszh'          
+    'but'     'kgmatd'                 
+    'buzz'    'maac^pbfvTDszhtd'       
+    'cop'     'mamapbfvTDszh'          
+    'cub'     'nac^n'                  
+    'cud'     'nmatd'                  
+    'cuff'    'pbfvTDszhac^'           
+    'cup'     'pbfvTDszhac^'           
+    'cuss'    'pbfvTDszhac^kg'         
+    'cut'     'pbfvTDszhac^kg'         
+    'dub'     'pbfvTDszhac^kg'         
+    'duck'    'pbfvTDszhac^kg'         
+    'dud'     'pbfvTDszhac^kg'         
+    'dug'     'pbfvTDszhac^kg'         
+    'dun'     'pbfvTDszhac^ma'         
+    'dust'    'pbfvTDszhac^ma'         
+    'fun'     'pbfvTDszhac^ma'         
+    'got'     'pbfvTDszhac^n'          
+    'gun'     'pbfvTDszhac^n'          
+    'gust'    'pbfvTDszhac^n'          
+    'mop'     'pbfvTDszhac^n'          
+    'must'    'pbfvTDszhac^n'          
+    'not'     'pbfvTDszhac^n'          
+    'nun'     'pbfvTDszhac^pbfvTDszh'  
+    'paw'     'pbfvTDszhac^pbfvTDszh'  
+    'pop'     'pbfvTDszhac^pbfvTDszh'  
+    'pot'     'pbfvTDszhac^pbfvTDszh'  
+    'pub'     'pbfvTDszhac^pbfvTDszh'  
+    'puck'    'pbfvTDszhac^pbfvTDszh'  
+    'puck'    'pbfvTDszhac^pbfvTDszh'  
+    'puff'    'pbfvTDszhac^pbfvTDszh'  
+    'pug'     'pbfvTDszhac^pbfvTDszh'  
+    'pun'     'pbfvTDszhac^pbfvTDszhtd'
+    'pun'     'pbfvTDszhac^td'         
+    'pup'     'pbfvTDszhac^td'         
+    'pus'     'pbfvTDszhac^td'         
+    'putt'    'pbfvTDszhac^td'         
+    'putt'    'pbfvTDszhmapbfvTDszh'   
+    'saw'     'pbfvTDszhmapbfvTDszh'   
+    'sop'     'pbfvTDszhmapbfvTDszh'   
+    'sot'     'pbfvTDszhmatd'          
+    'sub'     'pbfvTDszhmatd'          
+    'suck'    'tdac^kg'                
+    'sud'     'tdac^kg'                
+    'sum'     'tdac^n'                 
+    'sum'     'tdac^pbfvTDszh'         
+    'sun'     'tdac^pbfvTDszhtd'       
+    'sup'     'tdac^td'                
+    'top'     'tdmapbfvTDszh'          
+    'tot'     'tdmatd'                 
+
+test = sort(wordsPECs2)
+
+test =
+
+  58×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    'bop'     'kgac^n'                 
+    'buck'    'kgac^pbfvTDszh'         
+    'buff'    'kgac^pbfvTDszh'         
+    'bug'     'kgac^pbfvTDszh'         
+    'bum'     'kgac^pbfvTDszh'         
+    'bun'     'kgac^pbfvTDszhtd'       
+    'bun'     'kgac^td'                
+    'bus'     'kgac^td'                
+    'bust'    'kgmapbfvTDszh'          
+    'but'     'kgmatd'                 
+    'buzz'    'maac^pbfvTDszhtd'       
+    'cop'     'mamapbfvTDszh'          
+    'cub'     'nac^n'                  
+    'cud'     'nmatd'                  
+    'cuff'    'pbfvTDszhac^'           
+    'cup'     'pbfvTDszhac^'           
+    'cuss'    'pbfvTDszhac^kg'         
+    'cut'     'pbfvTDszhac^kg'         
+    'dub'     'pbfvTDszhac^kg'         
+    'duck'    'pbfvTDszhac^kg'         
+    'dud'     'pbfvTDszhac^kg'         
+    'dug'     'pbfvTDszhac^kg'         
+    'dun'     'pbfvTDszhac^ma'         
+    'dust'    'pbfvTDszhac^ma'         
+    'fun'     'pbfvTDszhac^ma'         
+    'got'     'pbfvTDszhac^n'          
+    'gun'     'pbfvTDszhac^n'          
+    'gust'    'pbfvTDszhac^n'          
+    'mop'     'pbfvTDszhac^n'          
+    'must'    'pbfvTDszhac^n'          
+    'not'     'pbfvTDszhac^n'          
+    'nun'     'pbfvTDszhac^pbfvTDszh'  
+    'paw'     'pbfvTDszhac^pbfvTDszh'  
+    'pop'     'pbfvTDszhac^pbfvTDszh'  
+    'pot'     'pbfvTDszhac^pbfvTDszh'  
+    'pub'     'pbfvTDszhac^pbfvTDszh'  
+    'puck'    'pbfvTDszhac^pbfvTDszh'  
+    'puck'    'pbfvTDszhac^pbfvTDszh'  
+    'puff'    'pbfvTDszhac^pbfvTDszh'  
+    'pug'     'pbfvTDszhac^pbfvTDszh'  
+    'pun'     'pbfvTDszhac^pbfvTDszhtd'
+    'pun'     'pbfvTDszhac^td'         
+    'pup'     'pbfvTDszhac^td'         
+    'pus'     'pbfvTDszhac^td'         
+    'putt'    'pbfvTDszhac^td'         
+    'putt'    'pbfvTDszhmapbfvTDszh'   
+    'saw'     'pbfvTDszhmapbfvTDszh'   
+    'sop'     'pbfvTDszhmapbfvTDszh'   
+    'sot'     'pbfvTDszhmatd'          
+    'sub'     'pbfvTDszhmatd'          
+    'suck'    'tdac^kg'                
+    'sud'     'tdac^kg'                
+    'sum'     'tdac^n'                 
+    'sum'     'tdac^pbfvTDszh'         
+    'sun'     'tdac^pbfvTDszhtd'       
+    'sup'     'tdac^td'                
+    'top'     'tdmapbfvTDszh'          
+    'tot'     'tdmatd'                 
+

@@ -1,0 +1,108 @@
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+readPhelx(): nRecsRead: <400>
+readPhlex(): nLexRecs:  <399>
+399 records have been read.
+nLexRecs: <399>, g_origSortEntries: <399>
+Concatenating homophones ... nLexRecs: <398>, g_origSortEntries: <398>
+ deleted <1> records
+ Finished, leaving <398> records
+Time of calculation: Thu Jun 17 08:39:41 1999
+This file is: F2A-exc.lex
+1. Do recoding without stress markers:[ON]
+2. Do recoding without syllable boundary:[ON]
+7. Output include the long list:[OFF]
+8. Name of output file:[F2A-exc.lex]
+mapping <p > to cluster <p>
+Cluster[1]: <p> represents p 
+mapping <b > to cluster <b>
+Cluster[2]: <b> represents b 
+mapping <f v > to cluster <v>
+Cluster[3]: <v> represents f v 
+mapping <T D s z > to cluster <z>
+Cluster[4]: <z> represents D T s z 
+mapping <w > to cluster <w>
+Cluster[5]: <w> represents w 
+mapping <r l > to cluster <r>
+Cluster[6]: <r> represents l r 
+mapping <C J > to cluster <J>
+Cluster[7]: <J> represents C J 
+mapping <S Z > to cluster <Z>
+Cluster[8]: <Z> represents S Z 
+mapping <t > to cluster <t>
+Cluster[9]: <t> represents t 
+mapping <d > to cluster <d>
+Cluster[10]: <d> represents d 
+mapping <k > to cluster <k>
+Cluster[11]: <k> represents k 
+mapping <g > to cluster <g>
+Cluster[12]: <g> represents g 
+mapping <n > to cluster <n>
+Cluster[13]: <n> represents n 
+mapping <h > to cluster <h>
+Cluster[14]: <h> represents h 
+mapping <i > to cluster <i>
+Cluster[15]: <i> represents i 
+mapping <I > to cluster <I>
+Cluster[16]: <I> represents I 
+mapping <e > to cluster <e>
+Cluster[17]: <e> represents e 
+mapping <A > to cluster <A>
+Cluster[18]: <A> represents A 
+mapping <E > to cluster <E>
+Cluster[19]: <E> represents E 
+mapping <R > to cluster <R>
+Cluster[20]: <R> represents R 
+mapping <@ > to cluster <@>
+Cluster[21]: <@> represents @ 
+mapping <a c > to cluster <c>
+Cluster[22]: <c> represents a c 
+mapping <o > to cluster <o>
+Cluster[23]: <o> represents o 
+mapping <W > to cluster <W>
+Cluster[24]: <W> represents W 
+mapping <O > to cluster <O>
+Cluster[25]: <O> represents O 
+mapping <^ > to cluster <^>
+Cluster[26]: <^> represents ^ 
+mapping <U > to cluster <U>
+Cluster[27]: <U> represents U 
+mapping <u > to cluster <u>
+Cluster[28]: <u> represents u 
+# rcstat()
+# Of 398 original entries, 324 are still unique [81.41%]
+# Of 360 total equivalence classes, 324 are unique [90.00%]
+# The sum of the frequencies of all words is          : 49656
+# The sum of the frequencies of the unique classes is : 40327 
+#                                                     : 81.21%
+# The sum of the log frequencies of all words is      : 1108.37
+# The sum of the log frequencies of unique classes is : 874.25
+#                                                     : 78.88%
+# The expected class size (ECS) is           :   1.21
+# The weighted expected class size (ECS) is           :   1.19
+# The log weighted expected class size (ECS) is       :   1.22
+# The expected inverse class size is        :   0.9045
+# The frequency weighted expected inverse class size is        :   0.9055
+# The log frequency weighted expected inverse class size is        :   0.8929
+# pAlpha: <-6.016636>, pTotal: <-6.113243>
+# The PIE for this recoding is 98.42%
+# The distribution for this recoding is: 95.03%
+# The frequency-weighted distribution for this recoding is: 95.05%
+Uniqueness point statistics for original lexicon:
+WD_Len  Tot_N  Tot_freq  Bef_N  Bef_freq  At_N At_freq  Aft_N  Aft_freq
+  2	  35     54.17       3     2.28     20    33.92     12    17.97
+  3	 313    353.41      59    69.06    251   280.90      3     3.46
+  4	  48     70.56      45    67.70      3     2.85      0     0.00
+  5	   1      2.27       1     2.27      0     0.00      0     0.00
+Uniqueness point statistics for recoded lexicon:
+WD_Len  Tot_N  Tot_freq  Bef_N  Bef_freq  At_N At_freq  Aft_N  Aft_freq
+  2	  35     54.17       3     2.28     13    21.25     19    30.64
+  3	 313    352.18      46    55.75    260   285.53      7    10.90
+  4	  48     70.56      44    65.54      4     5.02      0     0.00
+  5	   1      2.27       1     2.27      0     0.00      0     0.00
+# rcstat() Finished: Thu Jun 17 08:39:41 EDT 1999

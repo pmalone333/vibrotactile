@@ -1,0 +1,72 @@
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+readPhelx(): nRecsRead: <400>
+readPhlex(): nLexRecs:  <399>
+399 records have been read.
+nLexRecs: <399>, g_origSortEntries: <399>
+Concatenating homophones ... nLexRecs: <398>, g_origSortEntries: <398>
+ deleted <1> records
+ Finished, leaving <398> records
+Time of calculation: Thu Jun 17 08:23:00 1999
+This file is: F2A-inc.lex
+1. Do recoding without stress markers:[ON]
+2. Do recoding without syllable boundary:[ON]
+7. Output include the long list:[OFF]
+8. Name of output file:[F2A-inc.lex]
+mapping <p b m f v T D s z n h > to cluster <b>
+Cluster[1]: <b> represents D T b f h m n p s v z 
+mapping <w r l > to cluster <r>
+Cluster[2]: <r> represents l r w 
+mapping <C J S Z > to cluster <J>
+Cluster[3]: <J> represents C J S Z 
+mapping <t d k g > to cluster <d>
+Cluster[4]: <d> represents d g k t 
+mapping <i a c W ^ > to cluster <c>
+Cluster[5]: <c> represents W ^ a c i 
+mapping <I E @ > to cluster <E>
+Cluster[6]: <E> represents @ E I 
+mapping <e > to cluster <e>
+Cluster[7]: <e> represents e 
+mapping <A > to cluster <A>
+Cluster[8]: <A> represents A 
+mapping <R > to cluster <R>
+Cluster[9]: <R> represents R 
+mapping <o O U u > to cluster <o>
+Cluster[10]: <o> represents O U o u 
+# rcstat()
+# Of 398 original entries, 25 are still unique [6.28%]
+# Of 87 total equivalence classes, 25 are unique [28.74%]
+# The sum of the frequencies of all words is          : 49656
+# The sum of the frequencies of the unique classes is : 4734 
+#                                                     : 9.53%
+# The sum of the log frequencies of all words is      : 1108.37
+# The sum of the log frequencies of unique classes is : 72.54
+#                                                     : 6.54%
+# The expected class size (ECS) is           :  12.23
+# The weighted expected class size (ECS) is           :  13.05
+# The log weighted expected class size (ECS) is       :  11.66
+# The expected inverse class size is        :   0.2186
+# The frequency weighted expected inverse class size is        :   0.2329
+# The log frequency weighted expected inverse class size is        :   0.2276
+# pAlpha: <-4.706525>, pTotal: <-6.113243>
+# The PIE for this recoding is 76.99%
+# The distribution for this recoding is: 60.96%
+# The frequency-weighted distribution for this recoding is: 59.47%
+Uniqueness point statistics for original lexicon:
+WD_Len  Tot_N  Tot_freq  Bef_N  Bef_freq  At_N At_freq  Aft_N  Aft_freq
+  2	  35     54.17       3     2.28     20    33.92     12    17.97
+  3	 313    353.41      59    69.06    251   280.90      3     3.46
+  4	  48     70.56      45    67.70      3     2.85      0     0.00
+  5	   1      2.27       1     2.27      0     0.00      0     0.00
+Uniqueness point statistics for recoded lexicon:
+WD_Len  Tot_N  Tot_freq  Bef_N  Bef_freq  At_N At_freq  Aft_N  Aft_freq
+  2	  36     55.12       1     1.98      2     0.30     33    52.85
+  3	 312    308.85       7     5.39    180   178.62    125   124.84
+  4	  48     70.56       8     7.98     40    62.58      0     0.00
+  5	   1      2.27       1     2.27      0     0.00      0     0.00
+# rcstat() Finished: Thu Jun 17 08:23:00 EDT 1999

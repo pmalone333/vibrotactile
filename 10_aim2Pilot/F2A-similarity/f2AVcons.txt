@@ -1,0 +1,54 @@
+p  b  m  f  v  T  D  w  r  C  j  s  Z  t  d  s  z  k  g  n  l  h  a
+p  107  11  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+b  3  117  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+m  0  0  119  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+f  0  0  0  87  34  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+v  2  0  0  37  81  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+T  0  0  0  0  0  82  32  0  0  0  0  0  0  0  0  4  1  0  0  0  0  0  0
+D  0  0  0  1  0  78  38  0  0  0  0  0  1  1  0  1  0  0  1  0  0  0  0
+w  0  0  0  0  0  0  0  123  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+r  0  0  0  0  0  0  0  0  122  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+C  0  0  0  0  0  0  1  0  0  94  24  0  0  0  0  0  0  0  0  0  0  0  0
+j  0  0  0  0  0  0  0  0  0  38  80  0  0  0  0  0  0  0  0  0  0  0  0
+s  0  0  0  0  0  1  0  0  0  3  6  73  35  0  0  2  1  0  0  0  0  0  0
+Z  0  0  0  0  0  0  0  0  0  13  15  25  69  0  0  0  0  0  0  0  0  0  0
+t  0  0  0  0  0  0  0  0  0  0  0  0  0  78  35  0  0  7  1  0  0  0  0
+d  0  0  0  0  0  0  0  0  0  0  0  0  0  3  116  0  0  0  0  0  0  0  0
+s  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  101  12  0  0  1  0  0  0
+z  0  0  0  0  0  1  1  0  0  0  0  0  0  1  0  56  56  0  0  4  0  2  1
+k  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  108  13  0  0  0  0
+g  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  17  102  0  0  0  0
+n  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  121  0  0  0
+l  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  114  0  0
+h  1  0  0  1  0  0  0  1  0  0  0  0  0  1  0  0  0  0  0  4  3  103  5
+a  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  119
+load('f2avcons.mat')
+clusterAnalysis(cmx)
+Cluster Analysis: 
+cophenetic correlation = 0.9971
+Spearman's rank correlation = 0.5200
+TotalCorrect  lowestCorrectCluster, linkVal,  clusters
+100.000, 100.000, 0.1248, (pbmfvTDwrCjsZtdszkgnlha)
+99.964, 99.962, 0.4138, (r|pbmfvTDwCjsZtdszkgnlha)
+99.783, 99.705, 0.4172, (pbmfv|TDwCjsZtdszkgnlha|r)
+99.746, 99.634, 0.4251, (w|TDCjsZtdszkgnlha|pbmfv|r)
+99.601, 99.233, 0.4532, (tdkg|TDCjsZsznlha|w|pbmfv|r)
+99.384, 98.742, 0.7058, (CjsZ|TDsznlha|tdkg|w|pbmfv|r)
+99.312, 98.742, 0.7509, (fv|pbm|CjsZ|TDsznlha|tdkg|w|r)
+99.058, 97.191, 0.8665, (TDszn|lha|fv|pbm|CjsZ|tdkg|w|r)
+98.949, 95.021, 0.8865, (l|ha|TDszn|fv|pbm|CjsZ|tdkg|w|r)
+98.841, 95.021, 0.9336, (m|pb|l|ha|TDszn|fv|CjsZ|tdkg|w|r)
+98.551, 95.021, 0.9572, (TD|szn|m|pb|l|ha|fv|CjsZ|tdkg|w|r)
+98.261, 95.021, 0.9676, (td|kg|TD|szn|m|pb|l|ha|fv|CjsZ|w|r)
+98.080, 94.937, 0.9725, (n|sz|td|kg|TD|m|pb|l|ha|fv|CjsZ|w|r)
+97.826, 86.555, 0.9789, (h|a|n|sz|td|kg|TD|m|pb|l|fv|CjsZ|w|r)
+97.319, 86.555, 0.9790, (p|b|h|a|n|sz|td|kg|TD|m|l|fv|CjsZ|w|r)
+95.978, 83.128, 0.9892, (sZ|Cj|p|b|h|a|n|sz|td|kg|TD|m|l|fv|w|r)
+94.891, 83.128, 0.9937, (k|g|sZ|Cj|p|b|h|a|n|sz|td|TD|m|l|fv|w|r)
+93.514, 64.463, 0.9950, (t|d|k|g|sZ|Cj|p|b|h|a|n|sz|TD|m|l|fv|w|r)
+91.268, 64.463, 0.9970, (C|j|t|d|k|g|sZ|p|b|h|a|n|sz|TD|m|l|fv|w|r)
+88.804, 45.902, 0.9979, (s|z|C|j|t|d|k|g|sZ|p|b|h|a|n|TD|m|l|fv|w|r)
+86.232, 45.902, 0.9983, (f|v|s|z|C|j|t|d|k|g|sZ|p|b|h|a|n|TD|m|l|w|r)
+84.058, 45.902, 0.9996, (s|Z|f|v|s|z|C|j|t|d|k|g|p|b|h|a|n|TD|m|l|w|r)
+80.072, 31.405, 0.0000, (p|b|m|f|v|T|D|w|r|C|j|s|Z|t|d|s|z|k|g|n|l|h|a)
+diary off
