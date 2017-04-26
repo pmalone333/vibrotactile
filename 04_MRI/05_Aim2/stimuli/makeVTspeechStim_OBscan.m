@@ -39,7 +39,7 @@ end
 
 %% add OB stimulus
 
-load('aba1.mat'); % temp: replace with OB stim
+load('aba2_whiteNoiseAmplifiedC.mat'); % temp: replace with OB stim
 tm = tactStim{1}{1};
 tm = tm/4; % changed because of a slower sampling rate on new pulseCapture software
 ch = tactStim{1}{2};
