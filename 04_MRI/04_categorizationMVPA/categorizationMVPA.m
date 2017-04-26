@@ -73,7 +73,7 @@ if exptdesign.responseBox
 end
 
 %open com2 port for stimulator
-stimGenPTB('open')
+stimGenPTB('open','COM2')
 
 %run all 6 runs right after the last 
 for iRuns = 1:exptdesign.numRuns

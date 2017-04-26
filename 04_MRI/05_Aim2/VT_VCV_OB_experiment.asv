@@ -99,11 +99,10 @@ try
     %load training stimuli
     load('VTspeechStim_OBscan.mat');
     stimuli = stim{runCounter};
-    label = labels{runCounter};
     %randomize order of stimuli
     order = randperm(size(stimuli,1));
-    stimuli = stimuli(order,:);
-    label = label(order,:);
+    stimuli = trainingStimuli{1}(:,order);
+    label = labels{runCounter};
     
     totalTrialCounter = 1;
     for iBlock = 1:numBlocks %how many blocks to run this training session
@@ -130,7 +129,7 @@ try
            
            %draw fixation
            Screen('DrawTexture', w, fixationTexture);
-           [FixationVBLTimestamp, FixationOnsetTime, FixationFlipTimestamp, FixationMissed] = Screen('Flip',w, exptdesign.scanStart + 10*(iBlock) + 2*(totalTrialCounter-1)); 
+           [FixationVBLTimestamp, FixationOnsetTime, FixationFlipTimestamp, FixationMissed] = Screen('Flip',w, exptdesign.scanStart + 10*(iBlock) + 1*(totalTrialCounter-1)); 
            
            stimulusOnset = GetSecs;
            rtn=-1; % why do we still have this?... 
@@ -150,7 +149,6 @@ try
            end
            
            waitTime = exptdesign.interTrialInterval - stimLoadTime;
-           WaitSecs(waitTime);
            
            if strcmp(labelsBlock{iTrial},'OB')
                 correctResponse = 1;
@@ -211,7 +209,6 @@ try
         trialOutput(iBlock,1).accuracy              = accuracy;
         trialOutput(iBlock,1).responseFinishedTime  = responseFinishedTime;
         trialOutput(iBlock,1).stimuli               = stimuliBlock;
-        trialOutput(iBlock,1).labels                = labelsBlock;
         trialOutput(iBlock,1).blockStart            = blockStart;
         trialOutput(iBlock,1).blockFinished         = blockFinished;
     end

@@ -1,4 +1,4 @@
-exptdesign.debug = 0;
+exptdesign.debug = 1;
 % get subject info
 if exptdesign.debug
     number = '915';
@@ -27,7 +27,7 @@ if exptdesign.debug
     disp('WARNING!!! YOU ARE IN DEBUG MODE') 
     exptdesign.numBlocks = 3;         
     exptdesign.numTrialsPerSession = 6;    
-    exptdesign.numRuns = 1;
+    exptdesign.numRuns = 6;
 else
     exptdesign.numBlocks = 28;         
     exptdesign.numTrialsPerSession = 6;    
@@ -70,7 +70,7 @@ if exptdesign.responseBox
 end
 
 %open com2 port for stimulator
-stimGenPTB('open')
+stimGenPTB('open','COM2')
 
 %run all 6 runs right after the last 
 %%%CHANGE BACK TO 1%%%%%%%%%%%
