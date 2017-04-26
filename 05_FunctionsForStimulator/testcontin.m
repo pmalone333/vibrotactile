@@ -2,7 +2,7 @@ try
 stimGenPTB('CloseAll');
 catch
 end
-stimGenPTB('open','COM2')
+stimGenPTB('open','COM3')
 while 1
     tic;
     while toc < 2

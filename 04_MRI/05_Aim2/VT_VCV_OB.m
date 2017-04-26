@@ -1,4 +1,4 @@
-exptdesign.debug = 0;
+exptdesign.debug = 1;
 % get subject info
 if exptdesign.debug
     number = '915';
@@ -25,7 +25,7 @@ exptdesign.subjectName = name;
 
 if exptdesign.debug 
     disp('WARNING!!! YOU ARE IN DEBUG MODE') 
-    exptdesign.numBlocks = 3;         
+    exptdesign.numBlocks = 8;         
     exptdesign.numTrialsPerSession = 3;    
     exptdesign.numRuns = 1;
 else
@@ -34,8 +34,6 @@ else
     exptdesign.numRuns = 6;
 end
 
-% Create the random stimuli file
-automateTrainedStimuli(exptdesign.numRuns);
 
 %fixation location/duration
 exptdesign.fixationDuration =0.700;
@@ -70,7 +68,7 @@ if exptdesign.responseBox
 end
 
 %open com2 port for stimulator
-stimGenPTB('open')
+stimGenPTB('open','COM2')
 
 %run all 6 runs right after the last 
 %%%CHANGE BACK TO 1%%%%%%%%%%%
