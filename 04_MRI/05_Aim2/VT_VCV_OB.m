@@ -25,7 +25,7 @@ exptdesign.subjectName = name;
 
 if exptdesign.debug 
     disp('WARNING!!! YOU ARE IN DEBUG MODE') 
-    exptdesign.numBlocks = 8;         
+    exptdesign.numBlocks = 4;         
     exptdesign.numTrialsPerSession = 3;    
     exptdesign.numRuns = 1;
 else
