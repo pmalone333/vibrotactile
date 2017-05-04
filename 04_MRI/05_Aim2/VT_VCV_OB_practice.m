@@ -1,4 +1,4 @@
-exptdesign.debug = 1;
+exptdesign.debug = 0;
 % get subject info
 if exptdesign.debug
     number = '915';
@@ -25,13 +25,13 @@ exptdesign.subjectName = name;
 
 if exptdesign.debug 
     disp('WARNING!!! YOU ARE IN DEBUG MODE') 
-    exptdesign.numBlocks = 1;         
+    exptdesign.numBlocks = 4;         
     exptdesign.numTrialsPerSession = 3;    
-    exptdesign.numRuns = 2;
+    exptdesign.numRuns = 1;
 else
-    exptdesign.numBlocks = 28;         
+    exptdesign.numBlocks = 8;         
     exptdesign.numTrialsPerSession = 3;    
-    exptdesign.numRuns = 6;
+    exptdesign.numRuns = 1;
 end
 
 
@@ -80,7 +80,7 @@ for iRuns = 1:exptdesign.numRuns
         startOrNot = input('Start the next run? y or n\n');
     end
     if strcmp(startOrNot,'y')==1
-        [trialOutput.run] = VT_VCV_OB_experiment(name,exptdesign);
+        [trialOutput.run] = VT_VCV_OB_experiment_practice(name,exptdesign);
     else
         fprintf(['Skipping run ' num2str(iRuns) '\n']);
     end

@@ -1,5 +1,5 @@
 
-function trialOutput = VT_VCV_OB_experiment(name,exptdesign)
+function trialOutput = VT_VCV_OB_experiment_practice(name,exptdesign)
 %dbstop if error;
 try
 %     dbstop if error;
@@ -97,13 +97,10 @@ try
     response = exptdesign.response;
 
     %load training stimuli
-    load('VTspeechStim_OBscan.mat');
+    load('VTspeechStim_OBscan_practice.mat');
     stimuli = stim{runCounter};
     label = labels{runCounter};
-    %randomize order of stimuli
-    order = randperm(size(stimuli,1));
-    stimuli = stimuli(order,:);
-    label = label(order,:);
+
     
     totalTrialCounter = 1;
     for iBlock = 1:numBlocks %how many blocks to run this training session
