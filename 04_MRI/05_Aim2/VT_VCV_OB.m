@@ -1,4 +1,4 @@
-exptdesign.debug = 1;
+exptdesign.debug = 0;
 % get subject info
 if exptdesign.debug
     number = '915';
@@ -25,9 +25,9 @@ exptdesign.subjectName = name;
 
 if exptdesign.debug 
     disp('WARNING!!! YOU ARE IN DEBUG MODE') 
-    exptdesign.numBlocks = 1;         
+    exptdesign.numBlocks = 4;         
     exptdesign.numTrialsPerSession = 3;    
-    exptdesign.numRuns = 2;
+    exptdesign.numRuns = 1;
 else
     exptdesign.numBlocks = 28;         
     exptdesign.numTrialsPerSession = 3;    
@@ -89,7 +89,7 @@ end
 %close com3 port
 if exptdesign.responseBox
     CMUBox('Close',exptdesign.boxHandle);
-    handle = ERRORDLG('Please ensure dip switches are set back to 4 and A');
+    handle = errordlg('Please ensure dip switches are set back to 4 and A');
     disp(handle)
 end
 
