@@ -1,5 +1,5 @@
-%wrapper for vibrotactile speech training 
-%5/24/16
+%wrapper for VT watch testing
+%5/10/17
 %PSM pmalone333@gmail.com
 
 %get subject info
@@ -19,12 +19,11 @@ else
     mkdir(['./data/' number])
 end
 
-exptdesign.numSessions = 6; %number of blocks
-exptdesign.numTrialsPerSession = 60;
+exptdesign.numSessions = 1; %number of blocks
+exptdesign.numTrialsPerSession = 72;
+exptdesign.staircaseStep = 0.05; % staircase step size for volume adjustment
 
 exptdesign.fixationImage = 'imgsscaled/fixation.bmp';  % image for the fixation cross
 exptdesign.blankImage = 'imgsscaled/blank.bmp';        % image for the blank screen
 
-stimGenPTB('open','COM1');
-vtSpeechTrainingExperiment(name,exptdesign);
-stimGenPTB('close');
+vtWatchTestingExperimentStaircase(name,exptdesign);
