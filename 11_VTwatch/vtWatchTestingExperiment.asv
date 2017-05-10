@@ -64,27 +64,37 @@ function vtWatchTestingExperiment(name, exptdesign)
             
             [nx, ny, bbox] = DrawFormattedText(w, ['What consonant did you hear?'], 'center', 'center', 1);
             [RespVBLTimestamp RespOnsetTime RespFlipTimestamp RespMissed] = Screen('Flip', w);
-            
-            while KbCheck; end % Wait until all keys are released.
-            responseStartTime = GetSecs;
             while 1
                 % Check the state of the keyboard.
                 [ keyIsDown, seconds, keyCode ] = KbCheck;
+
+                % If the user is pressing a key, then display its code number and name.
                 if keyIsDown
-                    sResp = KbName(keyCode);
-                    break
+
+                    % Note that we use find(keyCode) because keyCode is an array.
+                    % See 'help KbCheck'
+                    sResp = find(
+                    fprintf('You pressed key %i which is %s\n', find(keyCode), KbName(keyCode));
+
+                    if keyCode(escapeKey)
+                        break;
+                    end
+
+                    % If the user holds down a key, KbCheck will report multiple events.
+                    % To condense multiple 'keyDown' events into a single event, we wait until all
+                    % keys have been released.
                     while KbCheck; end
                 end
             end
 
-            RT = seconds - responseStartTime;
+            
             
             %record parameters for the trial
             %trialOutput(iBlock).responseStartTime(iTrial)=responseStartTime;
             %trialOutput(iBlock).responseFinishedTime(iTrial)=responseFinishedTime;
             %trialOutput(iBlock).RT(iTrial)=responseFinishedTime-responseStartTime;
-            trialOutput(iBlock).sResp{iTrial}=sResp;
-            trialOutput(iBlock).RT(iTrial)=RT;
+            trialOutput(iBlock).sResp(iTrial)=sResp;
+            trialOutput(iBlock).keyCode(iTrial)=keyCode;
             %trialOutput(iBlock).accuracy(iTrial)=accuracy;
             %trialOutput(iBlock).correctResp(iTrial)=correctResp;
 
@@ -108,6 +118,7 @@ function vtWatchTestingExperiment(name, exptdesign)
                 KbWait(1)
                 Screen('CloseAll')
             end
+        
         end
     %record parameters for the block
     trialOutput(iBlock).order=stimOrder;
