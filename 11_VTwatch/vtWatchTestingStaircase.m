@@ -20,7 +20,8 @@ else
 end
 
 exptdesign.numSessions = 1; %number of blocks
-exptdesign.numTrialsPerSession = 72;
+exptdesign.numTrialsPerSession = 96;
+exptdesign.numReversals = 16;
 exptdesign.staircaseStep = 0.05; % staircase step size for volume adjustment
 
 exptdesign.fixationImage = 'imgsscaled/fixation.bmp';  % image for the fixation cross

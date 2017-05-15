@@ -30,6 +30,8 @@ function vtWatchTestingExperimentStaircase(name, exptdesign)
     stim = {'ada1';'ada2';'aza1';'aza2';'aba1';'aba2';'ata1';'ata2';'ana1';'ana2';...
     'ama1';'ama2';'asa1';'asa2';'apa1';'apa2';'ava1';'ava2';'afa1';'afa2';'aga1';...
     'aga2';'aka1';'aka2'};
+
+    numReversal = 0;
     
     for iBlock=1:exptdesign.numSessions %how many blocks to run this training session
         drawAndCenterText(w,['Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
@@ -41,7 +43,13 @@ function vtWatchTestingExperimentStaircase(name, exptdesign)
 
         for iTrial=1:exptdesign.numTrialsPerSession
             
-            
+            if numReversal == exptdesign.numReversals
+                drawAndCenterText(w, ['You have completed the session.  Thank you for your work!'],1)
+                KbWait(1)
+                break;
+                Screen('CloseAll')
+            end
+                 
             %draw fixation
             Screen('DrawTexture', w, fixationTexture);
             [FixationVBLTimestamp FixationOnsetTime FixationFlipTimestamp FixationMissed] = Screen('Flip',w);
@@ -92,9 +100,11 @@ function vtWatchTestingExperimentStaircase(name, exptdesign)
             
             if accuracy == 0
                 volume = volume + exptdesign.staircaseStep;
+                reversal = 0;
             elseif iTrial~=1 && accuracy == 1
                 if accuracy == 1 && trialOutput(iBlock).accuracy(iTrial-1)==1 && iTrial ~= 1
                 volume = volume - exptdesign.staircaseStep;
+                reversal = 1;
                 end
             end
             
@@ -106,6 +116,7 @@ function vtWatchTestingExperimentStaircase(name, exptdesign)
             trialOutput(iBlock).RT(iTrial)=RT;
             trialOutput(iBlock).accuracy(iTrial)=accuracy;
             trialOutput(iBlock).volume(iTrial)=volume;
+            trialOutput(iBlock).reversal(iTrial)=reversal;
             %trialOutput(iBlock).correctResp(iTrial)=correctResp;
 
             %save stimulus presentation timestamps
