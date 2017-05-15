@@ -23,17 +23,19 @@ volAndGainSettingsFileName = 'outputgain45_200Hz_GUeq_FFTfiltered';
 
 for i=1%:2:length(list_words)
     
-        audio_filename = ['audio\VCV_male\' list_words{i} '1_ampNorm__ampNorm_audition_FFTfilter.wav'];    
+        %audio_filename = ['audio\VCV_male\' list_words{i} '1_ampNorm__ampNorm_audition_FFTfilter.wav'];  
+        audio_filename = ['aba2_ampNorm_whiteNoiseCons_amplifed.wav'];
         %load audio
         [y,fs] = audioread(audio_filename);
         wavedata = y';
-        vcv_label1 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i} '1'];
+        vcv_label1 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i}];
+        %vcv_label1 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i} '1'];
         vcv_plot1 = vibplot(vcv_label1,offsets(i));
 
-        subplot(2,1,1);
+        %subplot(2,1,1);
         [S,F,T,P] = spectrogram(wavedata,window,noverlap,nfft,fs,'yaxis');
         surf(T,F,10*log10(P),'edgecolor','none'); axis tight; view(0,90);
-        colormap(hot);
+        colormap(summer);
         set(gca,'clim',[-80 -30]);
         set(gca,'ylim',[0 8000]);
         xlabel('time (s)'); ylabel = ('Hz');
@@ -46,44 +48,44 @@ for i=1%:2:length(list_words)
 %         subplot(2,2,2);
 %         t=[1/fs:1/fs:length(awave1)/fs];
 %         plot(t,awave1)
-        scatter(vcv_plot1(:,1),vcv_plot1(:,2),10,'o','w')
+        scatter(vcv_plot1(:,1),vcv_plot1(:,2),10,'o','r')
         for h=1:length(lookupf)
            hline = refline([0 lookupf(h)]);
            hline.Color = 'w';
         end
         title([list_words{i} '1 - ' volAndGainSettings]);
-        
-        audio_filename = ['audio\VCV_male\' list_words{i} '2_ampNorm__ampNorm_audition_FFTfilter.wav'];    
-        %load audio
-        [y,fs] = audioread(audio_filename);
-        wavedata = y';
-        
-        vcv_label2 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i} '2'];
-        vcv_plot2 = vibplot(vcv_label2,offsets(i+1));
-
-        subplot(2,1,2);
-        [S2,F2,T2,P2] = spectrogram(wavedata,window,noverlap,nfft,fs,'yaxis');
-        surf(T2,F2,10*log10(P2),'edgecolor','none'); axis tight; view(0,90);
-        colormap(hot);
-        set(gca,'clim',[-80 -30]);
-        set(gca,'ylim',[0 8000]);
-        xlabel('time (s)'); ylabel = ('Hz');
-        y1=get(gca,'ylim');
-        hold on
-%         plot([first_vowel_offset(i+1)-.1 first_vowel_offset(i+1)-.1],y1)
-%         plot([second_vowel_onset(i+1)+.15 second_vowel_onset(i+1)+.15],y1)
-        hold on;
-%         subplot(2,2,4);
-%         t=[1/fs:1/fs:length(awave2)/fs];
-%         plot(t,awave2)
-        scatter(vcv_plot2(:,1),vcv_plot2(:,2),10,'o','c')
-        for h=1:length(lookupf)
-           hline = refline([0 lookupf(h)]);
-        end
-        title([list_words{i} '2 - ' volAndGainSettings]);
-        set(gcf, 'PaperUnits', 'inches');
-        x_width=7;y_width=11;
-        set(gcf, 'PaperPosition', [0 0 x_width y_width]); %
+%         
+%         audio_filename = ['audio\VCV_male\' list_words{i} '2_ampNorm__ampNorm_audition_FFTfilter.wav'];    
+%         %load audio
+%         [y,fs] = audioread(audio_filename);
+%         wavedata = y';
+%         
+%         vcv_label2 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i} '2'];
+%         vcv_plot2 = vibplot(vcv_label2,offsets(i+1));
+% 
+%         subplot(2,1,2);
+%         [S2,F2,T2,P2] = spectrogram(wavedata,window,noverlap,nfft,fs,'yaxis');
+%         surf(T2,F2,10*log10(P2),'edgecolor','none'); axis tight; view(0,90);
+%         colormap(hot);
+%         set(gca,'clim',[-80 -30]);
+%         set(gca,'ylim',[0 8000]);
+%         xlabel('time (s)'); ylabel = ('Hz');
+%         y1=get(gca,'ylim');
+%         hold on
+% %         plot([first_vowel_offset(i+1)-.1 first_vowel_offset(i+1)-.1],y1)
+% %         plot([second_vowel_onset(i+1)+.15 second_vowel_onset(i+1)+.15],y1)
+%         hold on;
+% %         subplot(2,2,4);
+% %         t=[1/fs:1/fs:length(awave2)/fs];
+% %         plot(t,awave2)
+%         scatter(vcv_plot2(:,1),vcv_plot2(:,2),10,'o','c')
+%         for h=1:length(lookupf)
+%            hline = refline([0 lookupf(h)]);
+%         end
+%         title([list_words{i} '2 - ' volAndGainSettings]);
+%         set(gcf, 'PaperUnits', 'inches');
+%         x_width=7;y_width=11;
+%         set(gcf, 'PaperPosition', [0 0 x_width y_width]); %
         %export_fig(gcf,[list_words{i} '_' volAndGainSettingsFileName])
         %saveas(gcf,[list_words{i} '_' volAndGainSettingsFileName '.pdf'])
         %close all
