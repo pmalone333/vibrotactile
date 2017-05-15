@@ -58,7 +58,9 @@ function vtWatchTestingExperimentStaircase(name, exptdesign)
             wavedata = y';
             nrchannels = size(wavedata,1);
             InitializePsychSound;
+            if iTrial == 1
             soundhandle = PsychPortAudio('Open', [], [], 0, freq, nrchannels);
+            end
             % set initial volume
             if iTrial == 1
                 volume = 0.9;
@@ -100,12 +102,15 @@ function vtWatchTestingExperimentStaircase(name, exptdesign)
             
             if accuracy == 0
                 volume = volume + exptdesign.staircaseStep;
-                reversal = 0;
+                reversal = 1;
+                numReversal = numReversal+1;
             elseif iTrial~=1 && accuracy == 1
                 if accuracy == 1 && trialOutput(iBlock).accuracy(iTrial-1)==1 && iTrial ~= 1
                 volume = volume - exptdesign.staircaseStep;
-                reversal = 1;
+                reversal = 0;
                 end
+            elseif accuracy == 1 && iTrial == 1
+                reversal = 0;    
             end
             
             %record parameters for the trial
