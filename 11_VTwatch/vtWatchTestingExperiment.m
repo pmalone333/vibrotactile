@@ -35,7 +35,7 @@ function vtWatchTestingExperiment(name, exptdesign)
         drawAndCenterText(w,['Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
             'Click the mouse to continue'],1);
         
-        stim = repmat(stim,1,floor(exptdesign.numTrialsPerSession/length(stim)));        
+        stim = repmat(stim,floor(exptdesign.numTrialsPerSession/length(stim)),1);        
         stimOrder = randperm(length(stim));
         stim = stim(stimOrder);
 
@@ -49,7 +49,10 @@ function vtWatchTestingExperiment(name, exptdesign)
             wavedata = y';
             nrchannels = size(wavedata,1);
             InitializePsychSound;
+            if iTrial == 1
             soundhandle = PsychPortAudio('Open', [], [], 0, freq, nrchannels);
+            end
+            PsychPortAudio('Volume', soundhandle, 0.89);
             %fill primary buffer with waveform... tokens will be copied from this
             PsychPortAudio('FillBuffer', soundhandle, wavedata, 0, 1);
                         %start audio, wait for it to finish
