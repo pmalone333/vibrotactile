@@ -29,7 +29,7 @@ if exptdesign.debug
     exptdesign.numTrialsPerSession = 3;    
     exptdesign.numRuns = 1;
 else
-    exptdesign.numBlocks = 50;         
+    exptdesign.numBlocks = 28;         
     exptdesign.numTrialsPerSession = 3;    
     exptdesign.numRuns = 1;
 end
