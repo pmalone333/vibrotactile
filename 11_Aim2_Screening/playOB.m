@@ -11,4 +11,4 @@ for i=1:5
     WaitSecs(2);
 end
 
-stimGenPTB('close','COM1')
+stimGenPTB('close','COM2')
