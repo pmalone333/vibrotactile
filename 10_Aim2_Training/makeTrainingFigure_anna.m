@@ -1,4 +1,4 @@
-function makeTrainingFigure(subj,sessDate)
+function makeTrainingFigure_anna(subj,sessDate)
 
 % subj: string, e.g. '945'
 % sessDate: string, training session date in format YearMonthDay (e.g 20170405 for April 5 2017)
