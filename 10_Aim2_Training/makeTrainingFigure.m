@@ -3,8 +3,8 @@ function makeTrainingFigure(subj,sessDate)
 % subj: string, e.g. '945'
 % sessDate: string, training session date in format YearMonthDay (e.g 20170405 for April 5 2017)
 
-data_path = dir(fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_aim2Pilot\trainingExp\data',subj,[sessDate '*_block6.mat']));
-load(fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_aim2Pilot\trainingExp\data',subj,data_path(1).name));
+data_path = dir(fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data',subj,[sessDate '*_block6.mat']));
+load(fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data',subj,data_path(1).name));
 
 voice_hits = zeros(5,1); % row 1 = aba and apa, 2 = ada and ata, 3 = ava and afa, 4 = aga and aka, 5 = aza and asa
 voice_n_pres = zeros(5,1);
@@ -19,19 +19,19 @@ for i_block=1:length(trialOutput)
     %% voicing
     if strcmp(trialOutput(i_block).feature_block,'voicing')
         for i_stim=1:length(trialOutput(i_block).stimuli)
-            if strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aba') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'apa')
+            if strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aba') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'apa')
                 voice_hits(1,1) = voice_hits(1,1) + trialOutput(i_block).accuracy(i_stim);
                 voice_n_pres(1,1) = voice_n_pres(1,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ada') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ata')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ada') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'ata')
                 voice_hits(2,1) = voice_hits(2,1) + trialOutput(i_block).accuracy(i_stim);
                 voice_n_pres(2,1) = voice_n_pres(2,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ava') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'afa')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ava') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'afa')
                 voice_hits(3,1) = voice_hits(3,1) + trialOutput(i_block).accuracy(i_stim);
                 voice_n_pres(3,1) = voice_n_pres(3,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aga') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aka')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aga') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'aka')
                 voice_hits(4,1) = voice_hits(4,1) + trialOutput(i_block).accuracy(i_stim);
                 voice_n_pres(4,1) = voice_n_pres(4,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aza') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'asa')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aza') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'asa')
                 voice_hits(5,1) = voice_hits(5,1) + trialOutput(i_block).accuracy(i_stim);
                 voice_n_pres(5,1) = voice_n_pres(5,1) + 1;
             end
@@ -41,19 +41,19 @@ for i_block=1:length(trialOutput)
     %% place
     elseif strcmp(trialOutput(i_block).feature_block,'place')
         for i_stim=1:length(trialOutput(i_block).stimuli)
-            if strcmp(trialOutput(i_block).stimuli{i_stim}(1),'apa') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ata')
+            if strcmp(trialOutput(i_block).stimuli{i_stim}(1),'apa') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'ata')
                 place_hits(1,1) = place_hits(1,1) + trialOutput(i_block).accuracy(i_stim);
                 place_n_pres(1,1) = place_n_pres(1,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aba') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aga')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aba') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'aga')
                 place_hits(2,1) = place_hits(2,1) + trialOutput(i_block).accuracy(i_stim);
                 place_n_pres(2,1) = place_n_pres(2,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ava') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aza')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ava') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'aza')
                 place_hits(3,1) = place_hits(3,1) + trialOutput(i_block).accuracy(i_stim);
                 place_n_pres(3,1) = place_n_pres(3,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'afa') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'asa')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'afa') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'asa')
                 place_hits(4,1) = place_hits(4,1) + trialOutput(i_block).accuracy(i_stim);
                 place_n_pres(4,1) = place_n_pres(4,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ama') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ana')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ama') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'ana')
                 place_hits(5,1) = place_hits(5,1) + trialOutput(i_block).accuracy(i_stim);
                 place_n_pres(5,1) = place_n_pres(5,1) + 1;
             end
@@ -62,19 +62,19 @@ for i_block=1:length(trialOutput)
     %% manner
     elseif strcmp(trialOutput(i_block).feature_block,'manner')
         for i_stim=1:length(trialOutput(i_block).stimuli)
-            if strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ada') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aza')
+            if strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ada') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'aza')
                 manner_hits(1,1) = manner_hits(1,1) + trialOutput(i_block).accuracy(i_stim);
                 manner_n_pres(1,1) = manner_n_pres(1,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aza') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ana')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aza') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'ana')
                 manner_hits(2,1) = manner_hits(2,1) + trialOutput(i_block).accuracy(i_stim);
                 manner_n_pres(2,1) = manner_n_pres(2,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aba') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ama')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'aba') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'ama')
                 manner_hits(3,1) = manner_hits(3,1) + trialOutput(i_block).accuracy(i_stim);
                 manner_n_pres(3,1) = manner_n_pres(3,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ada') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ana')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ada') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'ana')
                 manner_hits(4,1) = manner_hits(4,1) + trialOutput(i_block).accuracy(i_stim);
                 manner_n_pres(4,1) = manner_n_pres(4,1) + 1;
-            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ata') || strcmp(trialOutput(i_block).stimuli{i_stim}(1),'asa')
+            elseif strcmp(trialOutput(i_block).stimuli{i_stim}(1),'ata') && strcmp(trialOutput(i_block).stimuli{i_stim}(2),'asa')
                 manner_hits(5,1) = manner_hits(5,1) + trialOutput(i_block).accuracy(i_stim);
                 manner_n_pres(5,1) = manner_n_pres(5,1) + 1;
             end
@@ -92,7 +92,7 @@ title(['sub' subj ' - voicing - ' sessDate]);
 ylim([0 1])
 hline = refline([0 0.5]);
 hline.Color = 'r';
-saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_aim2Pilot\trainingExp\data',subj,['sub' subj '_voicing_' sessDate '.pdf']))
+saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data',subj,['sub' subj '_voicing_' sessDate '.pdf']))
 close all
 
 bar(place_acc);
@@ -101,15 +101,15 @@ title(['sub' subj ' - place - ' sessDate]);
 ylim([0 1])
 hline = refline([0 0.5]);
 hline.Color = 'r';
-saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_aim2Pilot\trainingExp\data',subj,['sub' subj '_place_' sessDate '.pdf']))
+saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data',subj,['sub' subj '_place_' sessDate '.pdf']))
 close all
 
-bar(voice_acc);
+bar(manner_acc);
 xticklabels({'ada/aza','aza/ana','aba/ama','ada/ana','ata/asa'})
 title(['sub' subj ' - manner - ' sessDate]);
 ylim([0 1])
 hline = refline([0 0.5]);
 hline.Color = 'r';
-saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_aim2Pilot\trainingExp\data\',subj,['sub' subj '_manner_' sessDate '.pdf']))
+saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data\',subj,['sub' subj '_manner_' sessDate '.pdf']))
 
 end
