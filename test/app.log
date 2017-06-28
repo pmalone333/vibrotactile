@@ -1,0 +1,684 @@
+***************************************************************************************************
+DateTime     = Fri Dec 02 07:58:19 EST 2016
+OS           = Windows 10  (10.0, amd64)
+JVM          = Java(TM) SE Runtime Environment (1.8.0_72-b15, 64-bit)
+Locale       = English (United States), America/New_York
+User         = DESKTOP-SQ8HO7H$, C:\WINDOWS\system32\config\systemprofile
+
+Application  = CrashPlan
+CPVERSION    = 4.8.0 - 1435813200480 (2015-07-02T05:00:00:480+0000) - Build: 331
+CPGUID       = 770356609663976577 from file: C:/ProgramData/CrashPlan/.identity
+OrgType      = CONSUMER
+WorkingDir   = C:\Program Files\CrashPlan
+LogDir       = C:/ProgramData/CrashPlan/log
+AppDataDir   = C:\ProgramData\CrashPlan\conf
+CacheDir     = C:\ProgramData\CrashPlan\cache
+ArchiveDir   = C:\ProgramData\CrashPlan\backupArchives/
+JavaOptions  = [-Xrs, -Xms15M, -Xmx1024M, -Dsun.net.inetaddr.ttl=300, -Dnetworkaddress.cache.ttl=300, -Dsun.net.inetaddr.negative.ttl=0, -Dnetworkaddress.cache.negative.ttl=0, -Dfile.encoding=UTF-8, -DappBaseName=CrashPlan, -Duser.install=0, -Djna.nosys=true, abort, exit]
+Args         = [CrashPlanService]
+LibraryPath  = C:\Program Files\CrashPlan;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Dell\DW WLAN Card;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\msys64\mingw64\bin;C:\msys64\mingw32\bin;C:\Program Files (x86)\OpenSSH\bin;C:\Program Files (x86)\PuTTY\;C:\Program Files\MATLAB\R2016b\runtime\win64;C:\Program Files\MATLAB\R2016b\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\CrashPlan\jre\bin;.;lib
+ClassPath    = [file:/C:/Program%20Files/CrashPlan/lib/com.backup42.desktop.jar, file:/C:/ProgramData/CrashPlan/lang/, file:/C:/Program%20Files/CrashPlan/lang/, file:/C:/Program%20Files/CrashPlan/]
+
+
+***************************************************************************************************
+LICENSE
+***************************************************************************************************
+ServiceModel.authorized         = true
+ServiceModel.authRules          = AuthorizeRules [ldap=false, minPasswordLength=5, usernameIsAnEmail=true, deferredAllowed=false]
+ServiceModel.license.name    = CrashPlan Unlimited 1 Year Subscription
+ServiceModel.license.key        = 4cr8rumj7rcc2r7p
+ServiceModel.cpcLicense.product = PLUS
+ServiceModel.cpcLicense.expires = 11/24/17 (356day 17hr remaining)
+ServiceModel.license            = CPLicense@737953322[ PLUS, key=4cr8rumj7rcc2r7p, permissions=[admin.backup.sets, admin.cpd.adfree, admin.backup.backup, admin.backup.hosted, admin.backup.high_encryption, admin.backup.realtime, admin.backup.advanced_settings, admin.cpd.restore, admin.backup.restore], expireDate=2017-11-24T00:59:59:999, baseLicense=License@1862192433[ na, permissions=[admin.backup.backup, admin.cpd.restore, admin.backup.restore] ]; License@1846563657[ na, permissions=[admin.backup.backup, admin.cpd.restore, admin.backup.restore] ] ]
+LicensedFeatures                = []
+
+
+***************************************************************************************************
+SOCIAL NETWORK
+***************************************************************************************************
+
+---------------------------------------------------------------------------------------------------
+USERS
+4374464, pmalone333@gmail.com, SELF, Patrick, org=42-CrashPlan
+1, admin, CPC, Admin, org=1-ADMIN
+
+---------------------------------------------------------------------------------------------------
+COMPUTERS
+770356609663976577, DESKTOP-SQ8HO7H, SELF, private=0.0.0.0:4242, public=24.210.229.183:4242, connectedFor=0ms
+4200, CrashPlan Friend, CPC, private=central.crashplan.com:443, public=central.crashplan.com:4282, connectedFor=3min 43sec
+42, CrashPlan Central, userId=1, private=bof-sea.crashplan.com:443, connectedFor=28min 5sec
+
+---------------------------------------------------------------------------------------------------
+FALLBACKS
+primary=central.crashplan.com:443, lastConnected=0
+
+
+***************************************************************************************************
+OUTBOUND BACKUP
+***************************************************************************************************
+backupEnabled                  = true
+highBandwidthRate              = 0.0 KB/s (network throttle, user away)
+lowBandwidthRate               = 0.0 KB/s (network throttle, user present)
+lanHighBandwidthRate           = 0.0 KB/s (network throttle, user away)
+lanLowBandwidthRate            = 0.0 KB/s (network throttle, user present)
+idleThrottleRate               = 80 (cpu throttle, user away)
+activeThrottleRate             = 20 (cpu throttle, user present)
+
+---------------------------------------------------------------------------------------------------
+BACKUP SET 1
+backupPaths                    = [-C:/Users/Patrick Malone/Evernote/;n, -C:/Users/Patrick Malone/AppData/;n, +C:/Users/Patrick Malone/;w]
+backupPaths.lastModified       = Thu Dec 01 09:23:31 EST 2016
+scanning                       = false
+checkingForDeletes             = false
+totalFiles                     = 452064
+totalSize                      = 241.7GB
+watcherNoActivityInterval      = 15min 0sec (backup frequency)
+backupOpenFiles                = true
+backupRunWindow                = RunWindow[alwaysRun=true]
+scanInterval                   = 1day 0hr
+scanTime                       = 03:00
+compression                    = ON
+encryptionEnabled              = true
+dataDeDuplication              = AUTOMATIC
+keepDeleted                    = true
+keepDeletedMinutes             = 0ms
+versionLastWeekInterval        = 15min 0sec
+versionLastNinetyDaysInterval  = 1day 0hr
+versionLastYearInterval        = 7day 0hr
+versionPrevYearsInterval       = 30day 0hr
+
+
+***************************************************************************************************
+DESTINATIONS
+***************************************************************************************************
+
+---------------------------------------------------------------------------------------------------
+DESTINATIONS
+42, CrashPlan Central, userId=1, private=bof-sea.crashplan.com:443, connectedFor=28min 5sec, cache=C:\ProgramData\CrashPlan\cache\42
+ - setId=1: 100.0% complete
+
+---------------------------------------------------------------------------------------------------
+DESTINATIONS
+
+---------------------------------------------------------------------------------------------------
+DESTINATIONS
+
+
+***************************************************************************************************
+INBOUND BACKUP
+***************************************************************************************************
+listenForBackup      = true
+maintenanceInterval  = 7day 0hr
+verifyBlocksInterval = 28day 0hr
+listen               = 0.0.0.0:4242
+manifestPath         = C:\ProgramData\CrashPlan\backupArchives/ (default location)
+
+---------------------------------------------------------------------------------------------------
+SOURCES
+
+
+***************************************************************************************************
+SYSTEM (network, memory, disk, etc)
+***************************************************************************************************
+localHostAddress = 192.168.1.110
+memory           = maxMemory=910.50MB, totalMemory=353MB, freeMemory=107.50MB, usedMemory=245.50MB
+diskSpace        = DiskSpace[file = C:\, totalSpace = 1TB, freeSpace = 559.6GB, usedSpace = 451.8GB, capacity = 44.67%]
+
+
+***************************************************************************************************
+CONFIG FILE
+***************************************************************************************************
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config id="service" modified="2016-12-02T07:58:19:403-0500" version="9">
+  <configDateMs>1480602215564</configDateMs>
+  <installVersion>1435813200480</installVersion>
+  <serviceErrorInterval>3600000</serviceErrorInterval>
+  <userIdleDelay>900000</userIdleDelay>
+  <orgType>CONSUMER</orgType>
+  <systrayOnStartup>true</systrayOnStartup>
+  <location>0.0.0.0:4242</location>
+  <helpNovice>WELCOME,INTRO,STILL_RUNNING</helpNovice>
+  <userHome>C:\Users\Patrick Malone</userHome>
+  <windowsPriorityClass>LOW</windowsPriorityClass>
+  <windowsPriorityBoost>false</windowsPriorityBoost>
+  <macIOPriority>IOPOL_THROTTLE</macIOPriority>
+  <javaMemoryHeapMax>1024M</javaMemoryHeapMax>
+  <serviceUIConfig>
+    <serviceHost>localhost</serviceHost>
+    <servicePort>4243</servicePort>
+    <connectCheck>0</connectCheck>
+    <showFullFilePath>false</showFullFilePath>
+    <autoLoginPasswordHash>******</autoLoginPasswordHash>
+    <autoLogin>true</autoLogin>
+    <locale nil="true"/>
+  </serviceUIConfig>
+  <servicePeerConfig>
+    <authority address="central.crashplan.com:443" hideAddress="false"/>
+    <lastKnownVersion>1435813200480</lastKnownVersion>
+    <lastKnownBuildNumber>331</lastKnownBuildNumber>
+    <upgradeVersion nil="true"/>
+    <upgradeBuildNumber nil="true"/>
+    <upgradePath>upgrade</upgradePath>
+    <upgradeDelay>15000</upgradeDelay>
+    <inboundWorkers>4</inboundWorkers>
+    <securityProviderWorkers>1</securityProviderWorkers>
+    <securityProviderCipherId>0</securityProviderCipherId>
+    <socketSendBufferSize>65536</socketSendBufferSize>
+    <socketReceiveBufferSize>65536</socketReceiveBufferSize>
+    <inboundMessageBufferSize>524288</inboundMessageBufferSize>
+    <outboundMessageBufferSize>1310720</outboundMessageBufferSize>
+    <siteLocalInboundMessageBufferSize>1048576</siteLocalInboundMessageBufferSize>
+    <siteLocalOutboundMessageBufferSize>2621440</siteLocalOutboundMessageBufferSize>
+    <maxMessageSize>20971520</maxMessageSize>
+    <listenForBackup>true</listenForBackup>
+    <maxConnectAttempts>2</maxConnectAttempts>
+    <portMappingEnabled>true</portMappingEnabled>
+    <useProxy>false</useProxy>
+    <remotePACFileUrl nil="true"/>
+    <centralConfig>
+      <websiteHost>https://www.crashplan.com</websiteHost>
+      <hideDestinationUsageSetting>false</hideDestinationUsageSetting>
+    </centralConfig>
+  </servicePeerConfig>
+  <serviceBackupConfig>
+    <backupFilesLog>
+      <fileHandler append="true" count="2" level="ALL" limit="26214400" pattern="log/backup_files.log"/>
+    </backupFilesLog>
+    <restoreFilesLog>
+      <fileHandler append="false" count="1" level="ALL" limit="1073741824" pattern="log/restore_files.log"/>
+    </restoreFilesLog>
+    <highBandwidthRate>0.0</highBandwidthRate>
+    <lowBandwidthRate>0.0</lowBandwidthRate>
+    <lanHighBandwidthRate>0.0</lanHighBandwidthRate>
+    <lanLowBandwidthRate>0.0</lanLowBandwidthRate>
+    <wanNetworks>
+      <patternList>
+        <windows/>
+        <macintosh/>
+        <linux/>
+        <solaris/>
+      </patternList>
+    </wanNetworks>
+    <lanNetworks>
+      <patternList>
+        <windows/>
+        <macintosh/>
+        <linux/>
+        <solaris/>
+      </patternList>
+    </lanNetworks>
+    <wanTcpTrafficClass>0</wanTcpTrafficClass>
+    <lanTcpTrafficClass>0</lanTcpTrafficClass>
+    <tcpNoDelay>true</tcpNoDelay>
+    <notifyDeliveryTime>ANY</notifyDeliveryTime>
+    <warningEmailEnabled>true</warningEmailEnabled>
+    <minutesUntilWarning>4320</minutesUntilWarning>
+    <severeEmailEnabled>true</severeEmailEnabled>
+    <minutesUntilSevere>7200</minutesUntilSevere>
+    <backupStatusEmailEnabled>true</backupStatusEmailEnabled>
+    <backupStatusEmailFreqInMinutes>10080</backupStatusEmailFreqInMinutes>
+    <warningTwitterEnabled>false</warningTwitterEnabled>
+    <warningTwitterAfterMinutes>4320</warningTwitterAfterMinutes>
+    <severeTwitterEnabled>false</severeTwitterEnabled>
+    <severeTwitterAfterMinutes>7200</severeTwitterAfterMinutes>
+    <backupStatusTwitterEnabled>false</backupStatusTwitterEnabled>
+    <backupStatusTwitterFreqInMinutes>1440</backupStatusTwitterFreqInMinutes>
+    <twitterStatusUpdateOptIn>false</twitterStatusUpdateOptIn>
+    <twitterFollowersOptIn>false</twitterFollowersOptIn>
+    <inboundRunWindow>
+      <runWindow always="true" days="SMTWHFS" endTimeOfDay="06:00" startTimeOfDay="01:00"/>
+    </inboundRunWindow>
+    <hiddenFiles>
+      <patternList>
+        <pattern regex=".*/\..*"/>
+        <pattern regex="(?i).*\.tmp"/>
+        <pattern regex="(?i).*/temp/"/>
+        <pattern regex="(?i).*/tmp/"/>
+        <pattern regex=".*/(?:42|\d{8,}).*/(?:cp|~).*"/>
+        <pattern regex="(?i).*/CrashPlan.*/(?:cache|log|conf|manifest|upgrade)/.*"/>
+        <pattern regex=".*\.part"/>
+        <pattern regex=".*/iPhoto Library/iPod Photo Cache/.*"/>
+        <pattern regex=".*\.cprestoretmp.*"/>
+        <pattern regex=".*/Music/Subscription/.*"/>
+        <pattern regex="(?i).*/Google/Chrome/.*cache.*"/>
+        <pattern regex="(?i).*/Mozilla/Firefox/.*cache.*"/>
+        <pattern regex=".*/Google/Chrome/Safe Browsing.*"/>
+        <windows>
+          <pattern regex=".:/ProgramData/"/>
+          <pattern regex=".*Thumbs\.db"/>
+          <pattern regex=".*/Local Settings/History/"/>
+          <pattern regex=".*/NetHood/"/>
+          <pattern regex=".*/PrintHood/"/>
+          <pattern regex=".*/Cookies/"/>
+          <pattern regex=".*/Recent/"/>
+          <pattern regex=".*/SendTo/"/>
+          <pattern regex=".*/LocalService/"/>
+          <pattern regex=".*/NetworkService/"/>
+          <pattern regex=".*/Start Menu/"/>
+          <pattern regex="(?i).*/NTUSER.*"/>
+          <pattern regex="(?i).:/WINDOWS/"/>
+          <pattern regex="(?i).:/autoexec.bat"/>
+          <pattern regex=".*\$RECYCLE\.BIN/.*"/>
+          <pattern regex=".*/System Volume Information/.*"/>
+          <pattern regex=".*/RECYCLER/.*"/>
+          <pattern regex=".*/I386.*"/>
+          <pattern regex=".*/pagefile.sys"/>
+          <pattern regex=".*/MSOCache.*"/>
+          <pattern regex=".*UsrClass\.dat\.LOG"/>
+          <pattern regex=".*UsrClass\.dat"/>
+          <pattern regex=".*/Temporary Internet Files/.*"/>
+          <pattern regex="(?i).*/ntuser.dat.*"/>
+          <pattern regex=".*/Local Settings/Temp.*"/>
+          <pattern regex=".*/AppData/Local/Temp.*"/>
+          <pattern regex=".*/AppData/Temp.*"/>
+          <pattern regex=".*/Windows/Temp.*"/>
+          <pattern regex="(?i).*/Microsoft.*/Windows/.*\.log"/>
+          <pattern regex=".*/Microsoft.*/Windows/Cookies.*"/>
+          <pattern regex=".*/Microsoft.*/RecoveryStore.*"/>
+          <pattern regex="(?i).:/Config\\.Msi.*"/>
+          <pattern regex="(?i).*\\.rbf"/>
+          <pattern regex=".*/Windows/Installer.*"/>
+          <pattern regex=".*/Application Data/Application Data.*"/>
+          <pattern regex="(?i).:/Config\.Msi.*"/>
+          <pattern regex="(?i).*\.rbf"/>
+          <pattern regex="(?i).*/Microsoft.*/Windows/.*\.edb"/>
+        </windows>
+        <macintosh>
+          <pattern regex="/bin/"/>
+          <pattern regex="/etc/"/>
+          <pattern regex="/sbin/"/>
+          <pattern regex="/usr/"/>
+          <pattern regex="/sw/"/>
+          <pattern regex="/System/"/>
+          <pattern regex="/private/"/>
+          <pattern regex="/Desktop DB"/>
+          <pattern regex="/Desktop DF"/>
+          <pattern regex="/dev/.*"/>
+          <pattern regex=".*\.Trash.*"/>
+          <pattern regex="/\.vol/.*"/>
+          <pattern regex="/mach.sym"/>
+          <pattern regex="/mach_kernel"/>
+          <pattern regex=".*\.hotfiles\.btree.*"/>
+          <pattern regex=".*/Trash/.*"/>
+          <pattern regex=".*/Network Trash Folder/.*"/>
+          <pattern regex=".*/VM Storage"/>
+          <pattern regex=".*\.fseventsd.*"/>
+          <pattern regex=".*/Library/Caches/.*"/>
+          <pattern regex=".*\.Spotlight-.*/.*"/>
+          <pattern regex="/Network/.*"/>
+          <pattern regex="/tmp/.*"/>
+          <pattern regex="/cores/.*"/>
+          <pattern regex="/afs/.*"/>
+          <pattern regex="/automount/.*"/>
+          <pattern regex="/private/Network/.*"/>
+          <pattern regex="/private/tmp/.*"/>
+          <pattern regex="/private/var/tmp/.*"/>
+          <pattern regex="/private/var/folders/.*"/>
+          <pattern regex="/private/var/run/.*"/>
+          <pattern regex="/private/var/spool/postfix/.*"/>
+          <pattern regex="/private/var/vm/.*"/>
+          <pattern regex="/Previous Systems.*"/>
+          <pattern regex=".*/lost\+found/.*"/>
+          <pattern regex=".*/Microsoft User Data/Entourage Temp/.*"/>
+          <pattern regex=".*/iP.* Software Updates/.*"/>
+          <pattern regex=".*/Library/Application Support/SyncServices/.*"/>
+          <pattern regex=".*/Library/Logs/.*"/>
+          <pattern regex=".*/Library/Mail/Envelope Index"/>
+          <pattern regex=".*/Library/Mail/AvailableFeeds/.*"/>
+          <pattern regex=".*/Library/Mirrors/.*"/>
+          <pattern regex=".*/Library/PubSub/Database/.*"/>
+          <pattern regex=".*/Library/PubSub/Downloads/.*"/>
+          <pattern regex=".*/Library/PubSub/Feeds/.*"/>
+          <pattern regex=".*/Library/Safari/Icons.db"/>
+          <pattern regex=".*/Library/Safari/WebpageIcons.db"/>
+          <pattern regex=".*/Library/Safari/HistoryIndex.sk"/>
+          <pattern regex=".*/Library/Calendars/Calendar Cache"/>
+          <pattern regex=".*/iTunes/Album Artwork/Cache/.*"/>
+          <pattern regex=".*/iPhoto Library/iPod Photo Cache.*"/>
+          <pattern regex="/Network/Servers.*"/>
+          <pattern regex="/Users/Shared/SC Info.*"/>
+          <pattern regex="/net/.*"/>
+          <pattern regex="/private/var/automount/.*"/>
+          <pattern regex="/private/var/db/dhcpclient/.*"/>
+          <pattern regex="/private/var/db/fseventsd/.*"/>
+          <pattern regex="/System/Library/Extensions/Caches/.*"/>
+          <pattern regex=".*/Library/Saved Application State/.*"/>
+          <pattern regex=".*/Library/Mail/.*/Info.plist"/>
+          <pattern regex=".*/Library/Calendars/.*/Info.plist"/>
+          <pattern regex=".*MobileBackups/.*"/>
+        </macintosh>
+        <linux>
+          <pattern regex="/bin/"/>
+          <pattern regex="/boot/"/>
+          <pattern regex="/etc/"/>
+          <pattern regex="/initrd/"/>
+          <pattern regex="/lib/"/>
+          <pattern regex="/opt/"/>
+          <pattern regex="/sbin/"/>
+          <pattern regex="/usr/"/>
+          <pattern regex="/var/"/>
+          <pattern regex="/srv/"/>
+          <pattern regex="/sys/.*"/>
+          <pattern regex="/dev/.*"/>
+          <pattern regex="/proc/.*"/>
+          <pattern regex="/tmp/.*"/>
+          <pattern regex=".*/lost\+found/.*"/>
+          <pattern regex="/selinux/.*"/>
+        </linux>
+        <solaris>
+          <pattern regex="/bin/"/>
+          <pattern regex="/boot/"/>
+          <pattern regex="/etc/"/>
+          <pattern regex="/initrd/"/>
+          <pattern regex="/lib/"/>
+          <pattern regex="/opt/"/>
+          <pattern regex="/sbin/"/>
+          <pattern regex="/usr/"/>
+          <pattern regex="/var/"/>
+          <pattern regex="/srv/"/>
+          <pattern regex="/sys/.*"/>
+          <pattern regex="/dev/.*"/>
+          <pattern regex="/proc/.*"/>
+          <pattern regex="/tmp/.*"/>
+          <pattern regex=".*/lost\+found/.*"/>
+        </solaris>
+      </patternList>
+    </hiddenFiles>
+    <backupStatus>SAFE</backupStatus>
+    <networkInterfacesExcluded>
+      <patternList>
+        <windows/>
+        <macintosh/>
+        <linux/>
+        <solaris/>
+      </patternList>
+    </networkInterfacesExcluded>
+    <wirelessNetworksExcluded>
+      <patternList>
+        <windows/>
+        <macintosh/>
+        <linux/>
+        <solaris/>
+      </patternList>
+    </wirelessNetworksExcluded>
+    <minimumBatteryPercent>20</minimumBatteryPercent>
+    <backupConfig>
+      <backupSets>
+        <backupSet id="1">
+          <name>DESKTOP-SQ8HO7H Backup</name>
+          <priority>1</priority>
+          <backupPaths>
+            <lastModified>1480602211718</lastModified>
+            <pathset>
+              <paths os="Windows">
+                <path include="C:/Users/Patrick Malone/"/>
+                <path exclude="C:/Users/Patrick Malone/AppData/"/>
+                <path exclude="C:/Users/Patrick Malone/Evernote/"/>
+              </paths>
+            </pathset>
+            <excludeUser>
+              <patternList>
+                <windows/>
+                <macintosh>
+                  <pattern regex="(?i).*/backups.backupdb/.*"/>
+                </macintosh>
+                <linux/>
+                <solaris/>
+              </patternList>
+            </excludeUser>
+          </backupPaths>
+          <destinations>
+            <destination id="42"/>
+          </destinations>
+          <backupRunWindow>
+            <runWindow always="true" days="SMTWHFS" endTimeOfDay="06:00" startTimeOfDay="01:00"/>
+          </backupRunWindow>
+          <backupOpenFiles>true</backupOpenFiles>
+          <compression>ON</compression>
+          <dataDeDupAutoMaxFileSize>1073741824</dataDeDupAutoMaxFileSize>
+          <dataDeDupAutoMaxFileSizeForWan>0</dataDeDupAutoMaxFileSizeForWan>
+          <dataDeDuplication>AUTOMATIC</dataDeDuplication>
+          <encryptionEnabled>true</encryptionEnabled>
+          <scanInterval>86400000</scanInterval>
+          <scanTime>03:00</scanTime>
+          <watchFiles>true</watchFiles>
+          <retentionPolicy>
+            <backupFrequency>900000</backupFrequency>
+            <keepDeleted>true</keepDeleted>
+            <keepDeletedMinutes>0</keepDeletedMinutes>
+            <lastModified>1256016278684</lastModified>
+            <versionLastNinetyDaysInterval>1440</versionLastNinetyDaysInterval>
+            <versionLastWeekInterval>15</versionLastWeekInterval>
+            <versionLastYearInterval>10080</versionLastYearInterval>
+            <versionPrevYearsInterval>43200</versionPrevYearsInterval>
+          </retentionPolicy>
+          <visible>true</visible>
+        </backupSet>
+      </backupSets>
+      <cachePath>C:\ProgramData\CrashPlan\cache</cachePath>
+      <manifestPath>C:\ProgramData\CrashPlan\backupArchives/</manifestPath>
+      <softDeleteOfFiles>false</softDeleteOfFiles>
+      <smallBlockSize>4096</smallBlockSize>
+      <blockSize>32768</blockSize>
+      <largeBlockSize>131072</largeBlockSize>
+      <veryLargeBlockSize>524288</veryLargeBlockSize>
+      <noCompressBlockSize>524288</noCompressBlockSize>
+      <largeFileBytes>10485760</largeFileBytes>
+      <veryLargeFileBytes>1073741824</veryLargeFileBytes>
+      <maintenanceInterval>604800000</maintenanceInterval>
+      <maintenanceLoadWorkerDelay>300000</maintenanceLoadWorkerDelay>
+      <maintenanceLoadWorkerStartupDelay>60000</maintenanceLoadWorkerStartupDelay>
+      <numMaintenanceWorkers>1</numMaintenanceWorkers>
+      <verifyBlocksEnabled>true</verifyBlocksEnabled>
+      <verifyBlocksInterval>2419200000</verifyBlocksInterval>
+      <checksumBlocksEnabled>true</checksumBlocksEnabled>
+      <verifyRestoreEnabled>false</verifyRestoreEnabled>
+      <reduceEnabled>true</reduceEnabled>
+      <scrapPercentAllowed>10</scrapPercentAllowed>
+      <fileChangeCheckInterval>30000</fileChangeCheckInterval>
+      <manualFileChangeCheckInterval>30000</manualFileChangeCheckInterval>
+      <numBackupWorkers>4</numBackupWorkers>
+      <numReplaceWorkers>2</numReplaceWorkers>
+      <numCloseWorkers>10</numCloseWorkers>
+      <idleThrottleRate>80</idleThrottleRate>
+      <activeThrottleRate>20</activeThrottleRate>
+      <checksumIncomingBackupData>true</checksumIncomingBackupData>
+      <checksumIncomingRestoreData>true</checksumIncomingRestoreData>
+      <blockArchiveDataFileSize>4242538496</blockArchiveDataFileSize>
+      <weakBlockCacheLoadFactor>0.8</weakBlockCacheLoadFactor>
+      <strongBlockCacheLoadFactor>0.8</strongBlockCacheLoadFactor>
+      <strongBlockCacheMaxSize>30000</strongBlockCacheMaxSize>
+      <verifyBlocksLoadFactor>0.8</verifyBlocksLoadFactor>
+      <forceFileChannelDuringClose>false</forceFileChannelDuringClose>
+      <noCompressionPatterns>
+        <patternList>
+          <windows/>
+          <macintosh/>
+          <linux/>
+          <solaris/>
+        </patternList>
+      </noCompressionPatterns>
+      <excludeSystem>
+        <patternList>
+          <pattern regex=".*/(?:42|\d{8,}).*/(?:cp|~).*"/>
+          <pattern regex="(?i).*/CrashPlan.*/(?:cache|log|conf|manifest|upgrade)/.*"/>
+          <pattern regex=".*\.part"/>
+          <pattern regex=".*/iPhoto Library/iPod Photo Cache/.*"/>
+          <pattern regex=".*\.cprestoretmp.*"/>
+          <pattern regex=".*/Music/Subscription/.*"/>
+          <pattern regex="(?i).*/Google/Chrome/.*cache.*"/>
+          <pattern regex="(?i).*/Mozilla/Firefox/.*cache.*"/>
+          <pattern regex=".*/Google/Chrome/Safe Browsing.*"/>
+          <pattern regex="C:/ProgramData/CrashPlan/"/>
+          <windows>
+            <pattern regex=".*\$RECYCLE\.BIN/.*"/>
+            <pattern regex=".*/System Volume Information/.*"/>
+            <pattern regex=".*/RECYCLER/.*"/>
+            <pattern regex=".*/I386.*"/>
+            <pattern regex=".*/pagefile.sys"/>
+            <pattern regex=".*/MSOCache.*"/>
+            <pattern regex=".*UsrClass\.dat\.LOG"/>
+            <pattern regex=".*UsrClass\.dat"/>
+            <pattern regex=".*/Temporary Internet Files/.*"/>
+            <pattern regex="(?i).*/ntuser.dat.*"/>
+            <pattern regex=".*/Local Settings/Temp.*"/>
+            <pattern regex=".*/AppData/Local/Temp.*"/>
+            <pattern regex=".*/AppData/Temp.*"/>
+            <pattern regex=".*/Windows/Temp.*"/>
+            <pattern regex="(?i).*/Microsoft.*/Windows/.*\.log"/>
+            <pattern regex=".*/Microsoft.*/Windows/Cookies.*"/>
+            <pattern regex=".*/Microsoft.*/RecoveryStore.*"/>
+            <pattern regex="(?i).:/Config\\.Msi.*"/>
+            <pattern regex="(?i).*\\.rbf"/>
+            <pattern regex=".*/Windows/Installer.*"/>
+            <pattern regex=".*/Application Data/Application Data.*"/>
+            <pattern regex="(?i).:/Config\.Msi.*"/>
+            <pattern regex="(?i).*\.rbf"/>
+            <pattern regex="(?i).*/Microsoft.*/Windows/.*\.edb"/>
+            <pattern regex=".*\.tmp"/>
+            <pattern regex=".*\.tmp/.*"/>
+            <pattern regex=".*/swapfile.sys"/>
+          </windows>
+          <macintosh>
+            <pattern regex="/dev/.*"/>
+            <pattern regex=".*\.Trash.*"/>
+            <pattern regex="/\.vol/.*"/>
+            <pattern regex="/mach.sym"/>
+            <pattern regex="/mach_kernel"/>
+            <pattern regex=".*\.hotfiles\.btree.*"/>
+            <pattern regex=".*/Trash/.*"/>
+            <pattern regex=".*/Network Trash Folder/.*"/>
+            <pattern regex=".*/VM Storage"/>
+            <pattern regex=".*\.fseventsd.*"/>
+            <pattern regex=".*/Library/Caches/.*"/>
+            <pattern regex=".*\.Spotlight-.*/.*"/>
+            <pattern regex="/Network/.*"/>
+            <pattern regex="/tmp/.*"/>
+            <pattern regex="/cores/.*"/>
+            <pattern regex="/afs/.*"/>
+            <pattern regex="/automount/.*"/>
+            <pattern regex="/private/Network/.*"/>
+            <pattern regex="/private/tmp/.*"/>
+            <pattern regex="/private/var/tmp/.*"/>
+            <pattern regex="/private/var/folders/.*"/>
+            <pattern regex="/private/var/run/.*"/>
+            <pattern regex="/private/var/spool/postfix/.*"/>
+            <pattern regex="/private/var/vm/.*"/>
+            <pattern regex="/Previous Systems.*"/>
+            <pattern regex=".*/lost\+found/.*"/>
+            <pattern regex=".*/Microsoft User Data/Entourage Temp/.*"/>
+            <pattern regex=".*/iP.* Software Updates/.*"/>
+            <pattern regex=".*/Library/Application Support/SyncServices/.*"/>
+            <pattern regex=".*/Library/Logs/.*"/>
+            <pattern regex=".*/Library/Mail/Envelope Index"/>
+            <pattern regex=".*/Library/Mail/AvailableFeeds/.*"/>
+            <pattern regex=".*/Library/Mirrors/.*"/>
+            <pattern regex=".*/Library/PubSub/Database/.*"/>
+            <pattern regex=".*/Library/PubSub/Downloads/.*"/>
+            <pattern regex=".*/Library/PubSub/Feeds/.*"/>
+            <pattern regex=".*/Library/Safari/Icons.db"/>
+            <pattern regex=".*/Library/Safari/WebpageIcons.db"/>
+            <pattern regex=".*/Library/Safari/HistoryIndex.sk"/>
+            <pattern regex=".*/Library/Calendars/Calendar Cache"/>
+            <pattern regex=".*/iTunes/Album Artwork/Cache/.*"/>
+            <pattern regex=".*/iPhoto Library/iPod Photo Cache.*"/>
+            <pattern regex="/Desktop DB"/>
+            <pattern regex="/Desktop DF"/>
+            <pattern regex="/Network/Servers.*"/>
+            <pattern regex="/Users/Shared/SC Info.*"/>
+            <pattern regex="/net/.*"/>
+            <pattern regex="/private/var/automount/.*"/>
+            <pattern regex="/private/var/db/dhcpclient/.*"/>
+            <pattern regex="/private/var/db/fseventsd/.*"/>
+            <pattern regex="/System/Library/Extensions/Caches/.*"/>
+            <pattern regex=".*/Library/Saved Application State/.*"/>
+            <pattern regex=".*/Library/Mail/.*/Info.plist"/>
+            <pattern regex=".*/Library/Calendars/.*/Info.plist"/>
+            <pattern regex=".*/Code42/Code 42 Service.app/*"/>
+            <pattern regex=".*/Code42/SharePlan Helper.app/*"/>
+            <pattern regex=".*/Code42/SharePlanMenuItem.app/*"/>
+            <pattern regex="(?i).*/backups.backupdb/.*"/>
+            <pattern regex=".*MobileBackups/.*"/>
+          </macintosh>
+          <linux>
+            <pattern regex="/sys/.*"/>
+            <pattern regex="/dev/.*"/>
+            <pattern regex="/proc/.*"/>
+            <pattern regex="/tmp/.*"/>
+            <pattern regex=".*/lost\+found/.*"/>
+            <pattern regex="/selinux/.*"/>
+          </linux>
+          <solaris>
+            <pattern regex="/sys/.*"/>
+            <pattern regex="/dev/.*"/>
+            <pattern regex="/proc/.*"/>
+            <pattern regex="/tmp/.*"/>
+            <pattern regex=".*/lost\+found/.*"/>
+          </solaris>
+        </patternList>
+      </excludeSystem>
+      <hostSystemExcludes locked="true">
+        <patternList>
+          <windows/>
+          <macintosh/>
+          <linux/>
+          <solaris/>
+        </patternList>
+      </hostSystemExcludes>
+      <manualFileWatchPatterns>
+        <patternList>
+          <windows/>
+          <macintosh/>
+          <linux/>
+          <solaris/>
+        </patternList>
+      </manualFileWatchPatterns>
+    </backupConfig>
+  </serviceBackupConfig>
+  <socialNetworkConfig>
+    <computerConfigs>
+      <computerConfig id="42">
+        <guid>42</guid>
+        <manifestPath nil="true"/>
+        <manifestPathDefault>false</manifestPathDefault>
+        <allocatedCapacity>-1</allocatedCapacity>
+      </computerConfig>
+      <computerConfig id="4200">
+        <guid>4200</guid>
+        <manifestPath nil="true"/>
+        <manifestPathDefault>false</manifestPathDefault>
+        <allocatedCapacity>-1</allocatedCapacity>
+      </computerConfig>
+      <computerConfig id="770356609663976577">
+        <guid>770356609663976577</guid>
+        <manifestPath nil="true"/>
+        <manifestPathDefault>false</manifestPathDefault>
+        <allocatedCapacity>-1</allocatedCapacity>
+      </computerConfig>
+    </computerConfigs>
+    <userConfigs>
+      <userConfig id="1">
+        <userId>1</userId>
+        <manifestPath nil="true"/>
+        <manifestPathDefault>false</manifestPathDefault>
+      </userConfig>
+      <userConfig id="4374464">
+        <userId>4374464</userId>
+        <manifestPath nil="true"/>
+        <manifestPathDefault>false</manifestPathDefault>
+      </userConfig>
+    </userConfigs>
+  </socialNetworkConfig>
+  <migrationConfig>
+    <migrationEnabled>false</migrationEnabled>
+    <migrationFrequency>7</migrationFrequency>
+    <migrationLastBackupMs nil="true"/>
+    <migrationCmdLineArgsLoadState/>
+    <migrationCmdLineArgsScanState/>
+    <migrationToolType>USMT</migrationToolType>
+  </migrationConfig>
+</config>
+
+
+
+***************************************************************************************************

@@ -1,0 +1,807 @@
+;SIN                               53    495
+sIn
+;PIN                               16    532
+pIn
+;DIN                                1    547
+dIn
+;BIN                                9    539
+bIn
+;KIN                                2    546
+kIn
+;PUS                                0    548
+p^s
+;WIN                               55    493
+wIn
+;TIN                               12    536
+tIn
+;THIN                              92    456
+TIn
+;SHIN                               3    545
+SIn
+;GIN                               23    525
+JIn
+;CHIN                              25    523
+CIn
+;FIN                                2    546
+fIn
+;SIP                                2    546
+sIp
+;TIP                               22    526
+tIp
+;SIT                               67    481
+sIt
+;SICK                              51    497
+sIk
+;PICK                              55    493
+pIk
+;THICK                             67    481
+TIk
+;TICK                               3    545
+tIk
+;NICK                              25    523
+nIk
+;HICK                               1    547
+hIk
+;CHICK                              3    545
+CIk
+;WICK                               4    544
+wIk
+;FIT                               75    473
+fIt
+;PIT                               17    534
+pIt
+;FIZZ                               0    548
+fIz
+;BIT                              101    447
+bIt
+;BET                               20    528
+bEt
+;BAIT                               2    546
+bet
+;PIP                               23    525
+pIp
+;KIT                                2    546
+kIt
+;KITH                               0    548
+kIT
+;KID                               61    487
+kId
+;LID                               19    529
+lId
+;GUIDE                             36    512
+gAd
+;RID                               19    529
+rId
+;MID                                3    545
+mId
+;HID                                6    542
+hId
+;BID                               22    526
+bId
+;WIG                                1    547
+wIg
+;JIG                                8    540
+JIg
+;PIG                                8    540
+pIg
+;BIG                              360    233
+bIg
+;FIG                                2    546
+fIg
+;DIP                                6    542
+dIp
+;RIP                                6    542
+rIp
+;HIP                               10    538
+hIp
+;ZIP                                1    547
+zIp
+;CHIP                              17    531
+CIp
+;SHIP                              83    465
+SIp
+;GYP                                6    542
+JIp
+;DITCH                             10    538
+dIC
+;DISH                              16    532
+dIS
+;DIG                               10    538
+dIg
+;DID                             1044     88
+dId
+;DILL                              12    536
+dIl
+;SILL                               4    544
+sIl
+;TILL                              49    499
+tIl
+;HILL                              72    476
+hIl
+;FILL                              50    498
+fIl
+;WILL                            2245     47
+wIl
+;LOOK                             399    203
+lUk
+;NOOK                               0    548
+nUk
+;SHOOK                             57    491
+SUk
+;TOOK                             426    191
+tUk
+;HOOK                               5    543
+hUk
+;MOP                                3    545
+map
+;TOP                              204    345
+tap
+;SHOP                              63    485
+Sap
+;COP                               15    533
+kap
+;HOP                                2    546
+hap
+;POP                                7    541
+pap
+;RUST                              10    538
+r^st
+;LUST                               5    543
+l^st
+;JUST                             872    104
+J^st
+JEst
+JIst
+;DUST                              70    478
+d^st
+;MUST                            1012     92
+m^st
+;GUST                               2    546
+g^st
+;BUST                               7    541
+b^st
+;GUN                              118    430
+g^n
+;RUN                              221    336
+r^n
+;PUN                                1    547
+p^n
+;SHUN                               1    547
+S^n
+;BUN                                1    547
+b^n
+;NUN                                2    546
+n^n
+;SUN                              112    436
+s^n
+;FUN                               44    504
+f^n
+;SUB                                5    543
+s^b
+;SOP                                1    547
+sap
+;SUCK                               5    543
+s^k
+;SUCH                            1303     78
+s^C
+;PUTT                               7    541
+p^t
+;PUB                                1    547
+p^b
+;PUP                                2    546
+p^p
+;PUFF                               1    547
+p^f
+;PUG                                0    548
+p^g
+;DUB                                0    548
+d^b
+;DUN                                1    547
+d^n
+;DUD                                1    547
+d^d
+;DULL                              27    521
+d^l
+;DUCK                               9    539
+d^k
+;DUG                               15    533
+d^g
+;BUS                               34    514
+b^s
+;BUFF                               5    543
+b^f
+;BUT                             4381     25
+b^t
+;BUZZ                              13    535
+b^z
+;BOOT                              13    535
+but
+;BUG                                4    544
+b^g
+;CUFF                               1    547
+k^f
+;CUD                                1    547
+k^d
+;CUP                               45    503
+k^p
+;CUB                                0    548
+k^b
+;CUSS                               0    548
+k^s
+;HOT                              130    418
+hat
+;TOT                                0    548
+tat
+;GOT                              487    173
+gat
+;POT                               28    520
+pat
+;SOT                                0    548
+sat
+;SHOT                             126    435
+Sat
+;JOT                                1    547
+Jat
+;HEALTH                           105    443
+hElT
+;HEAVE                              2    546
+hiv
+;HEAL                               2    546
+hil
+;HEATH                              0    548
+hiT
+;HEAP                              14    534
+hip
+;JEEP                              16    532
+Jip
+;CHEAP                             24    524
+Cip
+;SHEEP                             23    525
+Sip
+;SEEP                               2    546
+sip
+;PEACE                            198    351
+pis
+;PEACH                              3    545
+piC
+;PEAL                               1    547
+pil
+;PEAK                              16    532
+pik
+;PEAT                               0    548
+pit
+;PEAS                              24    524
+piz
+;TEAM                              83    465
+tim
+;TEACH                             41    507
+tiC
+;TEAK                               0    548
+tik
+;TEAL                               0    548
+til
+;BEAN                               5    543
+bin
+;BEAD                               1    547
+bid
+;BEAT                              68    480
+bit
+;KEEL                               6    542
+kil
+;REEL                               2    546
+ril
+;FEEL                             216    334
+fil
+;EEL                                2    546
+il
+;MEAT                              45    503
+mit
+;HEAT                              97    451
+hit
+;NEAT                              21    527
+nit
+;SEEM                             229    322
+sim
+;SEEN                             279    283
+sin
+;SEAT                              54    494
+sit
+;SEED                              41    507
+sid
+;SEETHE                             0    548
+siD
+;SEEK                              69    479
+sik
+;RAW                               43    505
+rc
+;PAW                                3    545
+pc
+;SAW                              352    237
+sc
+;LAW                              299    266
+lc
+;RAKE                              11    537
+rek
+;JAKE                               6    542
+Jek
+;SHAKE                             17    531
+Sek
+;RAY                               19    529
+re
+;RAVE                               0    548
+rev
+;RACE                             107    445
+res
+;RATE                             209    340
+ret
+;CAME                             622    144
+kem
+;SAKE                              41    507
+sek
+;GALE                               2    546
+gel
+;MALE                              37    511
+mel
+;PALE                              58    490
+pel
+;SHALE                              0    548
+Sel
+;JAIL                              21    527
+Jel
+;TALE                              21    527
+tel
+;PARK                              94    454
+park
+;MARK                              83    465
+mark
+;SHARK                              0    548
+Sark
+;RENT                              21    527
+rEnt
+;DENT                               2    546
+dEnt
+;GENT                               0    548
+JEnt
+;TENT                              20    528
+tEnt
+;SENT                             145    403
+sEnt
+;BENT                              34    514
+bEnt
+;TOIL                               1    547
+tOl
+;BOIL                              12    536
+bOl
+;SOIL                              54    494
+sOl
+;HOLD                             169    379
+hold
+;TOLD                             413    197
+told
+;COLD                             171    377
+kold
+;GOLD                              52    496
+gold
+;SOLD                              47    501
+sold
+;SAG                                4    544
+s@g
+;SAT                              150    398
+s@t
+;SAP                                1    547
+s@p
+;ZAP                                0    548
+z@p
+;SACK                               8    540
+s@k
+;SASS                               0    548
+s@s
+;SAD                               35    513
+s@d
+;PAN                               16    532
+p@n
+;PAD                                8    540
+p@d
+;PAT                               35    513
+p@t
+;PASS                              89    459
+p@s
+;PATH                              44    504
+p@T
+;TAB                                1    547
+t@b
+;TAN                                9    539
+t@n
+;TACK                               4    544
+t@k
+;TAM                                0    548
+t@m
+;TAP                               18    530
+t@p
+;BATH                              26    522
+b@T
+;BADGE                              5    543
+b@J
+;BAT                               18    530
+b@t
+;BOUGHT                            56    492
+bct
+;BASS                              16    532
+b@s
+bes
+;BACK                             966     94
+b@k
+;MASS                              98    450
+m@s
+;MATH                               4    544
+m@T
+;MAD                               39    509
+m@d
+;MAP                               13    535
+m@p
+;MAN                             1224     82
+m@n
+;MAT                                5    543
+m@t
+;GAME                             123    425
+gem
+;SHAME                             21    527
+Sem
+;SAME                             686    129
+sem
+;TAME                               5    543
+tem
+;SANE                               8    540
+sen
+;SAFE                              58    490
+sef
+;SALE                              44    504
+sel
+;SAVE                              62    486
+sev
+;CAVE                               9    539
+kev
+;SHAVE                              6    542
+Sev
+;CAPE                              20    528
+kep
+;CASE                             362    231
+kes
+;PAY                              172    376
+pe
+;GAY                               30    518
+ge
+;SAY                              504    165
+se
+;WAY                              908     98
+we
+;DAY                              698    128
+de
+;THEY                            3624     30
+De
+;LAZE                               1    547
+lez
+;LACE                               7    541
+les
+;LAKE                              54    494
+lek
+;LAME                               2    546
+lem
+;LAY                              143    409
+le
+;LATE                             179    370
+let
+;PACE                              43    505
+pes
+;PAGE                              66    482
+peJ
+;PAVE                               2    546
+pev
+;VEST                               4    544
+vEst
+;REST                             163    385
+rEst
+;ZEST                               5    543
+zEst
+;TEST                             119    429
+tEst
+;WEST                             242    316
+wEst
+;DEN                                2    546
+dEn
+;HEN                               21    527
+hEn
+;TEN                              164    384
+*10
+;ZEN                               26    522
+zEn
+;PEN                               18    530
+pEn
+;MEN                              763    117
+mEn
+;THEN                            1379     72
+DEn
+;SHED                              11    537
+SEd
+;BED                              127    421
+bEd
+;WED                                2    546
+wEd
+;SAID                            1962     53
+sEd
+;CLUE                              15    533
+klu
+;SHOE                              14    534
+Su
+;GLUE                               8    540
+glu
+;DUE                              142    406
+du
+;RUE                                6    542
+ru
+;SCREW                             21    527
+skru
+;CREW                              36    512
+kru
+;GREW                              65    483
+gru
+;DREW                              68    480
+dru
+;SHREW                              0    548
+Sru
+;ZOO                                9    539
+zu
+;MOO                                0    548
+mu
+;BOO                                1    547
+bu
+;TOO                              834    108
+tu
+;COUCH                             12    536
+kWC
+;CROUCH                             7    541
+krWC
+;POUCH                              2    546
+pWC
+;GROUND                           186    363
+grWnd
+;BOUND                             42    506
+bWnd
+;HOUND                              7    541
+hWnd
+;ROUND                             80    473
+rWnd
+;SOUND                            204    345
+sWnd
+;BITE                              10    538
+bAt
+;CITE                               7    541
+sAt
+;MITE                               1    547
+mAt
+;KITE                               1    547
+kAt
+;BLIGHT                             2    546
+blAt
+;BRIGHT                            87    461
+brAt
+;FIGHT                             98    450
+fAt
+;FLIGHT                            46    502
+flAt
+;PANE                               3    545
+pen
+;BOW                               15    533
+bo
+;FLOW                              68    480
+flo
+;ROW                               35    513
+ro
+;THROW                             42    506
+Tro
+;CROW                               2    546
+kro
+;GLOW                              16    532
+glo
+;LOW                              182    375
+lo
+;SEW                                6    542
+so
+;SHOW                             288    274
+So
+;GOAT                               6    542
+got
+;THROAT                            51    497
+Trot
+;MOAT                               0    548
+mot
+;BATCH                              5    543
+b@C
+;BASH                               0    548
+b@S
+;MATCH                             41    507
+m@C
+;CATCH                             43    505
+k@C
+kEC
+;CACHE                              1    547
+k@S
+;LATCH                              5    543
+l@C
+;LASH                               6    542
+l@S
+;PATCH                             13    535
+p@C
+;THATCH                             0    548
+T@C
+;RASH                               1    547
+r@S
+;SASH                               3    545
+s@S
+;DASH                              11    537
+d@S
+;SOW                                3    545
+so
+sW
+;CHOW                               2    546
+CW
+;CHASE                             18    530
+Ces
+;SUM                               45    503
+s^m
+;PUCK                               0    548
+p^k
+;BALE                               5    543
+bel
+;PACK                              25    523
+p@k
+;NAME                             300    269
+nem
+;HIT                              114    434
+hIt
+;LICK                               3    545
+lIk
+;KICK                              15    533
+kIk
+;FIB                                0    548
+fIb
+;WIT                               20    528
+wIt
+;KISS                              17    531
+kIs
+;RIG                                5    543
+rIg
+;LIP                               18    530
+lIp
+;DIM                               19    529
+dIm
+;PILL                              15    533
+pIl
+;SHILL                              1    547
+SIl
+;BILL                             143    405
+bIl
+;KILL                              63    485
+kIl
+;COOK                              47    501
+kUk
+;BOOK                             197    352
+bUk
+;LOP                                1    547
+lap
+;BOP                                3    545
+bap
+;CHOP                               3    545
+Cap
+;HUN                                2    546
+h^n
+;SUP                                1    547
+s^p
+;BUCK                              20    528
+b^k
+;BOAT                              72    476
+bot
+;CUT                              198    357
+k^t
+;LOT                              144    421
+lat
+;NOT                             4610     23
+nat
+;HEAR                             153    395
+hir
+;TEASE                              6    542
+tiz
+;TEAR                              11    537
+tEr
+tir
+;BEACH                             61    487
+biC
+;BEAK                               0    548
+bik
+;BEAM                              21    527
+bim
+;FEAT                               6    542
+fit
+;SHEET                             45    503
+Sit
+;JAW                               16    532
+Jc
+;THAW                               6    542
+Tc
+;RAZE                               0    548
+rez
+;LARK                               2    546
+lark
+;DARK                             185    364
+dark
+;BARK                              14    534
+bark
+;HARK                               3    545
+hark
+;WENT                             508    164
+wEnt
+;FOIL                              20    528
+fOl
+;COIL                               6    542
+kOl
+;OIL                               95    453
+Ol
+;FOLD                              10    541
+fold
+;DAME                               7    541
+dem
+;FAME                              18    530
+fem
+;CANE                              12    536
+ken
+;CAKE                              13    535
+kek
+;MAY                             1401     71
+me
+;LANE                              30    518
+len
+;NEST                              20    528
+nEst
+;BEST                             351    238
+bEst
+;FED                               41    507
+fEd
+;RED                              197    352
+rEd
+;LED                              132    416
+lEd
+;BLUE                             143    405
+blu
+;JEW                               26    522
+Ju
+;TRUE                             231    320
+tru
+;BREW                               4    544
+bru
+;WOO                                3    545
+wu
+;OUCH                               0    548
+WC
+;VOUCH                              0    548
+vWC
+;QUITE                            281    281
+kwAt
+;FRIGHT                             2    546
+frAt
+;BLOW                              33    515
+blo
+;MOW                                0    548
+mo
+mW
+;KNOW                             683    131
+no
+;SLOW                              60    488
+slo
+;STOW                               0    548
+sto
+;TOW                                1    547
+to
+;COAT                              43    505
+kot
+;QUID                               0    548
+kwId

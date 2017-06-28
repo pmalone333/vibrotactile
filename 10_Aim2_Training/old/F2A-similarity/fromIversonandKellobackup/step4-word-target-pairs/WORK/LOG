@@ -1,0 +1,1137 @@
+<I>19990615 144850 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990615 144850 C:\STUDIES\TACTIL~1\STIMUL~1\STEP4-~1\/EXE/RECODE.EXE ==>
+<I>19990615 144850         on out: <.\work\log> as logFile
+<I>19990615 144850 inFile: lexicon
+<I>19990615 144850 outFile: v-vis.lex
+<I>19990615 144850 ready to start reading lexicon
+<I>19990615 144850 readPhlex() - start
+<I>19990615 144850 readPhelx(): nRecsRead: <400>
+<I>19990615 144850 readPhlex(): nLexRecs:  <399>
+<I>19990615 144850 399 records have been read.
+<I>19990615 144850 concatHomophones(): start
+<I>19990615 144850 concatHomophones(): nLexRecs: <399>
+<I>19990615 144850 concatHomophones(): sort complete
+<I>19990615 144850 concatHomophones(): sort complete (after concat)
+<I>19990615 144850 concatHomophones(): nDeleted: <1>
+<I>19990615 144850 concatHomophones(): nLexRecs: <398>
+<I>19990615 144850 concatHomophones(): end
+<I>19990615 144850 readPhlex(): end
+<I>19990615 144850 done reading lexicon
+<I>19990615 144850 Lexicon file:            lexicon
+<I>19990615 144850 Recode definition file:  v-vis.map
+<I>19990615 144850 Output file:             v-vis.lex
+<I>19990615 144850 g_flags.noPrompt: <1>
+<I>19990615 144850 reMap(): start
+<I>19990615 144901 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990615 144901 C:\STUDIES\TACTIL~1\STIMUL~1\STEP4-~1\/EXE/RECODE.EXE ==>
+<I>19990615 144901         on out: <.\work\log> as logFile
+<I>19990615 144901 inFile: lexicon
+<I>19990615 144901 outFile: v-vis.lex
+<I>19990615 144901 ready to start reading lexicon
+<I>19990615 144901 readPhlex() - start
+<I>19990615 144901 readPhelx(): nRecsRead: <400>
+<I>19990615 144901 readPhlex(): nLexRecs:  <399>
+<I>19990615 144901 399 records have been read.
+<I>19990615 144901 concatHomophones(): start
+<I>19990615 144901 concatHomophones(): nLexRecs: <399>
+<I>19990615 144901 concatHomophones(): sort complete
+<I>19990615 144901 concatHomophones(): sort complete (after concat)
+<I>19990615 144901 concatHomophones(): nDeleted: <1>
+<I>19990615 144901 concatHomophones(): nLexRecs: <398>
+<I>19990615 144901 concatHomophones(): end
+<I>19990615 144901 readPhlex(): end
+<I>19990615 144901 done reading lexicon
+<I>19990615 144901 Lexicon file:            lexicon
+<I>19990615 144901 Recode definition file:  v-vis.map
+<I>19990615 144901 Output file:             v-vis.lex
+<I>19990615 144901 g_flags.noPrompt: <1>
+<I>19990615 144901 reMap(): start
+<I>19990615 144901 Cluster[1]: <b> represents ==>
+   b m p 
+<I>19990615 144901 Cluster[2]: <v> represents ==>
+   f v 
+<I>19990615 144901 Cluster[3]: <D> represents ==>
+   D T 
+<I>19990615 144901 Cluster[4]: <w> represents ==>
+   w 
+<I>19990615 144901 Cluster[5]: <r> represents ==>
+   r 
+<I>19990615 144901 Cluster[6]: <d> represents ==>
+   C J S Z d 
+<I>19990615 144901 Cluster[7]: <z> represents ==>
+   s t z 
+<I>19990615 144901 Cluster[8]: <g> represents ==>
+   a g h k 
+<I>19990615 144901 Cluster[9]: <n> represents ==>
+   l n 
+<I>19990615 144901 reMap(): nRecsProcessed: <398>
+<I>19990615 144901 reMap(): end
+<I>19990615 144901 rcStat: start
+<I>19990615 144901 rcStat: nLexRecs: <398>
+<I>19990615 144901 rcStat(): build the sort list
+<I>19990615 144901 rcStat: start sort
+<I>19990615 144901 rcStat: sort complete
+<I>19990615 144901 rcStat(): nLexRecs: <398>
+<I>19990615 144901 rcStat(): recsProcessed: <398>
+<I>19990615 144901 rcStat(): end
+<I>19990615 144901 run complete
+<I>19990615 144901 RECODE.EXE:programEnd
+<I>19990615 144901 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990615 145310 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990615 145310 C:\PHLEX\RECODE.EXE ==>
+<I>19990615 145310         on out: <.\work\log> as logFile
+<I>19990615 145310 inFile: lexicon
+<I>19990615 145310 outFile: v-vis.lex
+<I>19990615 145310 ready to start reading lexicon
+<I>19990615 145310 readPhlex() - start
+<I>19990615 145310 readPhelx(): nRecsRead: <400>
+<I>19990615 145310 readPhlex(): nLexRecs:  <399>
+<I>19990615 145310 399 records have been read.
+<I>19990615 145310 concatHomophones(): start
+<I>19990615 145310 concatHomophones(): nLexRecs: <399>
+<I>19990615 145310 concatHomophones(): sort complete
+<I>19990615 145310 concatHomophones(): sort complete (after concat)
+<I>19990615 145310 concatHomophones(): nDeleted: <1>
+<I>19990615 145310 concatHomophones(): nLexRecs: <398>
+<I>19990615 145310 concatHomophones(): end
+<I>19990615 145310 readPhlex(): end
+<I>19990615 145310 done reading lexicon
+<I>19990615 145310 Lexicon file:            lexicon
+<I>19990615 145310 Recode definition file:  v-vis.map
+<I>19990615 145310 Output file:             v-vis.lex
+<I>19990615 145310 g_flags.noPrompt: <1>
+<I>19990615 145310 reMap(): start
+<I>19990615 145310 Cluster[1]: <b> represents ==>
+   b m p 
+<I>19990615 145310 Cluster[2]: <v> represents ==>
+   f v 
+<I>19990615 145310 Cluster[3]: <D> represents ==>
+   D T 
+<I>19990615 145310 Cluster[4]: <w> represents ==>
+   w 
+<I>19990615 145310 Cluster[5]: <r> represents ==>
+   r 
+<I>19990615 145310 Cluster[6]: <d> represents ==>
+   C J S Z d 
+<I>19990615 145310 Cluster[7]: <z> represents ==>
+   s t z 
+<I>19990615 145310 Cluster[8]: <g> represents ==>
+   a g h k 
+<I>19990615 145310 Cluster[9]: <n> represents ==>
+   l n 
+<I>19990615 145310 reMap(): nRecsProcessed: <398>
+<I>19990615 145310 reMap(): end
+<I>19990615 145310 rcStat: start
+<I>19990615 145310 rcStat: nLexRecs: <398>
+<I>19990615 145310 rcStat(): build the sort list
+<I>19990615 145310 rcStat: start sort
+<I>19990615 145310 rcStat: sort complete
+<I>19990615 145310 rcStat(): nLexRecs: <398>
+<I>19990615 145310 rcStat(): recsProcessed: <398>
+<I>19990615 145310 rcStat(): end
+<I>19990615 145310 run complete
+<I>19990615 145310 RECODE.EXE:programEnd
+<I>19990615 145310 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990615 145326 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990615 145326 C:\PHLEX\RECODE.EXE ==>
+<I>19990615 145326         on out: <.\work\log> as logFile
+<I>19990615 145326 inFile: lexicon
+<I>19990615 145326 outFile: v-vis.lex
+<I>19990615 145326 ready to start reading lexicon
+<I>19990615 145326 readPhlex() - start
+<I>19990615 145326 readPhelx(): nRecsRead: <400>
+<I>19990615 145326 readPhlex(): nLexRecs:  <399>
+<I>19990615 145326 399 records have been read.
+<I>19990615 145326 concatHomophones(): start
+<I>19990615 145326 concatHomophones(): nLexRecs: <399>
+<I>19990615 145326 concatHomophones(): sort complete
+<I>19990615 145326 concatHomophones(): sort complete (after concat)
+<I>19990615 145326 concatHomophones(): nDeleted: <1>
+<I>19990615 145326 concatHomophones(): nLexRecs: <398>
+<I>19990615 145326 concatHomophones(): end
+<I>19990615 145326 readPhlex(): end
+<I>19990615 145326 done reading lexicon
+<I>19990615 145326 Lexicon file:            lexicon
+<I>19990615 145326 Recode definition file:  v-vis.map
+<I>19990615 145326 Output file:             v-vis.lex
+<I>19990615 145326 g_flags.noPrompt: <1>
+<I>19990615 145326 reMap(): start
+<I>19990615 145326 Cluster[1]: <b> represents ==>
+   b m p 
+<I>19990615 145326 Cluster[2]: <v> represents ==>
+   f v 
+<I>19990615 145326 Cluster[3]: <D> represents ==>
+   D T 
+<I>19990615 145326 Cluster[4]: <w> represents ==>
+   w 
+<I>19990615 145326 Cluster[5]: <r> represents ==>
+   r 
+<I>19990615 145326 Cluster[6]: <d> represents ==>
+   C J S Z d 
+<I>19990615 145326 Cluster[7]: <z> represents ==>
+   s t z 
+<I>19990615 145326 Cluster[8]: <g> represents ==>
+   a g h k 
+<I>19990615 145326 Cluster[9]: <n> represents ==>
+   l n 
+<I>19990615 145326 reMap(): nRecsProcessed: <398>
+<I>19990615 145326 reMap(): end
+<I>19990615 145326 rcStat: start
+<I>19990615 145326 rcStat: nLexRecs: <398>
+<I>19990615 145326 rcStat(): build the sort list
+<I>19990615 145326 rcStat: start sort
+<I>19990615 145326 rcStat: sort complete
+<I>19990615 145326 rcStat(): nLexRecs: <398>
+<I>19990615 145326 rcStat(): recsProcessed: <398>
+<I>19990615 145326 rcStat(): end
+<I>19990615 145326 run complete
+<I>19990615 145326 RECODE.EXE:programEnd
+<I>19990615 145326 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990615 153049 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990615 153049 C:\PHLEX\RECODE.EXE ==>
+<I>19990615 153049         on out: <.\work\log> as logFile
+<I>19990615 153049 inFile: lexicon
+<I>19990615 153049 outFile: v-vis.lex
+<I>19990615 153049 ready to start reading lexicon
+<I>19990615 153049 readPhlex() - start
+<I>19990615 153049 readPhelx(): nRecsRead: <400>
+<I>19990615 153049 readPhlex(): nLexRecs:  <399>
+<I>19990615 153049 399 records have been read.
+<I>19990615 153049 concatHomophones(): start
+<I>19990615 153049 concatHomophones(): nLexRecs: <399>
+<I>19990615 153049 concatHomophones(): sort complete
+<I>19990615 153049 concatHomophones(): sort complete (after concat)
+<I>19990615 153049 concatHomophones(): nDeleted: <1>
+<I>19990615 153049 concatHomophones(): nLexRecs: <398>
+<I>19990615 153049 concatHomophones(): end
+<I>19990615 153049 readPhlex(): end
+<I>19990615 153049 done reading lexicon
+<I>19990615 153049 Lexicon file:            lexicon
+<I>19990615 153049 Recode definition file:  v-vis.map
+<I>19990615 153049 Output file:             v-vis.lex
+<I>19990615 153049 g_flags.noPrompt: <1>
+<I>19990615 153049 reMap(): start
+<I>19990615 153049 Cluster[1]: <b> represents ==>
+   b m p 
+<I>19990615 153049 Cluster[2]: <v> represents ==>
+   f v 
+<I>19990615 153049 Cluster[3]: <D> represents ==>
+   D T 
+<I>19990615 153049 Cluster[4]: <w> represents ==>
+   w 
+<I>19990615 153049 Cluster[5]: <r> represents ==>
+   r 
+<I>19990615 153049 Cluster[6]: <d> represents ==>
+   C J S Z d 
+<I>19990615 153049 Cluster[7]: <z> represents ==>
+   s t z 
+<I>19990615 153049 Cluster[8]: <g> represents ==>
+   a g h k 
+<I>19990615 153049 Cluster[9]: <n> represents ==>
+   l n 
+<I>19990615 153049 reMap(): nRecsProcessed: <398>
+<I>19990615 153049 reMap(): end
+<I>19990615 153049 rcStat: start
+<I>19990615 153049 rcStat: nLexRecs: <398>
+<I>19990615 153049 rcStat(): build the sort list
+<I>19990615 153049 rcStat: start sort
+<I>19990615 153049 rcStat: sort complete
+<I>19990615 153049 rcStat(): nLexRecs: <398>
+<I>19990615 153049 rcStat(): recsProcessed: <398>
+<I>19990615 153049 rcStat(): end
+<I>19990615 153049 run complete
+<I>19990615 153049 RECODE.EXE:programEnd
+<I>19990615 153049 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990816 121209 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990816 121209 C:\PHLEX\RECODE.EXE ==>
+<I>19990816 121209         on out: <.\work\log> as logFile
+<I>19990816 121209 inFile: lexicon
+<I>19990816 121209 outFile: F1A-exc.lex
+<E>19990816 121209 C:\PHLEX\RECODE.EXE: cannot open <F1A-exc.map> as defFile
+<I>19990816 121255 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990816 121255 C:\PHLEX\RECODE.EXE ==>
+<I>19990816 121255         on out: <.\work\log> as logFile
+<I>19990816 121255 inFile: lexicon
+<I>19990816 121255 outFile: f2a-exc.lex
+<I>19990816 121255 ready to start reading lexicon
+<I>19990816 121255 readPhlex() - start
+<I>19990816 121255 readPhelx(): nRecsRead: <400>
+<I>19990816 121255 readPhlex(): nLexRecs:  <399>
+<I>19990816 121255 399 records have been read.
+<I>19990816 121255 concatHomophones(): start
+<I>19990816 121255 concatHomophones(): nLexRecs: <399>
+<I>19990816 121255 concatHomophones(): sort complete
+<I>19990816 121255 concatHomophones(): sort complete (after concat)
+<I>19990816 121255 concatHomophones(): nDeleted: <1>
+<I>19990816 121255 concatHomophones(): nLexRecs: <398>
+<I>19990816 121255 concatHomophones(): end
+<I>19990816 121255 readPhlex(): end
+<I>19990816 121255 done reading lexicon
+<I>19990816 121255 Lexicon file:            lexicon
+<I>19990816 121255 Recode definition file:  f2a-exc.map
+<I>19990816 121255 Output file:             f2a-exc.lex
+<I>19990816 121255 g_flags.noPrompt: <1>
+<I>19990816 121255 reMap(): start
+<I>19990816 121255 Cluster[1]: <p> represents ==>
+   p 
+<I>19990816 121255 Cluster[2]: <b> represents ==>
+   b 
+<I>19990816 121255 Cluster[3]: <m> represents ==>
+   m 
+<I>19990816 121255 Cluster[4]: <v> represents ==>
+   f v 
+<I>19990816 121255 Cluster[5]: <z> represents ==>
+   D T s z 
+<I>19990816 121255 Cluster[6]: <w> represents ==>
+   w 
+<I>19990816 121255 Cluster[7]: <r> represents ==>
+   l r 
+<I>19990816 121255 Cluster[8]: <J> represents ==>
+   C J 
+<I>19990816 121255 Cluster[9]: <Z> represents ==>
+   S Z 
+<I>19990816 121255 Cluster[10]: <t> represents ==>
+   t 
+<I>19990816 121255 Cluster[11]: <d> represents ==>
+   d 
+<I>19990816 121255 Cluster[12]: <k> represents ==>
+   k 
+<I>19990816 121255 Cluster[13]: <g> represents ==>
+   g 
+<I>19990816 121255 Cluster[14]: <n> represents ==>
+   n 
+<I>19990816 121255 Cluster[15]: <h> represents ==>
+   h 
+<I>19990816 121255 Cluster[16]: <a> represents ==>
+   a 
+<I>19990816 121255 reMap(): nRecsProcessed: <398>
+<I>19990816 121255 reMap(): end
+<I>19990816 121255 rcStat: start
+<I>19990816 121255 rcStat: nLexRecs: <398>
+<I>19990816 121255 rcStat(): build the sort list
+<I>19990816 121255 rcStat: start sort
+<I>19990816 121255 rcStat: sort complete
+<I>19990816 121255 rcStat(): nLexRecs: <398>
+<I>19990816 121255 rcStat(): recsProcessed: <398>
+<I>19990816 121255 rcStat(): end
+<I>19990816 121255 run complete
+<I>19990816 121255 RECODE.EXE:programEnd
+<I>19990816 121255 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990816 121317 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990816 121317 C:\PHLEX\RECODE.EXE ==>
+<I>19990816 121317         on out: <.\work\log> as logFile
+<I>19990816 121317 inFile: lexicon
+<I>19990816 121317 outFile: f2a-vis.lex
+<I>19990816 121317 ready to start reading lexicon
+<I>19990816 121317 readPhlex() - start
+<I>19990816 121317 readPhelx(): nRecsRead: <400>
+<I>19990816 121317 readPhlex(): nLexRecs:  <399>
+<I>19990816 121317 399 records have been read.
+<I>19990816 121317 concatHomophones(): start
+<I>19990816 121317 concatHomophones(): nLexRecs: <399>
+<I>19990816 121317 concatHomophones(): sort complete
+<I>19990816 121317 concatHomophones(): sort complete (after concat)
+<I>19990816 121317 concatHomophones(): nDeleted: <1>
+<I>19990816 121317 concatHomophones(): nLexRecs: <398>
+<I>19990816 121317 concatHomophones(): end
+<I>19990816 121317 readPhlex(): end
+<I>19990816 121317 done reading lexicon
+<I>19990816 121317 Lexicon file:            lexicon
+<I>19990816 121317 Recode definition file:  f2a-vis.map
+<I>19990816 121317 Output file:             f2a-vis.lex
+<I>19990816 121317 g_flags.noPrompt: <1>
+<I>19990816 121317 reMap(): start
+<I>19990816 121317 Cluster[1]: <b> represents ==>
+   D T b f h p s v z 
+<I>19990816 121317 Cluster[2]: <m> represents ==>
+   a m 
+<I>19990816 121317 Cluster[3]: <w> represents ==>
+   w 
+<I>19990816 121317 Cluster[4]: <r> represents ==>
+   l r 
+<I>19990816 121317 Cluster[5]: <J> represents ==>
+   C J S Z 
+<I>19990816 121317 Cluster[6]: <d> represents ==>
+   d t 
+<I>19990816 121317 Cluster[7]: <g> represents ==>
+   g k 
+<I>19990816 121317 Cluster[8]: <n> represents ==>
+   n 
+<I>19990816 121317 reMap(): nRecsProcessed: <398>
+<I>19990816 121317 reMap(): end
+<I>19990816 121317 rcStat: start
+<I>19990816 121317 rcStat: nLexRecs: <398>
+<I>19990816 121317 rcStat(): build the sort list
+<I>19990816 121317 rcStat: start sort
+<I>19990816 121317 rcStat: sort complete
+<I>19990816 121317 rcStat(): nLexRecs: <398>
+<I>19990816 121317 rcStat(): recsProcessed: <398>
+<I>19990816 121317 rcStat(): end
+<I>19990816 121317 run complete
+<I>19990816 121317 RECODE.EXE:programEnd
+<I>19990816 121317 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990816 121321 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990816 121321 C:\PHLEX\RECODE.EXE ==>
+<I>19990816 121321         on out: <.\work\log> as logFile
+<I>19990816 121321 inFile: lexicon
+<I>19990816 121321 outFile: f2a-inc.lex
+<I>19990816 121321 ready to start reading lexicon
+<I>19990816 121321 readPhlex() - start
+<I>19990816 121321 readPhelx(): nRecsRead: <400>
+<I>19990816 121321 readPhlex(): nLexRecs:  <399>
+<I>19990816 121321 399 records have been read.
+<I>19990816 121321 concatHomophones(): start
+<I>19990816 121321 concatHomophones(): nLexRecs: <399>
+<I>19990816 121321 concatHomophones(): sort complete
+<I>19990816 121321 concatHomophones(): sort complete (after concat)
+<I>19990816 121321 concatHomophones(): nDeleted: <1>
+<I>19990816 121321 concatHomophones(): nLexRecs: <398>
+<I>19990816 121321 concatHomophones(): end
+<I>19990816 121321 readPhlex(): end
+<I>19990816 121321 done reading lexicon
+<I>19990816 121321 Lexicon file:            lexicon
+<I>19990816 121321 Recode definition file:  f2a-inc.map
+<I>19990816 121321 Output file:             f2a-inc.lex
+<I>19990816 121321 g_flags.noPrompt: <1>
+<I>19990816 121321 reMap(): start
+<I>19990816 121321 Cluster[1]: <b> represents ==>
+   D T a b f h m n p s v z 
+<I>19990816 121321 Cluster[2]: <r> represents ==>
+   l r w 
+<I>19990816 121321 Cluster[3]: <Z> represents ==>
+   C J S Z 
+<I>19990816 121321 Cluster[4]: <d> represents ==>
+   d g k t 
+<I>19990816 121321 reMap(): nRecsProcessed: <398>
+<I>19990816 121321 reMap(): end
+<I>19990816 121321 rcStat: start
+<I>19990816 121321 rcStat: nLexRecs: <398>
+<I>19990816 121321 rcStat(): build the sort list
+<I>19990816 121321 rcStat: start sort
+<I>19990816 121321 rcStat: sort complete
+<I>19990816 121321 rcStat(): nLexRecs: <398>
+<I>19990816 121321 rcStat(): recsProcessed: <398>
+<I>19990816 121321 rcStat(): end
+<I>19990816 121321 run complete
+<I>19990816 121321 RECODE.EXE:programEnd
+<I>19990816 121321 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990617 081714 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990617 081714 C:\PHLEX\RECODE.EXE ==>
+<I>19990617 081714         on out: <.\work\log> as logFile
+<I>19990617 081714 inFile: lexicon
+<I>19990617 081714 outFile: F2A-exc.lex
+<I>19990617 081714 ready to start reading lexicon
+<I>19990617 081714 readPhlex() - start
+<I>19990617 081714 readPhelx(): nRecsRead: <400>
+<I>19990617 081714 readPhlex(): nLexRecs:  <399>
+<I>19990617 081714 399 records have been read.
+<I>19990617 081714 concatHomophones(): start
+<I>19990617 081714 concatHomophones(): nLexRecs: <399>
+<I>19990617 081714 concatHomophones(): sort complete
+<I>19990617 081714 concatHomophones(): sort complete (after concat)
+<I>19990617 081714 concatHomophones(): nDeleted: <1>
+<I>19990617 081714 concatHomophones(): nLexRecs: <398>
+<I>19990617 081714 concatHomophones(): end
+<I>19990617 081714 readPhlex(): end
+<I>19990617 081714 done reading lexicon
+<I>19990617 081714 Lexicon file:            lexicon
+<I>19990617 081714 Recode definition file:  F2A-exc.map
+<I>19990617 081714 Output file:             F2A-exc.lex
+<I>19990617 081714 g_flags.noPrompt: <1>
+<I>19990617 081714 reMap(): start
+<I>19990617 081714 Cluster[1]: <p> represents ==>
+   p 
+<I>19990617 081714 Cluster[2]: <b> represents ==>
+   b 
+<I>19990617 081714 Cluster[3]: <v> represents ==>
+   f v 
+<I>19990617 081714 Cluster[4]: <z> represents ==>
+   D T s z 
+<I>19990617 081714 Cluster[5]: <w> represents ==>
+   w 
+<I>19990617 081714 Cluster[6]: <r> represents ==>
+   l r 
+<I>19990617 081714 Cluster[7]: <J> represents ==>
+   C J 
+<I>19990617 081714 Cluster[8]: <Z> represents ==>
+   S Z 
+<I>19990617 081714 Cluster[9]: <t> represents ==>
+   t 
+<I>19990617 081714 Cluster[10]: <d> represents ==>
+   d 
+<I>19990617 081714 Cluster[11]: <k> represents ==>
+   k 
+<I>19990617 081714 Cluster[12]: <g> represents ==>
+   g 
+<I>19990617 081714 Cluster[13]: <n> represents ==>
+   n 
+<I>19990617 081714 Cluster[14]: <h> represents ==>
+   h 
+<I>19990617 081714 Cluster[15]: <a> represents ==>
+   a 
+<I>19990617 081738 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990617 081738 C:\PHLEX\RECODE.EXE ==>
+<I>19990617 081738         on out: <.\work\log> as logFile
+<I>19990617 081738 inFile: lexicon
+<I>19990617 081738 outFile: F2A-exc.lex
+<I>19990617 081738 ready to start reading lexicon
+<I>19990617 081738 readPhlex() - start
+<I>19990617 081738 readPhelx(): nRecsRead: <400>
+<I>19990617 081738 readPhlex(): nLexRecs:  <399>
+<I>19990617 081738 399 records have been read.
+<I>19990617 081738 concatHomophones(): start
+<I>19990617 081738 concatHomophones(): nLexRecs: <399>
+<I>19990617 081738 concatHomophones(): sort complete
+<I>19990617 081738 concatHomophones(): sort complete (after concat)
+<I>19990617 081738 concatHomophones(): nDeleted: <1>
+<I>19990617 081738 concatHomophones(): nLexRecs: <398>
+<I>19990617 081738 concatHomophones(): end
+<I>19990617 081738 readPhlex(): end
+<I>19990617 081738 done reading lexicon
+<I>19990617 081738 Lexicon file:            lexicon
+<I>19990617 081738 Recode definition file:  F2A-exc.map
+<I>19990617 081738 Output file:             F2A-exc.lex
+<I>19990617 081738 g_flags.noPrompt: <1>
+<I>19990617 081738 reMap(): start
+<I>19990617 081738 Cluster[1]: <p> represents ==>
+   p 
+<I>19990617 081738 Cluster[2]: <b> represents ==>
+   b 
+<I>19990617 081738 Cluster[3]: <v> represents ==>
+   f v 
+<I>19990617 081738 Cluster[4]: <z> represents ==>
+   D T s z 
+<I>19990617 081738 Cluster[5]: <w> represents ==>
+   w 
+<I>19990617 081738 Cluster[6]: <r> represents ==>
+   l r 
+<I>19990617 081738 Cluster[7]: <J> represents ==>
+   C J 
+<I>19990617 081738 Cluster[8]: <Z> represents ==>
+   S Z 
+<I>19990617 081738 Cluster[9]: <t> represents ==>
+   t 
+<I>19990617 081738 Cluster[10]: <d> represents ==>
+   d 
+<I>19990617 081738 Cluster[11]: <k> represents ==>
+   k 
+<I>19990617 081738 Cluster[12]: <g> represents ==>
+   g 
+<I>19990617 081738 Cluster[13]: <n> represents ==>
+   n 
+<I>19990617 081738 Cluster[14]: <h> represents ==>
+   h 
+<I>19990617 081738 Cluster[15]: <a> represents ==>
+   a 
+<I>19990617 081758 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990617 081758 C:\PHLEX\RECODE.EXE ==>
+<I>19990617 081758         on out: <.\work\log> as logFile
+<I>19990617 081758 inFile: lexicon
+<I>19990617 081758 outFile: F2A-exc.lex
+<I>19990617 081758 ready to start reading lexicon
+<I>19990617 081758 readPhlex() - start
+<I>19990617 081758 readPhelx(): nRecsRead: <400>
+<I>19990617 081758 readPhlex(): nLexRecs:  <399>
+<I>19990617 081758 399 records have been read.
+<I>19990617 081758 concatHomophones(): start
+<I>19990617 081758 concatHomophones(): nLexRecs: <399>
+<I>19990617 081758 concatHomophones(): sort complete
+<I>19990617 081758 concatHomophones(): sort complete (after concat)
+<I>19990617 081758 concatHomophones(): nDeleted: <1>
+<I>19990617 081758 concatHomophones(): nLexRecs: <398>
+<I>19990617 081758 concatHomophones(): end
+<I>19990617 081758 readPhlex(): end
+<I>19990617 081758 done reading lexicon
+<I>19990617 081758 Lexicon file:            lexicon
+<I>19990617 081758 Recode definition file:  F2A-exc.map
+<I>19990617 081758 Output file:             F2A-exc.lex
+<I>19990617 081758 g_flags.noPrompt: <1>
+<I>19990617 081758 reMap(): start
+<I>19990617 081758 Cluster[1]: <p> represents ==>
+   p 
+<I>19990617 081758 Cluster[2]: <b> represents ==>
+   b 
+<I>19990617 081758 Cluster[3]: <v> represents ==>
+   f v 
+<I>19990617 081758 Cluster[4]: <z> represents ==>
+   D T s z 
+<I>19990617 081758 Cluster[5]: <w> represents ==>
+   w 
+<I>19990617 081758 Cluster[6]: <r> represents ==>
+   l r 
+<I>19990617 081758 Cluster[7]: <J> represents ==>
+   C J 
+<I>19990617 081758 Cluster[8]: <Z> represents ==>
+   S Z 
+<I>19990617 081758 Cluster[9]: <t> represents ==>
+   t 
+<I>19990617 081758 Cluster[10]: <d> represents ==>
+   d 
+<I>19990617 081758 Cluster[11]: <k> represents ==>
+   k 
+<I>19990617 081758 Cluster[12]: <g> represents ==>
+   g 
+<I>19990617 081758 Cluster[13]: <n> represents ==>
+   n 
+<I>19990617 081758 Cluster[14]: <h> represents ==>
+   h 
+<I>19990617 081758 Cluster[15]: <a> represents ==>
+   a 
+<I>19990617 081758 Cluster[16]: <i> represents ==>
+   i 
+<I>19990617 081758 Cluster[17]: <I> represents ==>
+   I 
+<I>19990617 081758 Cluster[18]: <e> represents ==>
+   e 
+<I>19990617 081758 Cluster[19]: <A> represents ==>
+   A 
+<I>19990617 081758 Cluster[20]: <E> represents ==>
+   E 
+<I>19990617 081758 Cluster[21]: <R> represents ==>
+   R 
+<I>19990617 081758 Cluster[22]: <@> represents ==>
+   @ 
+<I>19990617 082300 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990617 082300 C:\PHLEX\RECODE.EXE ==>
+<I>19990617 082300         on out: <.\work\log> as logFile
+<I>19990617 082300 inFile: lexicon
+<I>19990617 082300 outFile: F2A-inc.lex
+<I>19990617 082300 ready to start reading lexicon
+<I>19990617 082300 readPhlex() - start
+<I>19990617 082300 readPhelx(): nRecsRead: <400>
+<I>19990617 082300 readPhlex(): nLexRecs:  <399>
+<I>19990617 082300 399 records have been read.
+<I>19990617 082300 concatHomophones(): start
+<I>19990617 082300 concatHomophones(): nLexRecs: <399>
+<I>19990617 082300 concatHomophones(): sort complete
+<I>19990617 082300 concatHomophones(): sort complete (after concat)
+<I>19990617 082300 concatHomophones(): nDeleted: <1>
+<I>19990617 082300 concatHomophones(): nLexRecs: <398>
+<I>19990617 082300 concatHomophones(): end
+<I>19990617 082300 readPhlex(): end
+<I>19990617 082300 done reading lexicon
+<I>19990617 082300 Lexicon file:            lexicon
+<I>19990617 082300 Recode definition file:  F2A-inc.map
+<I>19990617 082300 Output file:             F2A-inc.lex
+<I>19990617 082300 g_flags.noPrompt: <1>
+<I>19990617 082300 reMap(): start
+<I>19990617 082300 Cluster[1]: <b> represents ==>
+   D T b f h m n p s v z 
+<I>19990617 082300 Cluster[2]: <r> represents ==>
+   l r w 
+<I>19990617 082300 Cluster[3]: <J> represents ==>
+   C J S Z 
+<I>19990617 082300 Cluster[4]: <d> represents ==>
+   d g k t 
+<I>19990617 082300 Cluster[5]: <c> represents ==>
+   W ^ a c i 
+<I>19990617 082300 Cluster[6]: <E> represents ==>
+   @ E I 
+<I>19990617 082300 Cluster[7]: <e> represents ==>
+   e 
+<I>19990617 082300 Cluster[8]: <A> represents ==>
+   A 
+<I>19990617 082300 Cluster[9]: <R> represents ==>
+   R 
+<I>19990617 082300 Cluster[10]: <o> represents ==>
+   O U o u 
+<I>19990617 082300 reMap(): nRecsProcessed: <398>
+<I>19990617 082300 reMap(): end
+<I>19990617 082300 rcStat: start
+<I>19990617 082300 rcStat: nLexRecs: <398>
+<I>19990617 082300 rcStat(): build the sort list
+<I>19990617 082300 rcStat: start sort
+<I>19990617 082300 rcStat: sort complete
+<I>19990617 082300 rcStat(): nLexRecs: <398>
+<I>19990617 082300 rcStat(): recsProcessed: <398>
+<I>19990617 082300 rcStat(): end
+<I>19990617 082300 run complete
+<I>19990617 082300 RECODE.EXE:programEnd
+<I>19990617 082300 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990617 083941 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990617 083941 C:\PHLEX\RECODE.EXE ==>
+<I>19990617 083941         on out: <.\work\log> as logFile
+<I>19990617 083941 inFile: lexicon
+<I>19990617 083941 outFile: F2A-exc.lex
+<I>19990617 083941 ready to start reading lexicon
+<I>19990617 083941 readPhlex() - start
+<I>19990617 083941 readPhelx(): nRecsRead: <400>
+<I>19990617 083941 readPhlex(): nLexRecs:  <399>
+<I>19990617 083941 399 records have been read.
+<I>19990617 083941 concatHomophones(): start
+<I>19990617 083941 concatHomophones(): nLexRecs: <399>
+<I>19990617 083941 concatHomophones(): sort complete
+<I>19990617 083941 concatHomophones(): sort complete (after concat)
+<I>19990617 083941 concatHomophones(): nDeleted: <1>
+<I>19990617 083941 concatHomophones(): nLexRecs: <398>
+<I>19990617 083941 concatHomophones(): end
+<I>19990617 083941 readPhlex(): end
+<I>19990617 083941 done reading lexicon
+<I>19990617 083941 Lexicon file:            lexicon
+<I>19990617 083941 Recode definition file:  F2A-exc.map
+<I>19990617 083941 Output file:             F2A-exc.lex
+<I>19990617 083941 g_flags.noPrompt: <1>
+<I>19990617 083941 reMap(): start
+<I>19990617 083941 Cluster[1]: <p> represents ==>
+   p 
+<I>19990617 083941 Cluster[2]: <b> represents ==>
+   b 
+<I>19990617 083941 Cluster[3]: <v> represents ==>
+   f v 
+<I>19990617 083941 Cluster[4]: <z> represents ==>
+   D T s z 
+<I>19990617 083941 Cluster[5]: <w> represents ==>
+   w 
+<I>19990617 083941 Cluster[6]: <r> represents ==>
+   l r 
+<I>19990617 083941 Cluster[7]: <J> represents ==>
+   C J 
+<I>19990617 083941 Cluster[8]: <Z> represents ==>
+   S Z 
+<I>19990617 083941 Cluster[9]: <t> represents ==>
+   t 
+<I>19990617 083941 Cluster[10]: <d> represents ==>
+   d 
+<I>19990617 083941 Cluster[11]: <k> represents ==>
+   k 
+<I>19990617 083941 Cluster[12]: <g> represents ==>
+   g 
+<I>19990617 083941 Cluster[13]: <n> represents ==>
+   n 
+<I>19990617 083941 Cluster[14]: <h> represents ==>
+   h 
+<I>19990617 083941 Cluster[15]: <i> represents ==>
+   i 
+<I>19990617 083941 Cluster[16]: <I> represents ==>
+   I 
+<I>19990617 083941 Cluster[17]: <e> represents ==>
+   e 
+<I>19990617 083941 Cluster[18]: <A> represents ==>
+   A 
+<I>19990617 083941 Cluster[19]: <E> represents ==>
+   E 
+<I>19990617 083941 Cluster[20]: <R> represents ==>
+   R 
+<I>19990617 083941 Cluster[21]: <@> represents ==>
+   @ 
+<I>19990617 083941 Cluster[22]: <c> represents ==>
+   a c 
+<I>19990617 083941 Cluster[23]: <o> represents ==>
+   o 
+<I>19990617 083941 Cluster[24]: <W> represents ==>
+   W 
+<I>19990617 083941 Cluster[25]: <O> represents ==>
+   O 
+<I>19990617 083941 Cluster[26]: <^> represents ==>
+   ^ 
+<I>19990617 083941 Cluster[27]: <U> represents ==>
+   U 
+<I>19990617 083941 Cluster[28]: <u> represents ==>
+   u 
+<I>19990617 083941 reMap(): nRecsProcessed: <398>
+<I>19990617 083941 reMap(): end
+<I>19990617 083941 rcStat: start
+<I>19990617 083941 rcStat: nLexRecs: <398>
+<I>19990617 083941 rcStat(): build the sort list
+<I>19990617 083941 rcStat: start sort
+<I>19990617 083941 rcStat: sort complete
+<I>19990617 083941 rcStat(): nLexRecs: <398>
+<I>19990617 083941 rcStat(): recsProcessed: <398>
+<I>19990617 083941 rcStat(): end
+<I>19990617 083941 run complete
+<I>19990617 083941 RECODE.EXE:programEnd
+<I>19990617 083941 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990617 083945 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990617 083945 C:\PHLEX\RECODE.EXE ==>
+<I>19990617 083945         on out: <.\work\log> as logFile
+<I>19990617 083945 inFile: lexicon
+<I>19990617 083945 outFile: F2A-vis.lex
+<I>19990617 083945 ready to start reading lexicon
+<I>19990617 083945 readPhlex() - start
+<I>19990617 083945 readPhelx(): nRecsRead: <400>
+<I>19990617 083945 readPhlex(): nLexRecs:  <399>
+<I>19990617 083945 399 records have been read.
+<I>19990617 083945 concatHomophones(): start
+<I>19990617 083945 concatHomophones(): nLexRecs: <399>
+<I>19990617 083945 concatHomophones(): sort complete
+<I>19990617 083945 concatHomophones(): sort complete (after concat)
+<I>19990617 083945 concatHomophones(): nDeleted: <1>
+<I>19990617 083945 concatHomophones(): nLexRecs: <398>
+<I>19990617 083945 concatHomophones(): end
+<I>19990617 083945 readPhlex(): end
+<I>19990617 083945 done reading lexicon
+<I>19990617 083945 Lexicon file:            lexicon
+<I>19990617 083945 Recode definition file:  F2A-vis.map
+<I>19990617 083945 Output file:             F2A-vis.lex
+<I>19990617 083945 g_flags.noPrompt: <1>
+<I>19990617 083945 reMap(): start
+<I>19990617 083945 Cluster[1]: <B> represents ==>
+   D T b f h p s v z 
+<I>19990617 083945 Cluster[2]: <m> represents ==>
+   m 
+<I>19990617 083945 Cluster[3]: <w> represents ==>
+   w 
+<I>19990617 083945 Cluster[4]: <r> represents ==>
+   l r 
+<I>19990617 083945 Cluster[5]: <J> represents ==>
+   C J S Z 
+<I>19990617 083945 Cluster[6]: <d> represents ==>
+   d t 
+<I>19990617 083945 Cluster[7]: <g> represents ==>
+   g k 
+<I>19990617 083945 Cluster[8]: <n> represents ==>
+   n 
+<I>19990617 083945 Cluster[9]: <i> represents ==>
+   i 
+<I>19990617 083945 Cluster[10]: <I> represents ==>
+   I 
+<I>19990617 083945 Cluster[11]: <e> represents ==>
+   e 
+<I>19990617 083945 Cluster[12]: <A> represents ==>
+   A 
+<I>19990617 083945 Cluster[13]: <E> represents ==>
+   @ E 
+<I>19990617 083945 Cluster[14]: <R> represents ==>
+   R 
+<I>19990617 083945 Cluster[15]: <c> represents ==>
+   a c 
+<I>19990617 083945 Cluster[16]: <o> represents ==>
+   o u 
+<I>19990617 083945 Cluster[17]: <W> represents ==>
+   W 
+<I>19990617 083945 Cluster[18]: <O> represents ==>
+   O 
+<I>19990617 083945 Cluster[19]: <^> represents ==>
+   ^ 
+<I>19990617 083945 Cluster[20]: <U> represents ==>
+   U 
+<I>19990617 083945 reMap(): nRecsProcessed: <398>
+<I>19990617 083945 reMap(): end
+<I>19990617 083945 rcStat: start
+<I>19990617 083945 rcStat: nLexRecs: <398>
+<I>19990617 083945 rcStat(): build the sort list
+<I>19990617 083945 rcStat: start sort
+<I>19990617 083945 rcStat: sort complete
+<I>19990617 083945 rcStat(): nLexRecs: <398>
+<I>19990617 083945 rcStat(): recsProcessed: <398>
+<I>19990617 083945 rcStat(): end
+<I>19990617 083945 run complete
+<I>19990617 083945 RECODE.EXE:programEnd
+<I>19990617 083945 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990707 153741 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990707 153741 C:\PHLEX\RECODE.EXE ==>
+<I>19990707 153741         on out: <.\work\log> as logFile
+<I>19990707 153741 inFile: lexicon
+<I>19990707 153741 outFile: f2a-exc2.lex
+<I>19990707 153741 ready to start reading lexicon
+<I>19990707 153741 readPhlex() - start
+<I>19990707 153741 readPhelx(): nRecsRead: <400>
+<I>19990707 153741 readPhlex(): nLexRecs:  <399>
+<I>19990707 153741 399 records have been read.
+<I>19990707 153741 concatHomophones(): start
+<I>19990707 153741 concatHomophones(): nLexRecs: <399>
+<I>19990707 153741 concatHomophones(): sort complete
+<I>19990707 153741 concatHomophones(): sort complete (after concat)
+<I>19990707 153741 concatHomophones(): nDeleted: <1>
+<I>19990707 153741 concatHomophones(): nLexRecs: <398>
+<I>19990707 153741 concatHomophones(): end
+<I>19990707 153741 readPhlex(): end
+<I>19990707 153741 done reading lexicon
+<I>19990707 153741 Lexicon file:            lexicon
+<I>19990707 153741 Recode definition file:  f2a-exc2.map
+<I>19990707 153741 Output file:             f2a-exc2.lex
+<I>19990707 153741 g_flags.noPrompt: <1>
+<I>19990707 153741 reMap(): start
+<I>19990707 153741 Cluster[1]: <p> represents ==>
+   p 
+<I>19990707 153741 Cluster[2]: <b> represents ==>
+   b 
+<I>19990707 153741 Cluster[3]: <m> represents ==>
+   m 
+<I>19990707 153741 Cluster[4]: <v> represents ==>
+   f v 
+<I>19990707 153741 Cluster[5]: <z> represents ==>
+   T z 
+<I>19990707 153741 Cluster[6]: <D> represents ==>
+   D 
+<I>19990707 153741 Cluster[7]: <w> represents ==>
+   w 
+<I>19990707 153741 Cluster[8]: <r> represents ==>
+   l r 
+<I>19990707 153741 Cluster[9]: <J> represents ==>
+   C J 
+<I>19990707 153741 Cluster[10]: <Z> represents ==>
+   S Z 
+<I>19990707 153741 Cluster[11]: <t> represents ==>
+   t 
+<I>19990707 153741 Cluster[12]: <d> represents ==>
+   d 
+<I>19990707 153741 Cluster[13]: <s> represents ==>
+   s 
+<I>19990707 153741 Cluster[14]: <k> represents ==>
+   k 
+<I>19990707 153741 Cluster[15]: <g> represents ==>
+   g 
+<I>19990707 153741 Cluster[16]: <n> represents ==>
+   n 
+<I>19990707 153741 Cluster[17]: <h> represents ==>
+   h 
+<I>19990707 153741 Cluster[18]: <i> represents ==>
+   i 
+<I>19990707 153741 Cluster[19]: <I> represents ==>
+   I 
+<I>19990707 153741 Cluster[20]: <e> represents ==>
+   e 
+<I>19990707 153741 Cluster[21]: <A> represents ==>
+   A 
+<I>19990707 153741 Cluster[22]: <E> represents ==>
+   E 
+<I>19990707 153741 Cluster[23]: <R> represents ==>
+   R 
+<I>19990707 153741 Cluster[24]: <@> represents ==>
+   @ 
+<I>19990707 153741 Cluster[25]: <c> represents ==>
+   a c 
+<I>19990707 153741 Cluster[26]: <o> represents ==>
+   o 
+<I>19990707 153741 Cluster[27]: <W> represents ==>
+   W 
+<I>19990707 153741 Cluster[28]: <O> represents ==>
+   O 
+<I>19990707 153741 Cluster[29]: <^> represents ==>
+   ^ 
+<I>19990707 153741 Cluster[30]: <U> represents ==>
+   U 
+<I>19990707 153741 Cluster[31]: <u> represents ==>
+   u 
+<I>19990707 153741 reMap(): nRecsProcessed: <398>
+<I>19990707 153741 reMap(): end
+<I>19990707 153741 rcStat: start
+<I>19990707 153741 rcStat: nLexRecs: <398>
+<I>19990707 153741 rcStat(): build the sort list
+<I>19990707 153741 rcStat: start sort
+<I>19990707 153741 rcStat: sort complete
+<I>19990707 153741 rcStat(): nLexRecs: <398>
+<I>19990707 153741 rcStat(): recsProcessed: <398>
+<I>19990707 153741 rcStat(): end
+<I>19990707 153741 run complete
+<I>19990707 153741 RECODE.EXE:programEnd
+<I>19990707 153741 RECODE.EXE:logFileClose() - closed <.\work\log>
+<I>19990707 162325 RECODE.EXE:logFileOpen() - opened <.\work\log> mode <a>
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+<I>19990707 162325 C:\PHLEX\RECODE.EXE ==>
+<I>19990707 162325         on out: <.\work\log> as logFile
+<I>19990707 162325 inFile: lexicon
+<I>19990707 162325 outFile: f2a-exc2.lex
+<I>19990707 162325 ready to start reading lexicon
+<I>19990707 162325 readPhlex() - start
+<I>19990707 162325 readPhelx(): nRecsRead: <400>
+<I>19990707 162325 readPhlex(): nLexRecs:  <399>
+<I>19990707 162325 399 records have been read.
+<I>19990707 162325 concatHomophones(): start
+<I>19990707 162325 concatHomophones(): nLexRecs: <399>
+<I>19990707 162325 concatHomophones(): sort complete
+<I>19990707 162325 concatHomophones(): sort complete (after concat)
+<I>19990707 162325 concatHomophones(): nDeleted: <1>
+<I>19990707 162325 concatHomophones(): nLexRecs: <398>
+<I>19990707 162325 concatHomophones(): end
+<I>19990707 162325 readPhlex(): end
+<I>19990707 162325 done reading lexicon
+<I>19990707 162325 Lexicon file:            lexicon
+<I>19990707 162325 Recode definition file:  f2a-exc2.map
+<I>19990707 162325 Output file:             f2a-exc2.lex
+<I>19990707 162325 g_flags.noPrompt: <1>
+<I>19990707 162325 reMap(): start
+<I>19990707 162325 Cluster[1]: <p> represents ==>
+   p 
+<I>19990707 162325 Cluster[2]: <b> represents ==>
+   b 
+<I>19990707 162325 Cluster[3]: <m> represents ==>
+   m 
+<I>19990707 162325 Cluster[4]: <v> represents ==>
+   f v 
+<I>19990707 162325 Cluster[5]: <z> represents ==>
+   T z 
+<I>19990707 162325 Cluster[6]: <D> represents ==>
+   D 
+<I>19990707 162325 Cluster[7]: <w> represents ==>
+   w 
+<I>19990707 162325 Cluster[8]: <r> represents ==>
+   l r 
+<I>19990707 162325 Cluster[9]: <J> represents ==>
+   C J 
+<I>19990707 162325 Cluster[10]: <Z> represents ==>
+   S Z 
+<I>19990707 162325 Cluster[11]: <t> represents ==>
+   t 
+<I>19990707 162325 Cluster[12]: <d> represents ==>
+   d 
+<I>19990707 162325 Cluster[13]: <s> represents ==>
+   s 
+<I>19990707 162325 Cluster[14]: <k> represents ==>
+   k 
+<I>19990707 162325 Cluster[15]: <g> represents ==>
+   g 
+<I>19990707 162325 Cluster[16]: <n> represents ==>
+   n 
+<I>19990707 162325 Cluster[17]: <h> represents ==>
+   h 
+<I>19990707 162326 Cluster[18]: <i> represents ==>
+   i 
+<I>19990707 162326 Cluster[19]: <I> represents ==>
+   I 
+<I>19990707 162326 Cluster[20]: <e> represents ==>
+   e 
+<I>19990707 162326 Cluster[21]: <A> represents ==>
+   A 
+<I>19990707 162326 Cluster[22]: <E> represents ==>
+   E 
+<I>19990707 162326 Cluster[23]: <R> represents ==>
+   R 
+<I>19990707 162326 Cluster[24]: <@> represents ==>
+   @ 
+<I>19990707 162326 Cluster[25]: <c> represents ==>
+   a c 
+<I>19990707 162326 Cluster[26]: <o> represents ==>
+   o 
+<I>19990707 162326 Cluster[27]: <W> represents ==>
+   W 
+<I>19990707 162326 Cluster[28]: <O> represents ==>
+   O 
+<I>19990707 162326 Cluster[29]: <^> represents ==>
+   ^ 
+<I>19990707 162326 Cluster[30]: <U> represents ==>
+   U 
+<I>19990707 162326 Cluster[31]: <u> represents ==>
+   u 
+<I>19990707 162326 reMap(): nRecsProcessed: <398>
+<I>19990707 162326 reMap(): end
+<I>19990707 162326 rcStat: start
+<I>19990707 162326 rcStat: nLexRecs: <398>
+<I>19990707 162326 rcStat(): build the sort list
+<I>19990707 162326 rcStat: start sort
+<I>19990707 162326 rcStat: sort complete
+<I>19990707 162326 rcStat(): nLexRecs: <398>
+<I>19990707 162326 rcStat(): recsProcessed: <398>
+<I>19990707 162326 rcStat(): end
+<I>19990707 162326 run complete
+<I>19990707 162326 RECODE.EXE:programEnd
+<I>19990707 162326 RECODE.EXE:logFileClose() - closed <.\work\log>
