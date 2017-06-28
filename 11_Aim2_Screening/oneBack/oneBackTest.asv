@@ -29,7 +29,7 @@ if exptdesign.debug
     exptdesign.numTrialsPerSession = 3;    
     exptdesign.numRuns = 1;
 else
-    exptdesign.numBlocks = 5;         
+    exptdesign.numBlocks = 28;         
     exptdesign.numTrialsPerSession = 3;    
     exptdesign.numRuns = 1;
 end
@@ -70,21 +70,21 @@ end
 %open com2 port for stimulator
 stimGenPTB('open','COM1')
 
-%run all 6 runs right after the last 
-%%%CHANGE BACK TO 1%%%%%%%%%%%
-for iRuns = 1:exptdesign.numRuns
-    exptdesign.iRuns=iRuns;
-    if iRuns == 1
-        startOrNot = 'y';
-    else
-        startOrNot = input('Start the next run? y or n\n');
-    end
-    if strcmp(startOrNot,'y')==1
-        [trialOutput.run] = oneBackTestExperiment(name,exptdesign);
-    else
-        fprintf(['Skipping run ' num2str(iRuns) '\n']);
-    end
-end
+% %run all 6 runs right after the last 
+% %%%CHANGE BACK TO 1%%%%%%%%%%%
+% for iRuns = 1:exptdesign.numRuns
+%     exptdesign.iRuns=iRuns;
+%     if iRuns == 1
+%         startOrNot = 'y';
+%     else
+%         startOrNot = input('Start the next run? y or n\n');
+%     end
+%     if strcmp(startOrNot,'y')==1
+%         [trialOutput.run] = oneBackTestExperiment(name,exptdesign);
+%     else
+%         fprintf(['Skipping run ' num2str(iRuns) '\n']);
+%     end
+% end
 
 %close com3 port
 if exptdesign.responseBox
