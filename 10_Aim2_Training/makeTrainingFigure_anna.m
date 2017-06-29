@@ -1,7 +1,7 @@
 
-subj = '983';
-sessDate = '20170607';
-sessNum = 'sess1';
+subj = '1026';
+sessDate = '20170626';
+sessNum = 'sess';
 
 % subj: string, e.g. '945'
 % sessDate: string, training session date in format YearMonthDay (e.g 20170405 for April 5 2017)
@@ -13,9 +13,10 @@ data_dir = ['data', filesep, subj, filesep, 'accTracking', filesep];
 %make variable storing directory path 
 %accTracking is folder containing voice, manner, place files  
 
-mkdir(data_dir); %make new folder under subject containing tracked accuracy 
-
-if length(dir(data_dir)) < 5 %if folder is empty, make empty array containing accuracies for all 3 terms 
+if exist(data_dir,'dir') == 0
+%if length(dir(data_dir)) < 5 %if folder is empty, make empty array containing accuracies for all 3 terms 
+    mkdir(data_dir); %make new folder under subject containing tracked accuracy 
+    
     voice_prev_acc = []; 
     voice_total_acc = []; 
     
@@ -127,6 +128,7 @@ manner_total = sum(manner_hits)/sum(manner_n_pres);
 manner_acc_2 = [manner_acc; manner_total]; %accuracy of all VCVs plus added row containing total accuracy
 manner_overall = [manner_prev_acc, manner_acc_2]; 
 
+figure(1); 
 subplot(3,1,1); 
 bar(voice_acc_2);
 xticklabels({'aba/apa','ada/ata','ava/afa','aga/aka','aza/asa','total'})
@@ -134,8 +136,6 @@ title(['sub' subj ' - voicing - ' sessDate]);
 ylim([0 1])
 hline = refline([0 0.5]);
 hline.Color = 'r';
-%saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_aim2Pilot\trainingExp\data',subj,['sub' subj '_voicing_' sessDate '.pdf']))
-
  
 subplot(3,1,2); 
 bar(place_acc_2);
@@ -144,8 +144,6 @@ title(['sub' subj ' - place - ' sessDate]);
 ylim([0 1])
 hline = refline([0 0.5]);
 hline.Color = 'r';
-%saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_aim2Pilot\trainingExp\data',subj,['sub' subj '_place_' sessDate '.pdf']))
-
 
 
 subplot(3,1,3); 
@@ -155,12 +153,14 @@ title(['sub' subj ' - manner - ' sessDate]);
 ylim([0 1])
 hline = refline([0 0.5]);
 hline.Color = 'r';
-%saveas(gcf,fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_aim2Pilot\trainingExp\data\',subj,['sub' subj '_manner_' sessDate '.pdf']))
+saveas(gcf,fullfile('/Users/annabianculli/Documents/SophS2/RiesenhuberLab/vibrotactile/10_Aim2_Training/data',subj,sessNum, [subj '_' sessDate '_all.jpg']))
+%close all
 
 %%%%articulatory features overall by VCVs%%%%%%%%%
-figure(4);
+figure(2); 
+subplot(3,1,1);
 hold on 
-title(['sub' subj ' - voicing overtime'])
+title(['sub' subj ' - voicing overtime -' sessDate])
 plot (voice_overall(1,:),'b.-', 'MarkerSize', 20)
 xlabel('session #')
 ylabel('Accuracy')
@@ -171,9 +171,9 @@ plot (voice_overall(4,:),'g.-', 'MarkerSize', 20)
 plot (voice_overall(5,:),'m.-', 'MarkerSize', 20)
 legend('aba/apa','ada/ata','ava/afa','aga/aka','aza/asa')
 
-figure(5);
+subplot(3,1,2);
 hold on
-title(['sub' subj ' - place overtime'])
+title(['sub' subj ' - place overtime -' sessDate])
 plot (place_overall(1,:),'b.-','MarkerSize', 20)
 xlabel('session #')
 ylabel('Accuracy')
@@ -184,9 +184,9 @@ plot (place_overall(4,:),'g.-', 'MarkerSize', 20)
 plot (place_overall(5,:),'m.-', 'MarkerSize', 20)
 legend('apa/ata','aba/aga','ava/aza','afa/asa','ama/ana')
 
-figure(6);
+subplot(3,1,3);
 hold on
-title(['sub' subj ' - manner overtime'])
+title(['sub' subj ' - manner overtime-' sessDate])
 plot (manner_overall(1,:),'b.-', 'MarkerSize', 20) 
 xlabel('session #')
 ylabel('Accuracy')
@@ -196,37 +196,24 @@ plot (manner_overall(3,:),'k.-', 'MarkerSize', 20)
 plot (manner_overall(4,:),'g.-', 'MarkerSize', 20)
 plot (manner_overall(5,:),'m.-', 'MarkerSize', 20)
 legend('ada/aza','aza/ana','aba/ama','ada/ana','ata/asa')
+saveas(gcf,fullfile('/Users/annabianculli/Documents/SophS2/RiesenhuberLab/vibrotactile/10_Aim2_Training/data',subj,sessNum, [subj '_' sessDate '_featuresOverall.jpg']))
+%close all
 
 
 %%%%%%articulatory features overall using total VCVs data%%%%%%%%
-%{
-figure(4);
+
+figure(3);
 hold on 
-title(['sub' subj ' - total voicing overtime'])
+title(['sub' subj ' - total Accuracy overtime-' sessDate])
 plot (voice_overall(6,:),'b.-', 'MarkerSize', 20)
+plot (place_overall(6,:),'r.-','MarkerSize', 20)
+plot (manner_overall(6,:),'k.-', 'MarkerSize', 20) 
 xlabel('session #')
 ylabel('Accuracy')
 ylim([0:1])
-legend('total')
+legend('voice', 'place', 'manner')
+saveas(gcf,fullfile('/Users/annabianculli/Documents/SophS2/RiesenhuberLab/vibrotactile/10_Aim2_Training/data',subj,sessNum, [subj '_' sessDate '_featuresTotal.jpg']))
 
-figure(5);
-hold on
-title(['sub' subj ' - total place overtime'])
-plot (place_overall(6,:),'b.-','MarkerSize', 20)
-xlabel('session #')
-ylabel('Accuracy')
-ylim([0:1])
-legend('total')
-
-figure(6);
-hold on
-title(['sub' subj ' - total manner overtime'])
-plot (manner_overall(6,:),'b.-', 'MarkerSize', 20) 
-xlabel('session #')
-ylabel('Accuracy')
-ylim([0:1])
-legend('total')
-%}
 
 save([data_dir, 'voice', subj, '.mat'], 'voice_overall'); 
 save([data_dir, 'place', subj, '.mat'], 'place_overall');

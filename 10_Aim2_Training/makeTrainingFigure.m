@@ -3,13 +3,13 @@ function makeTrainingFigure(subj,sessDate)
 % subj: string, e.g. '945'
 % sessDate: string, training session date in format YearMonthDay (e.g 20170405 for April 5 2017)
 
-<<<<<<< HEAD
+
 data_path = dir(fullfile('/Users/annabianculli/Documents/Soph S2/Riesenhuber lab/vibrotactile/10_Aim2_Training/data',subj,[sessDate '*_block6.mat']));
 load(fullfile('/Users/annabianculli/Documents/Soph S2/Riesenhuber lab/vibrotactile/10_Aim2_Training/data',subj,data_path(1).name));
-=======
-data_path = dir(fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data',subj,[sessDate '*_block6.mat']));
-load(fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data',subj,data_path(1).name));
->>>>>>> f3f79b8fe8412f38ace2b7267b12748bb2b12e11
+
+%data_path = dir(fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data',subj,[sessDate '*_block6.mat']));
+%load(fullfile('C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile\10_Aim2_Training\data',subj,data_path(1).name));
+
 
 voice_hits = zeros(5,1); % row 1 = aba and apa, 2 = ada and ata, 3 = ava and afa, 4 = aga and aka, 5 = aza and asa
 voice_n_pres = zeros(5,1);
