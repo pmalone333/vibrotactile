@@ -1,0 +1,92 @@
+*******************************************************************************
+                 recode--PhLex Tools-- 1.1 (beta)(3) 1999/06/14
+
+
+   Copyright 1997,1998 House Ear Institute, Los Angeles CA, All Rights Reserved
+
+*******************************************************************************
+readPhelx(): nRecsRead: <400>
+readPhlex(): nLexRecs:  <399>
+399 records have been read.
+nLexRecs: <399>, g_origSortEntries: <399>
+Concatenating homophones ... nLexRecs: <398>, g_origSortEntries: <398>
+ deleted <1> records
+ Finished, leaving <398> records
+Time of calculation: Thu Jun 17 08:39:45 1999
+This file is: F2A-vis.lex
+1. Do recoding without stress markers:[ON]
+2. Do recoding without syllable boundary:[ON]
+7. Output include the long list:[OFF]
+8. Name of output file:[F2A-vis.lex]
+mapping <p b f v T D s z h > to cluster <B>
+Cluster[1]: <B> represents D T b f h p s v z 
+mapping <m > to cluster <m>
+Cluster[2]: <m> represents m 
+mapping <w > to cluster <w>
+Cluster[3]: <w> represents w 
+mapping <r l > to cluster <r>
+Cluster[4]: <r> represents l r 
+mapping <C J S Z > to cluster <J>
+Cluster[5]: <J> represents C J S Z 
+mapping <t d > to cluster <d>
+Cluster[6]: <d> represents d t 
+mapping <k g > to cluster <g>
+Cluster[7]: <g> represents g k 
+mapping <n > to cluster <n>
+Cluster[8]: <n> represents n 
+mapping <i > to cluster <i>
+Cluster[9]: <i> represents i 
+mapping <I > to cluster <I>
+Cluster[10]: <I> represents I 
+mapping <e > to cluster <e>
+Cluster[11]: <e> represents e 
+mapping <A > to cluster <A>
+Cluster[12]: <A> represents A 
+mapping <E @ > to cluster <E>
+Cluster[13]: <E> represents @ E 
+mapping <R > to cluster <R>
+Cluster[14]: <R> represents R 
+mapping <a c > to cluster <c>
+Cluster[15]: <c> represents a c 
+mapping <o u > to cluster <o>
+Cluster[16]: <o> represents o u 
+mapping <W > to cluster <W>
+Cluster[17]: <W> represents W 
+mapping <O > to cluster <O>
+Cluster[18]: <O> represents O 
+mapping <^ > to cluster <^>
+Cluster[19]: <^> represents ^ 
+mapping <U > to cluster <U>
+Cluster[20]: <U> represents U 
+# rcstat()
+# Of 398 original entries, 106 are still unique [26.63%]
+# Of 198 total equivalence classes, 106 are unique [53.54%]
+# The sum of the frequencies of all words is          : 49656
+# The sum of the frequencies of the unique classes is : 20788 
+#                                                     : 41.86%
+# The sum of the log frequencies of all words is      : 1108.37
+# The sum of the log frequencies of unique classes is : 318.17
+#                                                     : 28.71%
+# The expected class size (ECS) is           :   3.26
+# The weighted expected class size (ECS) is           :   2.52
+# The log weighted expected class size (ECS) is       :   3.10
+# The expected inverse class size is        :   0.4975
+# The frequency weighted expected inverse class size is        :   0.6235
+# The log frequency weighted expected inverse class size is        :   0.5185
+# pAlpha: <-5.699030>, pTotal: <-6.113243>
+# The PIE for this recoding is 93.22%
+# The distribution for this recoding is: 80.40%
+# The frequency-weighted distribution for this recoding is: 81.89%
+Uniqueness point statistics for original lexicon:
+WD_Len  Tot_N  Tot_freq  Bef_N  Bef_freq  At_N At_freq  Aft_N  Aft_freq
+  2	  35     54.17       3     2.28     20    33.92     12    17.97
+  3	 313    353.41      59    69.06    251   280.90      3     3.46
+  4	  48     70.56      45    67.70      3     2.85      0     0.00
+  5	   1      2.27       1     2.27      0     0.00      0     0.00
+Uniqueness point statistics for recoded lexicon:
+WD_Len  Tot_N  Tot_freq  Bef_N  Bef_freq  At_N At_freq  Aft_N  Aft_freq
+  2	  35     54.65       3     2.28      9    15.70     23    36.67
+  3	 313    343.58      34    41.22    243   269.80     36    32.57
+  4	  48     70.56      35    53.80     13    16.76      0     0.00
+  5	   1      2.27       1     2.27      0     0.00      0     0.00
+# rcstat() Finished: Thu Jun 17 08:39:45 EDT 1999
