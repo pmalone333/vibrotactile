@@ -20,16 +20,17 @@ second_vowel_onset = [.475 .505 .515 .52 .46 .47 .495 .44 .455 .41 .455 .445 .49
 %list_words
 volAndGainSettings = 'outputgain45_200Hz_GUeq_FFTfiltered';
 volAndGainSettingsFileName = 'outputgain45_200Hz_GUeq_FFTfiltered';
+audio_path = 'C:\Users\Patrick Malone\Google Drive\Code\Vibrotactile_audioFiles_noGithub\audio\VCV_male';
 
 for i=1%:2:length(list_words)
     
-        %audio_filename = ['audio\VCV_male\' list_words{i} '1_ampNorm__ampNorm_audition_FFTfilter.wav'];  
-        audio_filename = ['aba2_ampNorm_whiteNoiseCons_amplifed.wav'];
+        audio_filename = fullfile(audio_path,[list_words{i} '1_ampNorm__ampNorm_audition_FFTfilter.wav']);  
+        %audio_filename = fullfile(audio_path,'aba2_ampNorm_whiteNoiseCons_amplifed.wav');
         %load audio
         [y,fs] = audioread(audio_filename);
         wavedata = y';
-        vcv_label1 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i}];
-        %vcv_label1 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i} '1'];
+        %vcv_label1 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i}];
+        vcv_label1 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i} '1'];
         vcv_plot1 = vibplot(vcv_label1,offsets(i));
 
         %subplot(2,1,1);
@@ -48,12 +49,12 @@ for i=1%:2:length(list_words)
 %         subplot(2,2,2);
 %         t=[1/fs:1/fs:length(awave1)/fs];
 %         plot(t,awave1)
-        scatter(vcv_plot1(:,1),vcv_plot1(:,2),10,'o','r')
+        scatter(vcv_plot1(:,1),vcv_plot1(:,2),10,'f','w')
         for h=1:length(lookupf)
            hline = refline([0 lookupf(h)]);
            hline.Color = 'w';
         end
-        title([list_words{i} '1 - ' volAndGainSettings]);
+       % title([list_words{i} '1 - ' volAndGainSettings]);
 %         
 %         audio_filename = ['audio\VCV_male\' list_words{i} '2_ampNorm__ampNorm_audition_FFTfilter.wav'];    
 %         %load audio
