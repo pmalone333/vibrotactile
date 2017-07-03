@@ -20,7 +20,7 @@ else
 end
 
 exptdesign.numSessions = 1; %number of blocks
-exptdesign.numTrialsPerSession = 120;
+exptdesign.numTrialsPerSession = 144;
 
 exptdesign.fixationImage = 'imgsscaled/fixation.bmp';  % image for the fixation cross
 exptdesign.blankImage = 'imgsscaled/blank.bmp';        % image for the blank screen
