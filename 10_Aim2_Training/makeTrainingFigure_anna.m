@@ -1,7 +1,7 @@
 
 subj = '1026';
-sessDate = '20170703';
-sessNum = 'sess';
+sessDate = '20170705';
+sessNum = 'sess10';
 
 % subj: string, e.g. '945'
 % sessDate: string, training session date in format YearMonthDay (e.g 20170405 for April 5 2017)
