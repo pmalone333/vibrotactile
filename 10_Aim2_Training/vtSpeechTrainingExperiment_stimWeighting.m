@@ -53,20 +53,20 @@ function vtSpeechTrainingExperiment_stimWeighting(name, exptdesign)
             end
         else
             if strcmp(feature_block{iBlock},'voicing')
-                load(fullfile('C:\Users\User\Desktop\vibrotactile\10_Aim2_Training\data',exptdesign.subNumber,'accTracking',['voice' subj '.mat']));
+                load(fullfile('C:\Users\User\Desktop\vibrotactile\10_Aim2_Training\data',exptdesign.subNumber,'accTracking',['voice' exptdesign.subNumber '.mat']));
                 word_pairs = repmat(word_pairs_voicing,1,floor((exptdesign.numTrialsPerSession*(2/3))/length(word_pairs_voicing))); % 2/3 of word_pairs are unweighted and include all stimuli
                 [b,i] = sort(voice_overall(1:5,end));
-                word_pairs = [word_pairs repmat({word_pairs_voicing{i(1)},word_pairs_voicing{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/length(word_pairs_voicing)))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
+                word_pairs = [word_pairs repmat({word_pairs_voicing{i(1)},word_pairs_voicing{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/2))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
             elseif strcmp(feature_block{iBlock},'manner')
-                load(fullfile('C:\Users\User\Desktop\vibrotactile\10_Aim2_Training\data',exptdesign.subNumber,'accTracking',['manner' subj '.mat']));
+                load(fullfile('C:\Users\User\Desktop\vibrotactile\10_Aim2_Training\data',exptdesign.subNumber,'accTracking',['manner' exptdesign.subNumber '.mat']));
                 word_pairs = repmat(word_pairs_manner,1,floor((exptdesign.numTrialsPerSession*(2/3))/length(word_pairs_manner))); % 2/3 of word_pairs are unweighted and include all stimuli
                 [b,i] = sort(manner_overall(1:5,end));
-                word_pairs = [word_pairs repmat({word_pairs_manner{i(1)},word_pairs_manner{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/length(word_pairs_manner)))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
+                word_pairs = [word_pairs repmat({word_pairs_manner{i(1)},word_pairs_manner{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/2))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
             elseif strcmp(feature_block{iBlock},'place')
-                load(fullfile('C:\Users\User\Desktop\vibrotactile\10_Aim2_Training\data',exptdesign.subNumber,'accTracking',['place' subj '.mat']));
+                load(fullfile('C:\Users\User\Desktop\vibrotactile\10_Aim2_Training\data',exptdesign.subNumber,'accTracking',['place' exptdesign.subNumber '.mat']));
                 word_pairs = repmat(word_pairs_place,1,floor((exptdesign.numTrialsPerSession*(2/3))/length(word_pairs_place))); % 2/3 of word_pairs are unweighted and include all stimuli
                 [b,i] = sort(place_overall(1:5,end));
-                word_pairs = [word_pairs repmat({word_pairs_place{i(1)},word_pairs_place{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/length(word_pairs_place)))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
+                word_pairs = [word_pairs repmat({word_pairs_place{i(1)},word_pairs_place{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/2))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
             end
         end
         
