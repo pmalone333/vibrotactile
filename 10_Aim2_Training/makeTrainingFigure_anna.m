@@ -1,13 +1,16 @@
 
-subj = '1026';
-sessDate = '20170705';
-sessNum = 'sess10';
+subj = '333';
+sessDate = '20170710';
+sessNum = 'sess1';
 
 % subj: string, e.g. '945'
 % sessDate: string, training session date in format YearMonthDay (e.g 20170405 for April 5 2017)
 
-data_path = dir(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj, sessNum, [sessDate '*_block6.mat']));
-load(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,sessNum, data_path(1).name));
+% data_path = dir(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj, sessNum, [sessDate '*_block3.mat']));
+% load(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,sessNum, data_path(1).name));
+data_path = dir(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj, [sessDate '*_block6.mat']));
+load(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj, data_path(1).name));
+
 
 data_dir = ['data', filesep, subj, filesep, 'accTracking', filesep]; 
 %make variable storing directory path 
@@ -153,7 +156,7 @@ title(['sub' subj ' - manner - ' sessDate]);
 ylim([0 1])
 hline = refline([0 0.5]);
 hline.Color = 'r';
-saveas(gcf,fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,sessNum, [subj '_' sessDate '_all.jpg']))
+saveas(gcf,fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,[subj '_' sessDate '_all.jpg']))
 %close all
 
 %%%%articulatory features overall by VCVs%%%%%%%%%
@@ -196,7 +199,7 @@ plot (manner_overall(3,:),'k.-', 'MarkerSize', 20)
 plot (manner_overall(4,:),'g.-', 'MarkerSize', 20)
 plot (manner_overall(5,:),'m.-', 'MarkerSize', 20)
 legend('ada/aza','aza/ana','aba/ama','ada/ana','ata/asa')
-saveas(gcf,fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,sessNum, [subj '_' sessDate '_featuresOverall.jpg']))
+saveas(gcf,fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj, [subj '_' sessDate '_featuresOverall.jpg']))
 %close all
 
 
@@ -212,7 +215,7 @@ xlabel('session #')
 ylabel('Accuracy')
 ylim([0:1])
 legend('voice', 'place', 'manner')
-saveas(gcf,fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,sessNum, [subj '_' sessDate '_featuresTotal.jpg']))
+saveas(gcf,fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj, [subj '_' sessDate '_featuresTotal.jpg']))
 
 
 save([data_dir, 'voice', subj, '.mat'], 'voice_overall'); 
