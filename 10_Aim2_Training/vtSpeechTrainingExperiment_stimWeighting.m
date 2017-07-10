@@ -1,7 +1,7 @@
 %vibrotactile speech training. called by vtSpeechTraining.m
 %PSM pmalone333@gmail.com
 
-function vtSpeechTrainingExperiment(name, exptdesign)
+function vtSpeechTrainingExperiment_stimWeighting(name, exptdesign)
 
     rand('twister',sum(100*clock))
 
@@ -42,10 +42,21 @@ function vtSpeechTrainingExperiment(name, exptdesign)
         drawAndCenterText(w,['Training Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
             'Click the mouse to continue'],1);
         
-
-        if strcmp(feature_block{iBlock},'voicing'), word_pairs = repmat(word_pairs_voicing,1,floor(exptdesign.numTrialsPerSession/length(word_pairs_voicing)));
-        elseif strcmp(feature_block{iBlock},'manner'), word_pairs = repmat(word_pairs_manner,1,floor(exptdesign.numTrialsPerSession/length(word_pairs_manner)));
-        elseif strcmp(feature_block{iBlock},'place'), word_pairs = repmat(word_pairs_place,1,floor(exptdesign.numTrialsPerSession/length(word_pairs_place)));
+        if strcmp(feature_block{iBlock},'voicing')
+            load(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,'accTracking',['voice' subj '.mat'])); 
+            word_pairs = repmat(word_pairs_voicing,1,floor((exptdesign.numTrialsPerSession*(2/3))/length(word_pairs_voicing))); % 2/3 of word_pairs are unweighted and include all stimuli
+            [~,i] = sort(voice_overall(1:5,end));
+            word_pairs = [word_pairs repmat({word_pairs_voicing{i(1)},word_pairs_voicing{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/length(word_pairs_voicing)))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
+        elseif strcmp(feature_block{iBlock},'manner')
+            load(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,'accTracking',['manner' subj '.mat']));
+            word_pairs = repmat(word_pairs_manner,1,floor((exptdesign.numTrialsPerSession*(2/3))/length(word_pairs_manner))); % 2/3 of word_pairs are unweighted and include all stimuli
+            [~,i] = sort(manner_overall(1:5,end));
+            word_pairs = [word_pairs repmat({word_pairs_manner{i(1)},word_pairs_manner{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/length(word_pairs_manner)))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
+        elseif strcmp(feature_block{iBlock},'place')
+            load(fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj,'accTracking',['place' subj '.mat'])); 
+            word_pairs = repmat(word_pairs_place,1,floor((exptdesign.numTrialsPerSession*(2/3))/length(word_pairs_place))); % 2/3 of word_pairs are unweighted and include all stimuli
+            [~,i] = sort(place_overall(1:5,end));
+            word_pairs = [word_pairs repmat({word_pairs_place{i(1)},word_pairs_place{i(2)}},1,floor((exptdesign.numTrialsPerSession*(1/3))/length(word_pairs_place)))]; % 1/3 of word_pairs are weighted and include 2 VCV pairs with lowest acc from previous session;
         end
         
         stimOrder = randperm(length(word_pairs));
@@ -165,11 +176,11 @@ function vtSpeechTrainingExperiment(name, exptdesign)
     trialOutput(iBlock).accuracyForBlock=accuracyForBlock;
 
     %save the session data in the data directory
-    save(['./data/' exptdesign.subNumber '/' datestr(now, 'yyyymmdd_HHMM') '-' exptdesign.subName '_' feature_block{iBlock} 'block' num2str(iBlock) '.mat'], 'trialOutput', 'exptdesign');
+    save(['./data/' exptdesign.subNumber '/' datestr(now, 'yyyymmdd_HHMM') '-' exptdesign.subName '_block' num2str(iBlock) '.mat'], 'trialOutput', 'exptdesign');
     
     end
     ShowCursor;
-end
+    end
 
 function drawAndCenterText(window,message, wait)
 if wait == 1
