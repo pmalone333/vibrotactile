@@ -1,7 +1,7 @@
 
-subj = '333';
+subj = '983';
 sessDate = '20170710';
-sessNum = 'sess1';
+sessNum = 'sess12';
 
 % subj: string, e.g. '945'
 % sessDate: string, training session date in format YearMonthDay (e.g 20170405 for April 5 2017)
@@ -172,7 +172,7 @@ plot (voice_overall(2,:),'r.-', 'MarkerSize', 20)
 plot (voice_overall(3,:),'k.-', 'MarkerSize', 20)
 plot (voice_overall(4,:),'g.-', 'MarkerSize', 20)
 plot (voice_overall(5,:),'m.-', 'MarkerSize', 20)
-legend('aba/apa','ada/ata','ava/afa','aga/aka','aza/asa')
+legend({'aba/apa','ada/ata','ava/afa','aga/aka','aza/asa'},'FontSize',8,'Location','northeastoutside')
 
 subplot(3,1,2);
 hold on
@@ -185,7 +185,7 @@ plot (place_overall(2,:),'r.-', 'MarkerSize', 20)
 plot (place_overall(3,:),'k.-', 'MarkerSize', 20)
 plot (place_overall(4,:),'g.-', 'MarkerSize', 20)
 plot (place_overall(5,:),'m.-', 'MarkerSize', 20)
-legend('apa/ata','aba/aga','ava/aza','afa/asa','ama/ana')
+legend({'apa/ata','aba/aga','ava/aza','afa/asa','ama/ana'},'FontSize',8,'Location','northeastoutside')
 
 subplot(3,1,3);
 hold on
@@ -198,7 +198,7 @@ plot (manner_overall(2,:),'r.-', 'MarkerSize', 20)
 plot (manner_overall(3,:),'k.-', 'MarkerSize', 20)
 plot (manner_overall(4,:),'g.-', 'MarkerSize', 20)
 plot (manner_overall(5,:),'m.-', 'MarkerSize', 20)
-legend('ada/aza','aza/ana','aba/ama','ada/ana','ata/asa')
+legend({'ada/aza','aza/ana','aba/ama','ada/ana','ata/asa'},'FontSize',8,'Location','northeastoutside')
 saveas(gcf,fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj, [subj '_' sessDate '_featuresOverall.jpg']))
 %close all
 
@@ -214,13 +214,13 @@ plot (manner_overall(6,:),'k.-', 'MarkerSize', 20)
 xlabel('session #')
 ylabel('Accuracy')
 ylim([0:1])
-legend('voice', 'place', 'manner')
+legend({'voice', 'place', 'manner'},'Location','northeastoutside')
 saveas(gcf,fullfile('/Users/pmalone/Google Drive/Code/Vibrotactile/10_Aim2_Training/data',subj, [subj '_' sessDate '_featuresTotal.jpg']))
 
 
-save([data_dir, 'voice', subj, '.mat'], 'voice_overall'); 
-save([data_dir, 'place', subj, '.mat'], 'place_overall');
-save([data_dir, 'manner', subj, '.mat'], 'manner_overall'); 
+%save([data_dir, 'voice', subj, '.mat'], 'voice_overall'); 
+%save([data_dir, 'place', subj, '.mat'], 'place_overall');
+%save([data_dir, 'manner', subj, '.mat'], 'manner_overall'); 
 
 %overall variable becomes previous in the next run, overwritten 
 
