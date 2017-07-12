@@ -1,5 +1,5 @@
 
-subj = '983';
+subj = '1026';
 sessDate = '20170711';
 sessNum = 'sess13';
 
