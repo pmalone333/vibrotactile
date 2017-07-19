@@ -1,6 +1,6 @@
 
-subj = '1093';
-sessDate = '20170717';
+subj = '1094';
+sessDate = '20170718';
 sessNum = 'sess13';
 
 % subj: string, e.g. '945'
