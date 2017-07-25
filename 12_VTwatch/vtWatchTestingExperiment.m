@@ -52,7 +52,7 @@ function vtWatchTestingExperiment(name, exptdesign)
             if iTrial == 1
             soundhandle = PsychPortAudio('Open', [], [], 0, freq, nrchannels);
             end
-            PsychPortAudio('Volume', soundhandle, 0.89);
+            PsychPortAudio('Volume', soundhandle, .88);
             %fill primary buffer with waveform... tokens will be copied from this
             PsychPortAudio('FillBuffer', soundhandle, wavedata, 0, 1);
                         %start audio, wait for it to finish
