@@ -20,9 +20,9 @@ function constructCategoryTrainingStimulus(stimulus)
         };
     [t,s]=buildTSM_nomap(stim);
     
-    stimGen('load',s,t);
+    stimGenPTB('load',s,t);
     rtn=-1;
     while rtn==-1
-        rtn=stimGen('start');
+        rtn=stimGenPTB('start');
     end
 end
