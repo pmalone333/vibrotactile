@@ -224,7 +224,7 @@ try
     % End of experiment, close window:
     Screen('CloseAll');
     Priority(0);
-    handle = ERRORDLG(['Subject Responses: ' num2str(sum_sResp)]);
+    handle = errordlg(['Subject Responses: ' num2str(sum_sResp)]);
     disp(handle)
     % At the end of your code, it is a good idea to restore the old level.
     %     Screen('Preference','SuppressAllWarnings',oldEnableFlag);

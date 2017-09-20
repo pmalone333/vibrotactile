@@ -1,4 +1,4 @@
-exptdesign.debug = 1;
+exptdesign.debug = 0;
 % get subject info
 if exptdesign.debug
     number = '915';
@@ -91,7 +91,7 @@ end
 %close com3 port
 if exptdesign.responseBox
     CMUBox('Close',exptdesign.boxHandle);
-    handle = ERRORDLG('Please ensure dip switches are set back to 4 and A');
+    handle = errordlg('Please ensure dip switches are set back to 4 and A');
     disp(handle)
 end
 
