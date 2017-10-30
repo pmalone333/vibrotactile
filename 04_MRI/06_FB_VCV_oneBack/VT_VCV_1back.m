@@ -29,7 +29,7 @@ if exptdesign.debug
     exptdesign.numTrialsPerSession = 3;    
     exptdesign.numRuns = 1;
 else     
-    exptdesign.numTrialsPerSession = 96;    
+    exptdesign.numTrialsPerSession = 103;  %103  
     exptdesign.numRuns = 6;
 end
 
@@ -79,7 +79,7 @@ for iRuns = 1:exptdesign.numRuns
         startOrNot = input('Start the next run? y or n\n');
     end
     if strcmp(startOrNot,'y')==1
-        [trialOutput.run] = VT_VCV_OB_1back(name,exptdesign);
+        [trialOutput.run] = VT_VCV_1back_exp(name,exptdesign);
     else
         fprintf(['Skipping run ' num2str(iRuns) '\n']);
     end
