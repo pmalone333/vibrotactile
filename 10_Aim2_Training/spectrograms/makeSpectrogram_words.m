@@ -18,7 +18,7 @@ volAndGainSettingsFileName = '';
 
 for i=1:length(list_words)
         vcv_label1 = [list_words{i}];
-        %vcv_plot1 = vibplot(vcv_label1,offsets(i));
+        vcv_plot1 = vibplot(vcv_label1,offsets(i));
         startSamp1 = list_startSamples(i);
         numSamps1 = list_numSamples(i);
         
@@ -31,17 +31,16 @@ for i=1:length(list_words)
         set(gca,'xlim',[offsets(i)-.1 offsets(i)+.9]);
         xlabel('time (s)'); ylabel = ('Hz');
  
-%         hold on;
-%         subplot(2,2,2);
-%         t=[1/fs:1/fs:length(awave1)/fs];
-%         plot(t,awave1)
-        %scatter(vcv_plot1(:,1),vcv_plot1(:,2),10,'o','c')
-%         for h=1:length(lookupf)
-%            hline = refline([0 lookupf(h)]);
-%         end
+        hold on;
+        subplot(2,2,2);
+        t=[1/fs:1/fs:length(awave1)/fs];
+        plot(t,awave1)
+        scatter(vcv_plot1(:,1),vcv_plot1(:,2),10,'o','c')
+        for h=1:length(lookupf)
+           hline = refline([0 lookupf(h)]);
+        end
         title([vcv_label1 ' - ' volAndGainSettings]);
 
-        %export_fig(gcf,[list_words{i} '_' volAndGainSettingsFileName])
         saveas(gcf,[list_words{i} '_' volAndGainSettingsFileName '.pdf'])
         close all
         

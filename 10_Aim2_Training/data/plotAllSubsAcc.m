@@ -1,0 +1,21 @@
+subs = {'983','1026','1093','1094','1095','1097','1098','899'};
+all_p = [];
+all_m = [];
+all_v = [];
+for s=1:length(subs)
+   m = load([subs{s} '/accTracking/manner' subs{s} '.mat']);
+   m = m.manner_overall;
+   m = mean(m,1);
+   v = load([subs{s} '/accTracking/voice' subs{s} '.mat']);
+   v = v.voice_overall;
+   v = mean(v,1);
+   p = load([subs{s} '/accTracking/place' subs{s} '.mat']);
+   p = p.place_overall;
+   p = mean(p,1);
+   all_p(s,:) = p(1:6);
+   all_v(s,:) = v(1:6);
+   all_m(s,:) = m(1:6);
+end
+avg_p = mean(all_p,1);
+avg_v = mean(all_v,1);
+avg_m = mean(all_m,1);
