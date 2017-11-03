@@ -215,25 +215,32 @@ end
 %             end
 % delay
 tic();
-while toc < 0.50
+while toc < 2.0
+    if SportH.BytesAvailable>0
+        break;
+    end
 end
+
 n = SportH.BytesAvailable;
 if n>0
  rtn = fread(SportH, n, 'uint8');
 else
-    fprintf('no bytes cavailable!\n');
+    fprintf('no acknowledgement after 2 seconds!\n');
 end            
-        otherwise
+    otherwise
             fprintf('stimGen - unrecognized command %s\n',cmd);
     end
-
 end
 % write size
 function writeSize(sz)
 global SportH;  %serial port object handle
     % write two bytes of size
-    v1 = uint8(sz/256);
-    v2 = uint8(rem(sz,256));
+    %v1 = uint8(sz/256);
+    %v2 = uint8(rem(sz,256));
+    sz = uint16(sz);
+    v1 = uint8(idivide(sz,uint16(256),'fix'));
+    v2 = uint8(rem(sz,uint16(256)));
+
     fwrite(SportH,v1);
     fwrite(SportH,v2);
 end
