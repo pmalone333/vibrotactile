@@ -22,7 +22,7 @@ end
 exptdesign.subjectName = name;
 
 
-stimType = input('\n\nEnter stim type (0=GU algorithm, 1=FB algorithm):\n\n','s');
+stimType = input('\n\nEnter stim type (1=GU algorithm, 2=FB algorithm):\n\n');
 exptdesign.stimType = stimType;
 %Trial/Block/Run lengths
 
@@ -32,7 +32,7 @@ if exptdesign.debug
     exptdesign.numTrialsPerSession = 3;    
     exptdesign.numRuns = 1;
 else     
-    exptdesign.numTrialsPerSession = 111;  %103  
+    exptdesign.numTrialsPerSession = 111;  %111  
     exptdesign.numRuns = 7;
 end
 
@@ -70,7 +70,7 @@ if exptdesign.responseBox
 end
 
 %open com2 port for stimulator
-piezoDriver32('open','COM5');
+piezoDriver32('open','COM4');
 
 %run all 6 runs right after the last 
 %%%CHANGE BACK TO 1%%%%%%%%%%%

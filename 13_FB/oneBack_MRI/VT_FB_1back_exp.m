@@ -129,7 +129,7 @@ try
         stimulusOnset = GetSecs;
         rtn=-1; % why do we still have this?...
         while rtn==-1
-            rtn = stimGenPTB('start');
+            rtn = piezoDriver32('start');
         end
         stimulusFinished = GetSecs;
         stimulusDuration = stimulusFinished     - stimulusOnset;
@@ -264,11 +264,11 @@ end
 
 function [loadTime] = loadStimuli(stimuliBlock, iTrial)
     
-tm = stimuliBlock{iTrial}{1};
-ch = stimuliBlock{iTrial}{2};
+t = stimuliBlock{iTrial}{1};
+s = stimuliBlock{iTrial}{2};
 
 startTime = tic;
-stimGenPTB('load',ch,tm);
+piezoDriver32('load',t,s);
 loadTime = toc(startTime);
 
 end
