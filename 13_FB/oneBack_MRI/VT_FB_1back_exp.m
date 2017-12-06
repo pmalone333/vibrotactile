@@ -154,12 +154,14 @@ try
         
         %collect event queue
         eventCount=0;
+        respCount = 0; % for tallying sResp for display at end of run
         evt = CMUBox('GetEvent', exptdesign.boxHandle);
         
         while ~isempty(evt)
             eventCount = eventCount + 1;
             %sResp ==1 if button pressed
             sResp(eventCount) = 1;
+            respCount = 1; 
             %record end time of response
             responseFinishedTime(eventCount)=evt.time;
             %responseFinishedTime=evt.time;
@@ -189,6 +191,7 @@ try
         trialOutput.FixationMissed(iTrial)        = FixationMissed;
         trialOutput.sResp{iTrial}                 = sResp;
         trialOutput.accuracy(iTrial)              = accuracy;
+        trialOutput.respCount(iTrial)             = respCount;
         trialOutput.stimuli(iTrial)               = stimuli(iTrial);
         trialOutput.label(iTrial)                 = label(iTrial);
         
@@ -202,12 +205,12 @@ try
     
          
     
-%     sum = 0;
-%     sum_sResp = 0;
-%     for i = 1:length(trialOutput)
-%         sum = sum + trialOutput(i).accuracy;
-%         sum_sResp = sum_sResp + trialOutput(i).sResp;
-%     end
+    sum = 0;
+    sum_sResp = 0;
+    for i = 1:length(trialOutput.sResp)
+        sum = sum + trialOutput.accuracy(i);
+        sum_sResp = sum_sResp + trialOutput.respCount(i);
+    end
     Screen('DrawTexture', w, fixationTexture);
     Screen('Flip',w)
     WaitSecs(10);
@@ -224,8 +227,10 @@ try
     % End of experiment, close window:
     Screen('CloseAll');
     Priority(0);
-%    handle = errordlg(['Subject Responses: ' num2str(sum_sResp)]);
- %   disp(handle)
+        Screen('CloseAll');
+    Priority(0);
+   handle = errordlg(['Subject Responses: ' num2str(sum_sResp)]);
+   disp(handle)
     % At the end of your code, it is a good idea to restore the old level.
     %     Screen('Preference','SuppressAllWarnings',oldEnableFlag);
     
