@@ -19,8 +19,11 @@ else
     mkdir(['./data/' number])
 end
 
-stimType = input('\n\nEnter stim type (1=GU algorithm, 2=FB algorithm):\n\n');
-exptdesign.stimType = stimType;
+if exist(['./history/' number],'dir')
+else
+    mkdir(['./history/' number])
+end
+
 
 if exist(['./history/SUBJ' number 'training.mat'], 'file')
     exptdesign.training=load(['./history/SUBJ' number 'training.mat']);
@@ -29,12 +32,15 @@ else
     fprintf('Subject has not been entered before, starting at level 1')
     exptdesign.training.level=1; %changed this to one cas 08/10/15
     exptdesign.training.history=[];
+    stimType = input('\n\nEnter stim type (1=GU algorithm, 2=FB algorithm):\n\n');
+    exptdesign.stimType = stimType;
+    exptdesign.training.algorithm = stimType;
 end
 pause(2)
 
-exptdesign.numSessions = 2; %number of blocks
-exptdesign.numTrialsPerSession = 5;
-exptdesign.accuracyCutoff = 0.90; %accuracy required to advance level 
+exptdesign.numSessions = 6; %number of blocks
+exptdesign.numTrialsPerSession = 2;
+exptdesign.accuracyCutoff = 0; %accuracy required to advance level 
 
 exptdesign.fixationImage = 'imgsscaled/fixation.bmp';  % image for the fixation cross
 exptdesign.blankImage = 'imgsscaled/blank.bmp';        % image for the blank screen

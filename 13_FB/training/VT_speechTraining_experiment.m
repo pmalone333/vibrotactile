@@ -27,9 +27,9 @@ function VT_speechTraining_experiment(name, exptdesign)
 
     drawAndCenterText(w,'\nVibrotactile speech training',1)
     
-    if exptdesign.stimType==1
+    if exptdesign.training.stimType==1
         load('stimuli\stimuli_GU.mat');
-    elseif exptdesign.stimType==2
+    elseif exptdesign.training.stimType==2
         load('stimuli\stimuli_FB.mat');
     end
     
@@ -96,9 +96,37 @@ function VT_speechTraining_experiment(name, exptdesign)
 
             %feedback
             if accuracy==0
-                drawAndCenterText(w, 'Incorrect.',1)
+                drawAndCenterText(w, ['Incorrect.\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
+                %WaitSecs(.1);
+                %[CorrectionVBLTimestamp CorrectionOnsetTime CorrectionFlipTimestamp CorrectionMissed]=Screen('Flip', w);
+                KbPressWait(1);
+                [var1, keycode, var2] = KbPressWait(1);
+                %tResp = getResponseMouse2();
+                while keycode(1) ~= 1
+                    rtn=-1;
+                    while rtn==-1
+                        rtn=piezoDriver32('start');
+                    end
+                    drawAndCenterText(w, ['Incorrect.\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
+                    [var1, keycode, var2] = KbPressWait(1);
+                    %tResp = getResponseMouse2();
+                end
             else
-                drawAndCenterText(w, 'Correct!',1)
+                drawAndCenterText(w, ['Correct!\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
+                %WaitSecs(.1);
+                %[CorrectionVBLTimestamp CorrectionOnsetTime CorrectionFlipTimestamp CorrectionMissed]=Screen('Flip', w);
+                KbPressWait(1);
+                [var1, keycode, var2] = KbPressWait(1);
+                %tResp = getResponseMouse2();
+                while keycode(1) ~= 1
+                    rtn=-1;
+                    while rtn==-1
+                        rtn=piezoDriver32('start');
+                    end
+                    drawAndCenterText(w, ['Correct!\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
+                    [var1, keycode, var2] = KbPressWait(1);
+                    %tResp = getResponseMouse2();
+                end
             end
             
             %record parameters for the trial
@@ -159,7 +187,7 @@ function VT_speechTraining_experiment(name, exptdesign)
     %save the history data (stimuli, last level passed
     history = [exptdesign.training.history];
     exptdesign.training.history = history;
-    stimType = exptdesign.stimType;
+    stimType = exptdesign.training.stimType;
     save(['./history/SUBJ' exptdesign.subNumber 'training.mat'], 'history', 'level', 'stimType');
 
     

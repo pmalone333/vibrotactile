@@ -96,7 +96,7 @@ function VT_speechTraining_experiment(name, exptdesign)
 
             %feedback
             if accuracy==0
-                drawAndCenterText(w, 'Incorrect.',1)
+                drawAndCenterText(w, 'Incorrect.',1)  
             else
                 drawAndCenterText(w, 'Correct!',1)
             end
@@ -159,7 +159,8 @@ function VT_speechTraining_experiment(name, exptdesign)
     %save the history data (stimuli, last level passed
     history = [exptdesign.training.history];
     exptdesign.training.history = history;
-    save(['./history/SUBJ' exptdesign.subNumber 'training.mat'], 'history', 'level', 'exptdesign.stimType');
+    stimType = exptdesign.stimType;
+    save(['./history/SUBJ' exptdesign.subNumber 'training.mat'], 'history', 'level', 'stimType');
 
     
     end
