@@ -27,7 +27,7 @@ function VT_speechTraining_experiment(name, exptdesign)
 
     drawAndCenterText(w,'\nVibrotactile speech training',1)
     
-    if exptdesign.training.stimType==1
+    if exptdesign.stimType==1 
         load('stimuli\stimuli_GU.mat');
     elseif exptdesign.training.stimType==2
         load('stimuli\stimuli_FB.mat');
@@ -187,7 +187,7 @@ function VT_speechTraining_experiment(name, exptdesign)
     %save the history data (stimuli, last level passed
     history = [exptdesign.training.history];
     exptdesign.training.history = history;
-    stimType = exptdesign.training.stimType;
+    stimType = exptdesign.stimType;
     save(['./history/SUBJ' exptdesign.subNumber 'training.mat'], 'history', 'level', 'stimType');
 
     

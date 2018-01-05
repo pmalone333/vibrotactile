@@ -28,6 +28,8 @@ end
 if exist(['./history/SUBJ' number 'training.mat'], 'file')
     exptdesign.training=load(['./history/SUBJ' number 'training.mat']);
     fprintf(['Subject has been here before, starting at level ' num2str(exptdesign.training.level)])
+    exptdesign.stimType = stimType;
+    exptdesign.training.algorithm = stimType;
 else
     fprintf('Subject has not been entered before, starting at level 1')
     exptdesign.training.level=1; %changed this to one cas 08/10/15
