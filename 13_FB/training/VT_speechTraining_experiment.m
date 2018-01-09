@@ -65,6 +65,8 @@ function VT_speechTraining_experiment(name, exptdesign)
             [nx, ny, bbox] = DrawFormattedText(w, disp_str, 'center', 'center', 1);
             [RespVBLTimestamp RespOnsetTime RespFlipTimestamp RespMissed] = Screen('Flip', w);
             
+            WaitSecs(1 + ((length(disp_labels)-2)*.25));
+            
             %play stimulus   target=worda worda wordb 
             s = stimuli{iTrial,1};
             t = stimuli{iTrial,2};

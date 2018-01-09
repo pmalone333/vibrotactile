@@ -1,92 +1,120 @@
+
 nStimPerBlock = 60;
 
 tmp = importdata('rsaset.csv');
 dm = tmp.data;
 load('wordlist.mat');
 
-%% levels 1-5; 2-AFC
+%% levels 1-4; 2-AFC
 
-thresh = [3.99, 3.49, 3, 2, 0]; %dissimilarity threshold for levels 1-5
+thresh = [3.99, 2.8, 2.1, 0]; %dissimilarity threshold for levels 1-4
 
 stim = {};
 label = {};
-for l=1:5
-    ind = find(dm>thresh(l));
+for l=1:length(thresh)
+    if l==1, ind = find(dm>thresh(l)); 
+    else
+        ind = find(dm>thresh(l) & dm<thresh(1));
+        ind = repmat(ind,4,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind2 = find(dm>thresh(1));
+        ind = [ind; ind2];
+    end
     [rows, columns] = ind2sub(size(dm), ind);
-    for w=1:length(wordlist)
-        load(['GU/' wordlist{w} '.mat']);
-        label{l}{w,1} = wordlist{w};
+    k=1;
+    for w=1:(length(wordlist)*2)
+        load(['GU/' wordlist{k} '.mat']);
+        label{l}{w,1} = wordlist{k};
         stim{l}{w,1} = s;
         stim{l}{w,2} = t;
         % get index of words with > thresh1 dissimilarity
-        i = rows(columns==w);
+        i = rows(columns==k);
         order = randperm(length(i));
         i = i(order); % randomize order of array
         load(['GU/' wordlist{i(1)} '.mat']);
         label{l}{w,2} = wordlist{i(1)};
 %         stim{l}{w,3} = s;
 %         stim{l}{w,4} = t;
+        k=k+1;
+        if k==31, k=1; end
     end
     %duplicate stimuli
     stim{l} = repmat(stim{l},nStimPerBlock/length(stim{l}),1);
     label{l} = repmat(label{l},nStimPerBlock/length(label{l}),1);
 end
 
-%% levels 6-10; 3-AFC
+%% levels 5-8; 3-AFC
 
-thresh = [3.99, 3.49, 3, 2, 0]; %dissimilarity threshold for levels 6-10
+thresh = [3.99, 2.8, 2.1, 0]; %dissimilarity threshold for levels 1-4
 
 stim2 = {};
 label2 = {};
-for l=1:5
-    ind = find(dm>thresh(l));
-    [rows, columns] = ind2sub(size(dm), ind);
-    for w=1:length(wordlist)
-        load(['GU/' wordlist{w} '.mat']);
-        label2{l}{w,1} = wordlist{w};
+for l=1:length(thresh)
+    if l==1, ind = find(dm>thresh(l)); 
+    else
+        ind = find(dm>thresh(l) & dm<thresh(1));
+        ind = repmat(ind,4,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind2 = find(dm>thresh(1));
+        ind = [ind; ind2];
+    end
+    k=1;
+    for w=1:(length(wordlist)*2)
+        load(['GU/' wordlist{k} '.mat']);
+        label2{l}{w,1} = wordlist{k};
         stim2{l}{w,1} = s;
         stim2{l}{w,2} = t;
         % get index of words with > thresh1 dissimilarity
-        i = rows(columns==w);
+        i = rows(columns==k);
         order = randperm(length(i));
         i = i(order); % randomize order of array
         load(['GU/' wordlist{i(1)} '.mat']);
         label2{l}{w,2} = wordlist{i(1)};
         label2{l}{w,3} = wordlist{i(2)};
+        k=k+1;
+        if k==30, k=1; end
     end
     %duplicate stimuli
-    stim2{l} = repmat(stim2{l},nStimPerBlock/length(stim2{l}),1);
-    label2{l} = repmat(label2{l},nStimPerBlock/length(label2{l}),1);
+%     stim2{l} = repmat(stim2{l},nStimPerBlock/length(stim2{l}),1);
+%     label2{l} = repmat(label2{l},nStimPerBlock/length(label2{l}),1);
 end
 
-%% levels 11; 4-AFC
+%% levels 9-12; 4-AFC
 
-thresh = 0; %dissimilarity threshold
+thresh = [3.99, 2.8, 2.1, 0]; %dissimilarity threshold for levels 1-4
 
 stim3 = {};
 label3 = {};
 
-ind = find(dm>thresh);
-[rows, columns] = ind2sub(size(dm), ind);
-for w=1:length(wordlist)
-    load(['GU/' wordlist{w} '.mat']);
-    label3{w,1} = wordlist{w};
-    stim3{w,1} = s;
-    stim3{w,2} = t;
-    % get index of words with > thresh1 dissimilarity
-    i = rows(columns==w);
-    order = randperm(length(i));
-    i = i(order); % randomize order of array
-    load(['GU/' wordlist{i(1)} '.mat']);
-    label3{w,2} = wordlist{i(1)};
-    label3{w,3} = wordlist{i(2)};
-    label3{w,4} = wordlist{i(3)};
+for l=1:length(thresh)
+    if l==1, ind = find(dm>thresh(l)); 
+    else
+        ind = find(dm>thresh(l) & dm<thresh(1));
+        ind = repmat(ind,4,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind2 = find(dm>thresh(1));
+        ind = [ind; ind2];
+    end
+    k=1;
+    for w=1:(length(wordlist)*2)
+        load(['GU/' wordlist{k} '.mat']);
+        label3{l}{w,1} = wordlist{k};
+        stim3{l}{w,1} = s;
+        stim3{l}{w,2} = t;
+        % get index of words with > thresh1 dissimilarity
+        i = rows(columns==k);
+        order = randperm(length(i));
+        i = i(order); % randomize order of array
+        load(['GU/' wordlist{i(1)} '.mat']);
+        label3{l}{w,2} = wordlist{i(1)};
+        label3{l}{w,3} = wordlist{i(2)};
+        label3{l}{w,4} = wordlist{i(3)};
+        k=k+1;
+        if k==30, k=1; end
+    end
+    %duplicate stimuli
+%     stim3n{l} = repmat(stim3{l},nStimPerBlock/length(stim3{l}),1);
+%     label3n{l} = repmat(label3{l},nStimPerBlock/length(label3{l}),1);
 end
-%duplicate stimuli
-stim3n{1} = repmat(stim3,nStimPerBlock/length(stim3),1);
-label3n{1} = repmat(label3,nStimPerBlock/length(label3),1);
 
-%% levels 12; 5-AFC
+%% levels 13; 5-AFC
 
 thresh = 0; %dissimilarity threshold
 
@@ -95,27 +123,30 @@ label4 = {};
 
 ind = find(dm>thresh);
 [rows, columns] = ind2sub(size(dm), ind);
-for w=1:length(wordlist)
-    load(['GU/' wordlist{w} '.mat']);
-    label4{w,1} = wordlist{w};
-    stim4{w,1} = s;
-    stim4{w,2} = t;
+k=1;
+for w=1:(length(wordlist)*2)
+    load(['GU/' wordlist{k} '.mat']);
+    label4{1}{w,1} = wordlist{k};
+    stim4{1}{w,1} = s;
+    stim4{1}{w,2} = t;
     % get index of words with > thresh1 dissimilarity
-    i = rows(columns==w);
+    i = rows(columns==k);
     order = randperm(length(i));
     i = i(order); % randomize order of array
     load(['GU/' wordlist{i(1)} '.mat']);
-    label4{w,2} = wordlist{i(1)};
-    label4{w,3} = wordlist{i(2)};
-    label4{w,4} = wordlist{i(3)};
-    label4{w,5} = wordlist{i(4)};
+    label4{1}{w,2} = wordlist{i(1)};
+    label4{1}{w,3} = wordlist{i(2)};
+    label4{1}{w,4} = wordlist{i(3)};
+    label4{1}{w,5} = wordlist{i(4)};
+    k=k+1;
+    if k==30, k=1; end
 end
 %duplicate stimuli
-stim4n{1} = repmat(stim4,nStimPerBlock/length(stim4),1);
-label4n{1} = repmat(label4,nStimPerBlock/length(label4),1);
+% stim4n{1} = repmat(stim4,nStimPerBlock/length(stim4),1);
+% label4n{1} = repmat(label4,nStimPerBlock/length(label4),1);
 
 
-stim = [stim stim2 stim3n stim4n];
-label = [label label2 label3n label4n];
+stim = [stim stim2 stim3 stim4];
+label = [label label2 label3 label4];
 
 save('stimuli_GU','stim','label')
