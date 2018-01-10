@@ -1,29 +1,28 @@
 
 nStimPerBlock = 60;
 
-tmp = importdata('trainingset-phdistanceGUGW.csv');
+tmp = importdata('trainingset-editdistanceFB.csv');
 dm = tmp.data;
 load('wordlist_train.mat');
 
 %% levels 1-3; 2-AFC
 
-thresh = [3.99, 2.45,0]; %dissimilarity threshold for levels 1-3
+thresh = [3,2,0]; %dissimilarity threshold for levels 1-3
 
 stim = {};
 label = {};
 for l=1:length(thresh)
-    if l==1, ind = find(dm>thresh(l)); 
-    elseif l==2
-        ind2 = find(dm>thresh(2) & dm<thresh(1));
-        ind2 = repmat(ind2(1:168),3,1); %scale up by 4 so distributions of pairs with different diss is the same
-        ind = find(dm>thresh(1));
+    ind = find(dm>thresh(1));
+    if l==2
+        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
+        ind2 = repmat(ind2(1:244),2,1);
         ind = [ind; ind2];
     elseif l==3
-        ind3 = find(dm>thresh(3) & dm<thresh(2));
-        ind3 = repmat(ind3(1:168),3,1); %scale up by 4 so distributions of pairs with different diss is the same
-        ind2 = find(dm>thresh(2) & dm<thresh(1));
-        ind2 = repmat(ind2(1:168),3,1); %scale up by 4 so distributions of pairs with different diss is the same
-        ind = find(dm>thresh(1));
+        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
+        ind2 = repmat(ind2(1:244),2,1);
+        ind3 = find(dm>=thresh(3) & dm<=thresh(2));
+        ind3 = [ind3; ind3(1:20)];
+        ind3 = repmat(ind3,3,1);
         ind = [ind; ind2; ind3];
     end
     [rows, columns] = ind2sub(size(dm), ind);
@@ -51,17 +50,23 @@ end
 
 %% levels 4-6; 3-AFC
 
-thresh = [3.99, 2.45,0]; %dissimilarity threshold for levels 1-4
+thresh = [3,2,0]; %dissimilarity threshold for levels 1-3
 
 stim2 = {};
 label2 = {};
 for l=1:length(thresh)
-    if l==1, ind = find(dm>thresh(l)); 
-    else
-        ind = find(dm>thresh(l) & dm<thresh(1));
-        ind = repmat(ind,4,1); %scale up by 4 so distributions of pairs with different diss is the same
-        ind2 = find(dm>thresh(1));
+    ind = find(dm>thresh(1));
+    if l==2
+        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
+        ind2 = repmat(ind2(1:244),2,1);
         ind = [ind; ind2];
+    elseif l==3
+        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
+        ind2 = repmat(ind2(1:244),2,1);
+        ind3 = find(dm>=thresh(3) & dm<=thresh(2));
+        ind3 = [ind3; ind3(1:20)];
+        ind3 = repmat(ind3,3,1);
+        ind = [ind; ind2; ind3];
     end
     k=1;
     for w=1:(length(wordlist)*2)
@@ -86,17 +91,24 @@ end
 
 %% levels 7-9; 4-AFC
 
-thresh = [3.99, 2.45,0]; %dissimilarity threshold for levels 1-3
+thresh = [3,2,0]; %dissimilarity threshold for levels 1-3
+
 stim3 = {};
 label3 = {};
 
 for l=1:length(thresh)
-    if l==1, ind = find(dm>thresh(l)); 
-    else
-        ind = find(dm>thresh(l) & dm<thresh(1));
-        ind = repmat(ind,4,1); %scale up by 4 so distributions of pairs with different diss is the same
-        ind2 = find(dm>thresh(1));
+    ind = find(dm>thresh(1));
+    if l==2
+        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
+        ind2 = repmat(ind2(1:244),2,1);
         ind = [ind; ind2];
+    elseif l==3
+        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
+        ind2 = repmat(ind2(1:244),2,1);
+        ind3 = find(dm>=thresh(3) & dm<=thresh(2));
+        ind3 = [ind3; ind3(1:20)];
+        ind3 = repmat(ind3,3,1);
+        ind = [ind; ind2; ind3];
     end
     k=1;
     for w=1:(length(wordlist)*2)
@@ -120,7 +132,7 @@ for l=1:length(thresh)
 %     label3n{l} = repmat(label3{l},nStimPerBlock/length(label3{l}),1);
 end
 
-%% levels 13; 5-AFC
+%% levels 10; 5-AFC
 
 thresh = 0; %dissimilarity threshold
 
@@ -155,4 +167,4 @@ end
 stim = [stim stim2 stim3 stim4];
 label = [label label2 label3 label4];
 
-save('stimuli_GU','stim','label')
+save('stimuli_FB','stim','label')
