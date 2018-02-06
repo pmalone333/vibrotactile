@@ -1,7 +1,7 @@
 %vibrotactile speech training. called by VT_speechTraining.m
 %PSM pmalone333@gmail.com
 
-function VT_speechTraining_experiment(name, exptdesign)
+function VT_speechTraining_experiment(name, exptdesign, stimType)
 
     rand('twister',sum(100*clock))
 
@@ -22,23 +22,29 @@ function VT_speechTraining_experiment(name, exptdesign)
     blankTexture=Screen('MakeTexture', w, double(blankImage));
 
     %display experiment instructions
-    drawAndCenterText(w, ['Please review instructions \n'...
-        'Please click a mouse button to advance at each screen'],1)
+%     drawAndCenterText(w, ['Please review instructions \n'...
+%         'Press any key to continue'],1)
 
-    drawAndCenterText(w,'\nVibrotactile speech training',1)
+    drawAndCenterText(w,'\nVibrotactile speech training.\n\n\nPress any key to continue.',0)
+    KbWait
     
-    if exptdesign.stimType==1 
-        load('stimuli\stimuli_GU.mat');
-    elseif exptdesign.training.stimType==2
-        load('stimuli\stimuli_FB.mat');
+    
+    if stimType == 1
+        makeGUTrainingStim;
+        load('stimuli_GU.mat');
+    elseif stimType == 2
+        makeFBTrainingStim;
+        load('stimuli_FB.mat');
     end
     
-    level = exptdesign.training.level;
+     level = exptdesign.training.level;
 
     for iBlock=1:exptdesign.numSessions %how many blocks to run this training session
         drawAndCenterText(w,['Training Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
             'You are on Level ' num2str(level) '\n\n\n\n'...
-            'Click the mouse to continue'],1);
+            'Press any key to continue'],0);
+        while KbCheck; end % Wait until all keys are released.
+        KbWait
         
         stimuli = stim{level};
         labels = label{level};
@@ -74,6 +80,7 @@ function VT_speechTraining_experiment(name, exptdesign)
             piezoDriver32('start');
             
             %get keyboard response
+            clear sResp
             while KbCheck; end % Wait until all keys are released.
             responseStartTime = GetSecs;
             while 1
@@ -82,8 +89,8 @@ function VT_speechTraining_experiment(name, exptdesign)
                 if keyIsDown
                     sResp = KbName(keyCode);
                     responseFinishedTime = GetSecs;
-                    break
                     while KbCheck; end
+                    break
                 end
             end
 
@@ -91,45 +98,108 @@ function VT_speechTraining_experiment(name, exptdesign)
             accuracy=0;
             for i=1:length(size(labels,2))
                 r = str2num(sResp(1));
+                try
                 if strcmp(target,disp_labels{r}), accuracy=1;
+                end
+                catch
                 end
             end
 
 
             %feedback
+            numFB=0;
+            fbResp = []; %for recording which stimuli are replayed during feedback
             if accuracy==0
-                drawAndCenterText(w, ['Incorrect.\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
-                %WaitSecs(.1);
-                %[CorrectionVBLTimestamp CorrectionOnsetTime CorrectionFlipTimestamp CorrectionMissed]=Screen('Flip', w);
-                KbPressWait(1);
-                [var1, keycode, var2] = KbPressWait(1);
-                %tResp = getResponseMouse2();
-                while keycode(1) ~= 1
-                    rtn=-1;
-                    while rtn==-1
-                        rtn=piezoDriver32('start');
+                %                 drawAndCenterText(w, ['Incorrect.\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
+                %                 %WaitSecs(.1);
+                %                 %[CorrectionVBLTimestamp CorrectionOnsetTime CorrectionFlipTimestamp CorrectionMissed]=Screen('Flip', w);
+                %                 KbPressWait(1);
+                %                 [var1, keycode, var2] = KbPressWait(1);
+                %                 %tResp = getResponseMouse2();
+                %                 while keycode(1) ~= 1
+                %                     rtn=-1;
+                %                     while rtn==-1
+                %                         rtn=piezoDriver32('start');
+                %                     end
+                %                     drawAndCenterText(w, ['Incorrect.\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
+                %                     [var1, keycode, var2] = KbPressWait(1);
+                %                     %tResp = getResponseMouse2();
+                %                 end
+
+                drawAndCenterText(w, ['Incorrect. The correct answer was ' target '. \n\n\n Select a word you would like to feel again. \n\n\nWhen you are finished, press enter to continue.\n\n\n' disp_str], 0);
+                %get keyboard response
+                while KbCheck; end % Wait until all keys are released.
+                while 1
+                    % Check the state of the keyboard.
+                    [ keyIsDown, seconds, keyCode ] = KbCheck;
+                    if keyIsDown
+                        numFB=numFB+1;
+                        sResp = KbName(keyCode);
+                        if strcmp(sResp,'return'), break; end
+                        if numFB==4, break; end
+                        for i=1:size(labels,2)
+                            try 
+                                if strcmp(labels{iTrial,i},disp_labels{str2num(sResp(1))})
+                                    s = stimuli{iTrial,i+(i-1)};
+                                    t = stimuli{iTrial,i+1+(i-1)};
+                                    piezoDriver32('load',t,s);
+                                    piezoDriver32('start'); 
+                                    fbResp = [fbResp sResp];
+                                end
+                            catch
+                            end
+                        end
+                   
+                        %while KbCheck; end
+                        clear sResp
                     end
-                    drawAndCenterText(w, ['Incorrect.\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
-                    [var1, keycode, var2] = KbPressWait(1);
-                    %tResp = getResponseMouse2();
                 end
+
             else
-                drawAndCenterText(w, ['Correct!\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
-                %WaitSecs(.1);
-                %[CorrectionVBLTimestamp CorrectionOnsetTime CorrectionFlipTimestamp CorrectionMissed]=Screen('Flip', w);
-                KbPressWait(1);
-                [var1, keycode, var2] = KbPressWait(1);
-                %tResp = getResponseMouse2();
-                while keycode(1) ~= 1
-                    rtn=-1;
-                    while rtn==-1
-                        rtn=piezoDriver32('start');
+                drawAndCenterText(w, ['Correct! The correct answer was ' target '. \n\n\n Select a word you would like to feel again. \n\n\nWhen you are finished, press enter to continue.\n\n\n' disp_str], 0);
+                %get keyboard response
+                while KbCheck; end % Wait until all keys are released.
+                while 1
+                    % Check the state of the keyboard.
+                    [ keyIsDown, seconds, keyCode ] = KbCheck;
+                    if keyIsDown
+                        numFB=numFB+1;
+                        sResp = KbName(keyCode);
+                        if strcmp(sResp,'return'), break; end
+                        if numFB==4, break; end
+                        for i=1:size(labels,2)
+                            try
+                            if strcmp(labels{iTrial,i},disp_labels{str2num(sResp(1))})
+                                s = stimuli{iTrial,i+(i-1)};
+                                t = stimuli{iTrial,i+1+(i-1)};
+                                piezoDriver32('load',t,s);
+                                piezoDriver32('start');
+                                fbResp = [fbResp sResp];
+                            end
+                            catch
+                            end
+                        end
+                
+                        %while KbCheck; end
+                        clear sResp
                     end
-                    drawAndCenterText(w, ['Correct!\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
-                    [var1, keycode, var2] = KbPressWait(1);
-                    %tResp = getResponseMouse2();
                 end
-            end
+%                 drawAndCenterText(w, ['Correct!\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
+%                 %WaitSecs(.1);
+%                 %[CorrectionVBLTimestamp CorrectionOnsetTime CorrectionFlipTimestamp CorrectionMissed]=Screen('Flip', w);
+%                 KbPressWait(1);
+%                 [var1, keycode, var2] = KbPressWait(1);
+%                 %tResp = getResponseMouse2();
+%                 while keycode(1) ~= 1
+%                     rtn=-1;
+%                     while rtn==-1
+%                         rtn=piezoDriver32('start');
+%                     end
+%                     drawAndCenterText(w, ['Correct!\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
+%                     [var1, keycode, var2] = KbPressWait(1);
+%                     %tResp = getResponseMouse2();
+%                 end
+             end
             
             %record parameters for the trial
             trialOutput(iBlock).responseStartTime(iTrial)=responseStartTime;
@@ -141,6 +211,7 @@ function VT_speechTraining_experiment(name, exptdesign)
             trialOutput(iBlock).stim{iTrial}=stimuli{iTrial};
             trialOutput(iBlock).disp_labels{iTrial}=disp_labels;
             trialOutput(iBlock).disp_str{iTrial}=disp_str;
+            trialOutput(iBlock).fbResp{iTrial}=fbResp;
 
             %save stimulus presentation timestamps
 %             trialOutput(iBlock).FixationVBLTimestamp(iTrial)=FixationVBLTimestamp;
@@ -158,8 +229,9 @@ function VT_speechTraining_experiment(name, exptdesign)
             if iTrial==exptdesign.numTrialsPerSession && iBlock < exptdesign.numSessions
                 accuracyForBlock=mean(trialOutput(iBlock).accuracy);
                 drawAndCenterText(w, ['Your accuracy was ' num2str(round(accuracyForBlock.*100)) '%\n\n\n'...
-                    'Click mouse to continue' ],1)
-                KbWait(1)
+                    'Press any key to continue' ],0)
+                while KbCheck; end % Wait until all keys are released.
+                KbWait
 
             elseif iTrial==exptdesign.numTrialsPerSession && iBlock == exptdesign.numSessions
                 %calculate accuracy
@@ -189,7 +261,7 @@ function VT_speechTraining_experiment(name, exptdesign)
     %save the history data (stimuli, last level passed
     history = [exptdesign.training.history];
     exptdesign.training.history = history;
-    stimType = exptdesign.stimType;
+    %exptdesign.training.stimType = stimType;
     save(['./history/SUBJ' exptdesign.subNumber 'training.mat'], 'history', 'level', 'stimType');
 
     

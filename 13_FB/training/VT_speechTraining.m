@@ -2,6 +2,8 @@
 %1/2/18
 %PSM pmalone333@gmail.com
 
+
+clear; %make sure to clear workspace 
 %get subject info
 number = input('\n\nEnter Subject NUMBER:\n\n','s');
 name = number;
@@ -27,20 +29,18 @@ end
 
 if exist(['./history/SUBJ' number 'training.mat'], 'file')
     exptdesign.training=load(['./history/SUBJ' number 'training.mat']);
+    stimType = exptdesign.training.stimType;
     fprintf(['Subject has been here before, starting at level ' num2str(exptdesign.training.level)])
-    exptdesign.stimType = stimType;
-    exptdesign.training.algorithm = stimType;
+    %stimType = stimType;
 else
     fprintf('Subject has not been entered before, starting at level 1')
     exptdesign.training.level=1; %changed this to one cas 08/10/15
     exptdesign.training.history=[];
     stimType = input('\n\nEnter stim type (1=GU algorithm, 2=FB algorithm):\n\n');
-    exptdesign.stimType = stimType;
-    exptdesign.training.algorithm = stimType;
 end
 pause(2)
 
-exptdesign.numSessions = 6; %number of blocks
+exptdesign.numSessions = 5; %number of blocks
 exptdesign.numTrialsPerSession = 60;
 exptdesign.accuracyCutoff = 0.8; %accuracy required to advance level 
 
@@ -48,7 +48,8 @@ exptdesign.fixationImage = 'imgsscaled/fixation.bmp';  % image for the fixation 
 exptdesign.blankImage = 'imgsscaled/blank.bmp';        % image for the blank screen
 
 piezoDriver32('open','COM5');
-VT_speechTraining_experiment(name,exptdesign);
+VT_speechTraining_experiment(name,exptdesign,stimType);
 sessDate = datestr(now, 'yyyymmdd_HHMM');
 %makeTrainingFigure(number,sessDate);
 piezoDriver32('close');
+clear

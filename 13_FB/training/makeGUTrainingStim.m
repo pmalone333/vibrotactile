@@ -1,34 +1,36 @@
+function makeGUTrainingStim
 
 nStimPerBlock = 60;
 
-tmp = importdata('trainingset-editdistanceFB.csv');
+tmp = importdata('stimuli/trainingset-phdistanceGUGW.csv');
 dm = tmp.data;
-load('wordlist_train.mat');
+load('stimuli/wordlist_train.mat');
 
 %% levels 1-3; 2-AFC
 
-thresh = [3,2,0]; %dissimilarity threshold for levels 1-3
+thresh = [3.99, 2.45,0]; %dissimilarity threshold for levels 1-3
 
 stim = {};
 label = {};
 for l=1:length(thresh)
-    ind = find(dm>thresh(1));
-    if l==2
-        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
-        ind2 = repmat(ind2(1:244),2,1);
+    if l==1, ind = find(dm>thresh(l)); 
+    elseif l==2
+        ind2 = find(dm>thresh(2) & dm<thresh(1));
+        ind2 = repmat(ind2(1:168),3,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind = find(dm>thresh(1));
         ind = [ind; ind2];
     elseif l==3
-        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
-        ind2 = repmat(ind2(1:244),2,1);
-        ind3 = find(dm>=thresh(3) & dm<=thresh(2));
-        ind3 = [ind3; ind3(1:20)];
-        ind3 = repmat(ind3,3,1);
+        ind3 = find(dm>thresh(3) & dm<thresh(2));
+        ind3 = repmat(ind3(1:168),3,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind2 = find(dm>thresh(2) & dm<thresh(1));
+        ind2 = repmat(ind2(1:168),3,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind = find(dm>thresh(1));
         ind = [ind; ind2; ind3];
     end
     [rows, columns] = ind2sub(size(dm), ind);
     k=1;
     for w=1:(length(wordlist)*2)
-        load(['GU/' wordlist{k} '.mat']);
+        load(['stimuli/GU/' wordlist{k} '.mat']);
         label{l}{w,1} = wordlist{k};
         stim{l}{w,1} = s;
         stim{l}{w,2} = t;
@@ -36,10 +38,10 @@ for l=1:length(thresh)
         i = rows(columns==k);
         order = randperm(length(i));
         i = i(order); % randomize order of array
-        load(['GU/' wordlist{i(1)} '.mat']);
+        load(['stimuli/GU/' wordlist{i(1)} '.mat']);
         label{l}{w,2} = wordlist{i(1)};
-%         stim{l}{w,3} = s;
-%         stim{l}{w,4} = t;
+        stim{l}{w,3} = s;
+        stim{l}{w,4} = t;
         k=k+1;
         if k==31, k=1; end
     end
@@ -50,27 +52,22 @@ end
 
 %% levels 4-6; 3-AFC
 
-thresh = [3,2,0]; %dissimilarity threshold for levels 1-3
+thresh = [3.99, 2.45,0]; %dissimilarity threshold for levels 1-4
 
 stim2 = {};
 label2 = {};
 for l=1:length(thresh)
-    ind = find(dm>thresh(1));
-    if l==2
-        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
-        ind2 = repmat(ind2(1:244),2,1);
+    if l==1, ind = find(dm>thresh(l)); 
+    else
+        ind = find(dm>thresh(l) & dm<thresh(1));
+        ind = repmat(ind,4,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind2 = find(dm>thresh(1));
         ind = [ind; ind2];
-    elseif l==3
-        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
-        ind2 = repmat(ind2(1:244),2,1);
-        ind3 = find(dm>=thresh(3) & dm<=thresh(2));
-        ind3 = [ind3; ind3(1:20)];
-        ind3 = repmat(ind3,3,1);
-        ind = [ind; ind2; ind3];
     end
+    [rows, columns] = ind2sub(size(dm), ind);
     k=1;
     for w=1:(length(wordlist)*2)
-        load(['GU/' wordlist{k} '.mat']);
+        load(['stimuli/GU/' wordlist{k} '.mat']);
         label2{l}{w,1} = wordlist{k};
         stim2{l}{w,1} = s;
         stim2{l}{w,2} = t;
@@ -78,9 +75,14 @@ for l=1:length(thresh)
         i = rows(columns==k);
         order = randperm(length(i));
         i = i(order); % randomize order of array
-        load(['GU/' wordlist{i(1)} '.mat']);
+        load(['stimuli/GU/' wordlist{i(1)} '.mat']);
         label2{l}{w,2} = wordlist{i(1)};
         label2{l}{w,3} = wordlist{i(2)};
+        stim2{l}{w,3} = s;
+        stim2{l}{w,4} = t;
+        load(['stimuli/GU/' wordlist{i(2)} '.mat']);
+        stim2{l}{w,5} = s;
+        stim2{l}{w,6} = t;
         k=k+1;
         if k==30, k=1; end
     end
@@ -91,28 +93,22 @@ end
 
 %% levels 7-9; 4-AFC
 
-thresh = [3,2,0]; %dissimilarity threshold for levels 1-3
-
+thresh = [3.99, 2.45,0]; %dissimilarity threshold for levels 1-3
 stim3 = {};
 label3 = {};
 
 for l=1:length(thresh)
-    ind = find(dm>thresh(1));
-    if l==2
-        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
-        ind2 = repmat(ind2(1:244),2,1);
+    if l==1, ind = find(dm>thresh(l)); 
+    else
+        ind = find(dm>thresh(l) & dm<thresh(1));
+        ind = repmat(ind,4,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind2 = find(dm>thresh(1));
         ind = [ind; ind2];
-    elseif l==3
-        ind2 = find(dm>=thresh(2) & dm<=thresh(1));
-        ind2 = repmat(ind2(1:244),2,1);
-        ind3 = find(dm>=thresh(3) & dm<=thresh(2));
-        ind3 = [ind3; ind3(1:20)];
-        ind3 = repmat(ind3,3,1);
-        ind = [ind; ind2; ind3];
     end
+    [rows, columns] = ind2sub(size(dm), ind);
     k=1;
     for w=1:(length(wordlist)*2)
-        load(['GU/' wordlist{k} '.mat']);
+        load(['stimuli/GU/' wordlist{k} '.mat']);
         label3{l}{w,1} = wordlist{k};
         stim3{l}{w,1} = s;
         stim3{l}{w,2} = t;
@@ -120,10 +116,18 @@ for l=1:length(thresh)
         i = rows(columns==k);
         order = randperm(length(i));
         i = i(order); % randomize order of array
-        load(['GU/' wordlist{i(1)} '.mat']);
+        load(['stimuli/GU/' wordlist{i(1)} '.mat']);
         label3{l}{w,2} = wordlist{i(1)};
         label3{l}{w,3} = wordlist{i(2)};
         label3{l}{w,4} = wordlist{i(3)};
+        stim3{l}{w,3} = s;
+        stim3{l}{w,4} = t;
+        load(['stimuli/GU/' wordlist{i(2)} '.mat']);
+        stim3{l}{w,5} = s;
+        stim3{l}{w,6} = t;
+        load(['stimuli/GU/' wordlist{i(3)} '.mat']);
+        stim3{l}{w,7} = s;
+        stim3{l}{w,8} = t;
         k=k+1;
         if k==30, k=1; end
     end
@@ -134,16 +138,17 @@ end
 
 %% levels 10; 5-AFC
 
-thresh = 0; %dissimilarity threshold
+thresh = [0];
 
 stim4 = {};
 label4 = {};
+
 
 ind = find(dm>thresh);
 [rows, columns] = ind2sub(size(dm), ind);
 k=1;
 for w=1:(length(wordlist)*2)
-    load(['GU/' wordlist{k} '.mat']);
+    load(['stimuli/FB/' wordlist{k} '.mat']);
     label4{1}{w,1} = wordlist{k};
     stim4{1}{w,1} = s;
     stim4{1}{w,2} = t;
@@ -151,11 +156,22 @@ for w=1:(length(wordlist)*2)
     i = rows(columns==k);
     order = randperm(length(i));
     i = i(order); % randomize order of array
-    load(['GU/' wordlist{i(1)} '.mat']);
+    load(['stimuli/FB/' wordlist{i(1)} '.mat']);
     label4{1}{w,2} = wordlist{i(1)};
+    stim4{1}{w,3} = s;
+    stim4{1}{w,4} = t;
     label4{1}{w,3} = wordlist{i(2)};
     label4{1}{w,4} = wordlist{i(3)};
     label4{1}{w,5} = wordlist{i(4)};
+    load(['stimuli/FB/' wordlist{i(2)} '.mat']);
+    stim4{1}{w,5} = s;
+    stim4{1}{w,6} = t;
+    load(['stimuli/FB/' wordlist{i(3)} '.mat']);
+    stim4{1}{w,7} = s;
+    stim4{1}{w,8} = t;
+    load(['stimuli/FB/' wordlist{i(4)} '.mat']);
+    stim4{1}{w,9} = s;
+    stim4{1}{w,10} = t;
     k=k+1;
     if k==30, k=1; end
 end
@@ -167,4 +183,6 @@ end
 stim = [stim stim2 stim3 stim4];
 label = [label label2 label3 label4];
 
-save('stimuli_FB','stim','label')
+save('stimuli_GU','stim','label')
+
+end
