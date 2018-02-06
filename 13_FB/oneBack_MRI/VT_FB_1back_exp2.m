@@ -1,5 +1,5 @@
 
-function trialOutput = VT_FB_1back_exp(name,exptdesign)
+function trialOutput = VT_FB_1back_exp2(name,exptdesign)
 %dbstop if error;
 try
     rand('twister',sum(100*clock))
@@ -206,10 +206,10 @@ try
     
          
     
-    sum = 0;
+    sum2 = 0;
     sum_sResp = 0;
     for i = 1:length(trialOutput.sResp)
-        sum = sum + trialOutput.accuracy(i);
+        sum2 = sum2 + trialOutput.accuracy(i);
         sum_sResp = sum_sResp + trialOutput.respCount(i);
     end
     Screen('DrawTexture', w, fixationTexture);

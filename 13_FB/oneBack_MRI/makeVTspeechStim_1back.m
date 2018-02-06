@@ -1,4 +1,5 @@
 function makeVTspeechStim_1back(stimType)
+rand('twister',sum(100*clock))
 % stimType; 0=GU algorithm, 1=FB algorithm
 nRuns = 7;
 nStimPerRun = 111; % number of stimuli presented in 6 second block 

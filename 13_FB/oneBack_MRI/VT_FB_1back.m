@@ -82,7 +82,7 @@ for iRuns = 1:exptdesign.numRuns
         startOrNot = input('Start the next run? y or n\n');
     end
     if strcmp(startOrNot,'y')==1
-        [trialOutput.run] = VT_FB_1back_exp(name,exptdesign);
+        [trialOutput.run] = VT_FB_1back_exp2(name,exptdesign);
     else
         fprintf(['Skipping run ' num2str(iRuns) '\n']);
     end
