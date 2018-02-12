@@ -148,7 +148,7 @@ ind = find(dm>thresh);
 [rows, columns] = ind2sub(size(dm), ind);
 k=1;
 for w=1:(length(wordlist)*2)
-    load(['stimuli/FB/' wordlist{k} '.mat']);
+    load(['stimuli/GU/' wordlist{k} '.mat']);
     label4{1}{w,1} = wordlist{k};
     stim4{1}{w,1} = s;
     stim4{1}{w,2} = t;
@@ -156,20 +156,20 @@ for w=1:(length(wordlist)*2)
     i = rows(columns==k);
     order = randperm(length(i));
     i = i(order); % randomize order of array
-    load(['stimuli/FB/' wordlist{i(1)} '.mat']);
+    load(['stimuli/GU/' wordlist{i(1)} '.mat']);
     label4{1}{w,2} = wordlist{i(1)};
     stim4{1}{w,3} = s;
     stim4{1}{w,4} = t;
     label4{1}{w,3} = wordlist{i(2)};
     label4{1}{w,4} = wordlist{i(3)};
     label4{1}{w,5} = wordlist{i(4)};
-    load(['stimuli/FB/' wordlist{i(2)} '.mat']);
+    load(['stimuli/GU/' wordlist{i(2)} '.mat']);
     stim4{1}{w,5} = s;
     stim4{1}{w,6} = t;
-    load(['stimuli/FB/' wordlist{i(3)} '.mat']);
+    load(['stimuli/GU/' wordlist{i(3)} '.mat']);
     stim4{1}{w,7} = s;
     stim4{1}{w,8} = t;
-    load(['stimuli/FB/' wordlist{i(4)} '.mat']);
+    load(['stimuli/GU/' wordlist{i(4)} '.mat']);
     stim4{1}{w,9} = s;
     stim4{1}{w,10} = t;
     k=k+1;

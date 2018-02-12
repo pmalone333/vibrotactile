@@ -65,20 +65,20 @@ function vtWatchTestingExperiment(name, exptdesign)
                 end
             end
             
-            [nx, ny, bbox] = DrawFormattedText(w, ['What consonant did you hear?'], 'center', 'center', 1);
-            [RespVBLTimestamp RespOnsetTime RespFlipTimestamp RespMissed] = Screen('Flip', w);
-            
-            while KbCheck; end % Wait until all keys are released.
-            responseStartTime = GetSecs;
-            while 1
-                % Check the state of the keyboard.
-                [ keyIsDown, seconds, keyCode ] = KbCheck;
-                if keyIsDown
-                    sResp = KbName(keyCode);
-                    break
-                    while KbCheck; end
-                end
-            end
+%             [nx, ny, bbox] = DrawFormattedText(w, ['What consonant did you hear?'], 'center', 'center', 1);
+%             [RespVBLTimestamp RespOnsetTime RespFlipTimestamp RespMissed] = Screen('Flip', w);
+%             
+%             while KbCheck; end % Wait until all keys are released.
+%             responseStartTime = GetSecs;
+%             while 1
+%                 % Check the state of the keyboard.
+%                 [ keyIsDown, seconds, keyCode ] = KbCheck;
+%                 if keyIsDown
+%                     sResp = KbName(keyCode);
+%                     break
+%                     while KbCheck; end
+%                 end
+%             end
 
             RT = seconds - responseStartTime;
             
