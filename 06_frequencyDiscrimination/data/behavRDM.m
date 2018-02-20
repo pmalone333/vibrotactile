@@ -1,6 +1,7 @@
-subjs = {'1028','1058','1062','1064','1072','1073'};
+subjs = {'1028','1058','1062','1064','1072','1073','1103','1106','1108','1112'};
 preOrPost = 'postT';
-BDMs = zeros(length(subjs),6,6);
+BDMs = zeros(6,6,length(subjs));
+%BDMs = {};
 
 for i=1:length(subjs)
    data_path = dir(fullfile(subjs{i},preOrPost,'20*block7.mat'));
@@ -69,7 +70,9 @@ for i=1:length(subjs)
    end
    BDM_temp = BDM_temp + BDM_temp';
    BDM_totalTrials = BDM_totalTrials + BDM_totalTrials';
-   BDMs(:,:,i) = BDM_temp ./ BDM_totalTrials;
+   tmp = BDM_temp ./ BDM_totalTrials;
+   %BDMs{i} = tmp;
+   BDMs(:,:,i) = tmp;
    BDMs(isnan(BDMs)) = 0;
    meanBDM = mean(BDMs,3);
 end
