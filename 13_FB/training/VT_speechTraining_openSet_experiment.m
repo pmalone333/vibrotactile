@@ -76,20 +76,51 @@ function VT_speechTraining_openSet_experiment(name, exptdesign, stimType)
             responseStartTime = GetSecs;
             sResp = getEchoString(w,'Please type the word you felt, followed by the Enter key:',25, 400, [], [255 255 255]);
             responseFinishedTime = GetSecs;
+            
+            %get confidence 
+            drawAndCenterText(w, ['How correct do you think your response is? \n\n Select a number between 1 and 7. \n\n 1=not correct at all\n 2=16% correct\n 3=32% correct\n 4=48% correct\n 5=64% correct\n 6=80% correct\n 7=100% correct'], 0);
+            while KbCheck; end % Wait until all keys are released.
+            while 1
+                % Check the state of the keyboard.
+                [ keyIsDown, seconds, keyCode ] = KbCheck;
+                if keyIsDown
+                    confResp = KbName(keyCode);
+                    break
+                end
+            end
 
             %score the answer
             accuracy=0;
             if strcmp(sResp,target)
                 accuracy=1;
-                drawAndCenterText(w, ['Correct!\n\nThe correct answer was ' target '.\n Press any key to continue.'], 0)
-                while KbCheck; end % Wait until all keys are released.
-                KbWait
+                drawAndCenterText(w, ['Correct!\n\nThe correct answer was ' target '.\n\n Press any key to feel ' target ' again, \n\n or press Enter to continue to the next trial.'], 0)
+%                 while KbCheck; end % Wait until all keys are released.
+%                 KbWait
             else
-                drawAndCenterText(w, ['Incorrect.\n\nThe correct answer was ' target '.\n Press any key to continue.'], 0)
-                while KbCheck; end % Wait until all keys are released.
-                KbWait
+                drawAndCenterText(w, ['Incorrect.\n\nThe correct answer was ' target '.\n\n Press any key to feel ' target ' again, \n\n or press Enter to continue to the next trial.'], 0)
+%                 while KbCheck; end % Wait until all keys are released.
+%                 KbWait
             end
             
+            while KbCheck; end % Wait until all keys are released.
+            while 1
+                % Check the state of the keyboard.
+                [ keyIsDown, seconds, keyCode ] = KbCheck;
+                if keyIsDown
+                    fbResp = KbName(keyCode);
+                    if strcmp(fbResp,'return'), break; end
+                    s = stimuli{iTrial,1};
+                    t = stimuli{iTrial,2};
+                    piezoDriver32('load',t,s);
+                    piezoDriver32('start');
+                    WaitSecs(1)
+                    break
+                end
+            end
+    
+            drawAndCenterText(w, ['Press any key to continue.'], 0)
+            while KbCheck; end % Wait until all keys are released.
+            KbWait
 
             %record parameters for the trial
             trialOutput(iBlock).responseStartTime(iTrial)=responseStartTime;
@@ -99,6 +130,7 @@ function VT_speechTraining_openSet_experiment(name, exptdesign, stimType)
             trialOutput(iBlock).accuracy(iTrial)=accuracy;
             trialOutput(iBlock).target{iTrial}=target;
             trialOutput(iBlock).stim{iTrial}=stimuli{iTrial};
+            trialOutput(iBlock).confResp{iTrial}=confResp;
         end
 
 
@@ -119,21 +151,25 @@ function VT_speechTraining_openSet_experiment(name, exptdesign, stimType)
                 KbWait(1)
                 Screen('CloseAll')
             end
+            
+            %record parameters for the block
+            trialOutput(iBlock).order=stimOrder;
+            trialOutput(iBlock).stimuli=stimuli;
+            trialOutput(iBlock).labels=labels;
+            trialOutput(iBlock).accuracyForBlock=accuracyForBlock;
 
+            
             clear correctResp;
+            
+            %save the session data in the data directory
+            save(['./data/' exptdesign.subNumber '/' datestr(now, 'yyyymmdd_HHMM') '-' exptdesign.subName '_block' num2str(iBlock) '.mat'], 'trialOutput', 'exptdesign');
             
     end
         
     %if accuracyForBlock>exptdesign.accuracyCutoff, level=level+1; end
     
-    %record parameters for the block
-    trialOutput(iBlock).order=stimOrder;
-    trialOutput(iBlock).stimuli=stimuli;
-    trialOutput(iBlock).labels=labels;
-    trialOutput(iBlock).accuracyForBlock=accuracyForBlock;
 
-    %save the session data in the data directory
-    save(['./data/' exptdesign.subNumber '/' datestr(now, 'yyyymmdd_HHMM') '-' exptdesign.subName '_block' num2str(iBlock) '.mat'], 'trialOutput', 'exptdesign');
+   
     
     %save the history data (stimuli, last level passed
     history = [exptdesign.training.history];

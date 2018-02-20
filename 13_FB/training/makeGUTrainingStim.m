@@ -138,50 +138,69 @@ end
 
 %% levels 10; 5-AFC
 
-thresh = [0];
+thresh = [3.99, 2.45,0]; %dissimilarity threshold for levels 1-
 
-stim4 = {};
-label4 = {};
+stim5 = {};
+label5 = {};
 
-
-ind = find(dm>thresh);
-[rows, columns] = ind2sub(size(dm), ind);
-k=1;
-for w=1:(length(wordlist)*2)
-    load(['stimuli/GU/' wordlist{k} '.mat']);
-    label4{1}{w,1} = wordlist{k};
-    stim4{1}{w,1} = s;
-    stim4{1}{w,2} = t;
-    % get index of words with > thresh1 dissimilarity
-    i = rows(columns==k);
-    order = randperm(length(i));
-    i = i(order); % randomize order of array
-    load(['stimuli/GU/' wordlist{i(1)} '.mat']);
-    label4{1}{w,2} = wordlist{i(1)};
-    stim4{1}{w,3} = s;
-    stim4{1}{w,4} = t;
-    label4{1}{w,3} = wordlist{i(2)};
-    label4{1}{w,4} = wordlist{i(3)};
-    label4{1}{w,5} = wordlist{i(4)};
-    load(['stimuli/GU/' wordlist{i(2)} '.mat']);
-    stim4{1}{w,5} = s;
-    stim4{1}{w,6} = t;
-    load(['stimuli/GU/' wordlist{i(3)} '.mat']);
-    stim4{1}{w,7} = s;
-    stim4{1}{w,8} = t;
-    load(['stimuli/GU/' wordlist{i(4)} '.mat']);
-    stim4{1}{w,9} = s;
-    stim4{1}{w,10} = t;
-    k=k+1;
-    if k==30, k=1; end
+for l=1:length(thresh)
+    ind = find(dm>thresh(1));
+    if l==1, ind = find(dm>thresh(l)); 
+    else
+        ind = find(dm>thresh(l) & dm<thresh(1));
+        ind = repmat(ind,4,1); %scale up by 4 so distributions of pairs with different diss is the same
+        ind2 = find(dm>thresh(1));
+        ind = [ind; ind2];
+    end
+    [rows, columns] = ind2sub(size(dm), ind);
+    k=1;
+     for w=1:(length(wordlist)*2)
+        load(['stimuli/GU/' wordlist{k} '.mat']);
+        label5{l}{w,1} = wordlist{k};
+        stim5{l}{w,1} = s;
+        stim5{l}{w,2} = t;
+        % get index of words with > thresh1 dissimilarity
+        i = rows(columns==k);
+        order = randperm(length(i));
+        i = i(order); % randomize order of array
+        load(['stimuli/GU/' wordlist{i(1)} '.mat']);
+        label5{l}{w,2} = wordlist{i(1)};
+        stim5{l}{w,3} = s;
+        stim5{l}{w,4} = t;
+        label5{l}{w,3} = wordlist{i(2)};
+        label5{l}{w,4} = wordlist{i(3)};
+        label5{l}{w,5} = wordlist{i(4)};
+        label5{l}{w,6} = wordlist{i(5)};
+        label5{l}{w,7} = wordlist{i(6)};
+        label5{l}{w,8} = wordlist{i(7)};
+        load(['stimuli/GU/' wordlist{i(2)} '.mat']);
+        stim5{l}{w,5} = s;
+        stim5{l}{w,6} = t;
+        load(['stimuli/GU/' wordlist{i(3)} '.mat']);
+        stim5{l}{w,7} = s;
+        stim5{l}{w,8} = t;
+        load(['stimuli/GU/' wordlist{i(4)} '.mat']);
+        stim5{l}{w,9} = s;
+        stim5{l}{w,10} = t;
+        load(['stimuli/GU/' wordlist{i(5)} '.mat']);
+        stim5{l}{w,11} = s;
+        stim5{l}{w,12} = t;
+        load(['stimuli/GU/' wordlist{i(6)} '.mat']);
+        stim5{l}{w,13} = s;
+        stim5{l}{w,14} = t;
+        load(['stimuli/GU/' wordlist{i(7)} '.mat']);
+        stim5{l}{w,15} = s;
+        stim5{l}{w,16} = t;
+        k=k+1;
+        if k==30, k=1; end
+    end
+    %duplicate stimuli
+%     stim3n{l} = repmat(stim3{l},nStimPerBlock/length(stim3{l}),1);
+%     label3n{l} = repmat(label3{l},nStimPerBlock/length(label3{l}),1);
 end
-%duplicate stimuli
-% stim4n{1} = repmat(stim4,nStimPerBlock/length(stim4),1);
-% label4n{1} = repmat(label4,nStimPerBlock/length(label4),1);
 
-
-stim = [stim stim2 stim3 stim4];
-label = [label label2 label3 label4];
+stim = [stim stim2 stim3 stim5];
+label = [label label2 label3 label5];
 
 save('stimuli_GU','stim','label')
 
