@@ -34,33 +34,43 @@ function VT_speechTraining_generalization_experiment(name, exptdesign, stimType)
     
 
     for iBlock=1:exptdesign.numSessions %how many blocks to run this training session
-        if iBlock==1 || iBlock ==2 
-            drawAndCenterText(w,['Testing Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
-                'This block will use the words that you trained on.\n\n\n'...
-                'Press any key to continue'],0);
-        else
-            drawAndCenterText(w,['Testing Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
-                'This block will use the NEW words that you have never felt before.\n\n' ... 
-                'Good luck!\n\n\n'...
-                'Press any key to continue'],0);
-        end
+%         if iBlock==1 || iBlock ==2 
+%             drawAndCenterText(w,['Testing Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
+%                 'This block will use the words that you trained on.\n\n\n'...
+%                 'Press any key to continue'],0);
+%         else
+%             drawAndCenterText(w,['Testing Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
+%                 'This block will use the NEW words that you have never felt before.\n\n' ... 
+%                 'Good luck!\n\n\n'...
+%                 'Press any key to continue'],0);
+%         end
+
+        drawAndCenterText(w,['Testing Block #' num2str(iBlock) ' of ' num2str(exptdesign.numSessions) '\n\n\n\n'...
+            'This block will use the NEW words that you have never felt before.\n\n' ...
+            'Good luck!\n\n\n'...
+            'Press any key to continue'],0);
         while KbCheck; end % Wait until all keys are released.
         KbWait
         
-        if iBlock==1 || iBlock==2
-            if stimType == 1
-                load('stimuli_GU_openSet.mat');
-            elseif stimType == 2
-                load('stimuli_FB_openSet.mat');
-            end
-        elseif iBlock==3 || iBlock==4
-            if stimType == 1
-                load('stimuli_GU_generalization_openSet.mat');
-            elseif stimType == 2
-                load('stimuli_FB_generalization_openSet.mat');
-            end
+%         if iBlock==1 || iBlock==2
+%             if stimType == 1
+%                 load('stimuli_GU_openSet.mat');
+%             elseif stimType == 2
+%                 load('stimuli_FB_openSet.mat');
+%             end
+%         elseif iBlock==4 || iBlock==3
+%             if stimType == 1
+%                 load('stimuli_GU_generalization_openSet.mat');
+%             elseif stimType == 2
+%                 load('stimuli_FB_generalization_openSet.mat');
+%             end
+%         end
+
+        if stimType == 1
+            load('stimuli_GU_generalization_openSet.mat');
+        elseif stimType == 2
+            load('stimuli_FB_generalization_openSet.mat');
         end
-    
         
         stimuli = stim;
         labels = label;
