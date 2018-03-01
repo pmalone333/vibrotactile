@@ -40,8 +40,8 @@ else
 end
 pause(2)
 
-exptdesign.numSessions = 2; %number of blocks
-exptdesign.numTrialsPerSession = 2;
+exptdesign.numSessions = 5; %number of blocks
+exptdesign.numTrialsPerSession = 60;
 exptdesign.accuracyCutoff = 0.8; %accuracy required to advance level 
 
 exptdesign.fixationImage = 'imgsscaled/fixation.bmp';  % image for the fixation cross

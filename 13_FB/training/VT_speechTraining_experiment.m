@@ -76,8 +76,12 @@ function VT_speechTraining_experiment(name, exptdesign, stimType)
             %play stimulus   target=worda worda wordb 
             s = stimuli{iTrial,1};
             t = stimuli{iTrial,2};
-            piezoDriver32('load',t,s);
-            piezoDriver32('start');
+            rtn_load = piezoDriver32('load',t,s);
+            rtn_start = piezoDriver32('start');
+%             rtn_start2 = 0;
+%             if rtn_start == -1
+%                 rtn_start2 =piezoDriver32('start');
+%             end
             
             %get keyboard response
             %clear sResp
@@ -212,6 +216,9 @@ function VT_speechTraining_experiment(name, exptdesign, stimType)
             trialOutput(iBlock).disp_labels{iTrial}=disp_labels;
             trialOutput(iBlock).disp_str{iTrial}=disp_str;
             trialOutput(iBlock).fbResp{iTrial}=fbResp;
+            trialOutput(iBlock).rtn_load{iTrial}=rtn_load;
+            trialOutput(iBlock).rtn_start{iTrial}=rtn_start;
+            trialOutput(iBlock).rtn_start2{iTrial}=rtn_start2;
 
             %save stimulus presentation timestamps
 %             trialOutput(iBlock).FixationVBLTimestamp(iTrial)=FixationVBLTimestamp;
