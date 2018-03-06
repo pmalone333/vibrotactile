@@ -78,10 +78,10 @@ function VT_speechTraining_experiment(name, exptdesign, stimType)
             t = stimuli{iTrial,2};
             rtn_load = piezoDriver32('load',t,s);
             rtn_start = piezoDriver32('start');
-%             rtn_start2 = 0;
-%             if rtn_start == -1
-%                 rtn_start2 =piezoDriver32('start');
-%             end
+            rtn_start2 = 0;
+            if rtn_start == -1
+                rtn_start2 =piezoDriver32('start');
+            end
             
             %get keyboard response
             %clear sResp

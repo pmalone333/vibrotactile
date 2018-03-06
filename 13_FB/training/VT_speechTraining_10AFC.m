@@ -40,7 +40,7 @@ else
 end
 pause(2)
 
-exptdesign.numSessions = 5; %number of blocks
+exptdesign.numSessions = 4; %number of blocks
 exptdesign.numTrialsPerSession = 60;
 exptdesign.accuracyCutoff = 0.8; %accuracy required to advance level 
 
