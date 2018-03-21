@@ -138,24 +138,24 @@ function VT_speechTraining_experiment(name, exptdesign, stimType)
                     [ keyIsDown, seconds, keyCode ] = KbCheck;
                     if keyIsDown
                         numFB=numFB+1;
-                        sResp = KbName(keyCode);
-                        if strcmp(sResp,'return'), break; end
+                        sRespFb = KbName(keyCode);
+                        if strcmp(sRespFb,'return'), break; end
                         if numFB==4, break; end
                         for i=1:size(labels,2)
                             try 
-                                if strcmp(labels{iTrial,i},disp_labels{str2num(sResp(1))})
+                                if strcmp(labels{iTrial,i},disp_labels{str2num(sRespFb(1))})
                                     s = stimuli{iTrial,i+(i-1)};
                                     t = stimuli{iTrial,i+1+(i-1)};
                                     piezoDriver32('load',t,s);
                                     piezoDriver32('start'); 
-                                    fbResp = [fbResp sResp];
+                                    fbResp = [fbResp sRespFb];
                                 end
                             catch
                             end
                         end
                    
                         %while KbCheck; end
-                        clear sResp
+                        clear sRespFb
                     end
                 end
 
@@ -168,24 +168,24 @@ function VT_speechTraining_experiment(name, exptdesign, stimType)
                     [ keyIsDown, seconds, keyCode ] = KbCheck;
                     if keyIsDown
                         numFB=numFB+1;
-                        sResp = KbName(keyCode);
-                        if strcmp(sResp,'return'), break; end
+                        sRespFb = KbName(keyCode);
+                        if strcmp(sRespFb,'return'), break; end
                         if numFB==4, break; end
                         for i=1:size(labels,2)
                             try
-                            if strcmp(labels{iTrial,i},disp_labels{str2num(sResp(1))})
+                            if strcmp(labels{iTrial,i},disp_labels{str2num(sRespFb(1))})
                                 s = stimuli{iTrial,i+(i-1)};
                                 t = stimuli{iTrial,i+1+(i-1)};
                                 piezoDriver32('load',t,s);
                                 piezoDriver32('start');
-                                fbResp = [fbResp sResp];
+                                fbResp = [fbResp sRespFb];
                             end
                             catch
                             end
                         end
                 
                         %while KbCheck; end
-                        clear sResp
+                        clear sRespFb
                     end
                 end
 %                 drawAndCenterText(w, ['Correct!\n\nIf you would like to feel ' target ' again click the RIGHT mouse button.\n\nClick the LEFT mouse button to continue.'], 1.5);
@@ -219,6 +219,7 @@ function VT_speechTraining_experiment(name, exptdesign, stimType)
             trialOutput(iBlock).rtn_load{iTrial}=rtn_load;
             trialOutput(iBlock).rtn_start{iTrial}=rtn_start;
             trialOutput(iBlock).rtn_start2{iTrial}=rtn_start2;
+            trialOutput(iBlock).sRespfb{iTrial}=sRespFb;
 
             %save stimulus presentation timestamps
 %             trialOutput(iBlock).FixationVBLTimestamp(iTrial)=FixationVBLTimestamp;
