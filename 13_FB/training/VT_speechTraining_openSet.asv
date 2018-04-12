@@ -1,0 +1,386 @@
+
+rfteam
+\11
+fhymax
+1
+tkeeps
+1
+hyteak
+1 
+
+
+max
+1
+yh red
+1
+fmeant
+1
+ymast
+1
+tdoomed
+1
+ codes
+ 1 
+ meant
+ 1
+ dmaps
+ 1
+  red
+  1
+  
+  
+  
+  
+  emaps
+  1
+  fmax
+  1
+  tgmeant
+  1
+  gfdtime
+  1
+  kjmaps
+  1
+  ytime
+  1
+  gmax
+  1
+  wdoomed
+  1'
+  h'
+  
+  ksoup
+  1     doomed
+  1
+  tseems
+  1
+  gsnip
+  1
+  dsnip
+  1
+  jred
+  1
+  gmax
+  1
+  tkeep
+  1gf
+  
+  
+  
+  
+  team
+  1
+  ymaps
+  1
+  smeant
+  1r
+  
+  seems
+  1
+  ujhgfdsstand
+  1
+  gtmmax
+  1
+  jhdoomed
+  1
+  uytplay
+  1
+  ymeant
+  1
+  g  doomed
+  1
+  gteam
+  1
+  gmeant
+  1
+  fm%wrapper for vibrotactile speech training aps
+  1
+  gtense
+  1
+  fdoomed
+  1
+  ftense
+  1
+  gmax
+  1'
+  fhjkeeps
+  1
+  cdoomed
+  1
+   red
+   1
+   gdoomed
+   1
+   ftseems
+   1
+   gt tense
+   1
+   tgmaps
+   1
+   hmax
+   1
+   gkeeps
+   1
+   ymax
+   2
+   fmax
+   2
+   rfmmax
+   1
+   hjtense
+1
+gmax
+1hik meant
+1
+ftense
+1
+gmen
+1
+fr seems
+1
+hteAM
+1
+R         MODES
+1
+HMEANT]
+1
+
+
+TENSE
+2
+GMAX
+1
+GTENSE'
+1
+FDOOMED
+1
+FTEAM
+1
+GKEEP
+1
+GMAPS
+1
+FSEEMS
+1
+TTENSE
+1
+ RED'
+ 1
+ JDOOMED
+ `
+ GMAST
+ 1
+ GMASK
+ 1
+ GMAX
+ 1
+ HTEAM
+ 1
+ FMAPS
+ 1
+ HMEANT
+ 1
+ FMAPS
+ 1'
+ 
+ PEAT
+ 1
+ MAPS;
+ 1
+ JRED
+ 1
+ HDOOMED
+ 1
+ GTENSE
+ 1
+ DSNIP
+ 1
+ FDOOMED
+ 1
+ EMAPS
+ 1
+ SMAX
+ 1
+ GMIST
+ 1
+ GF  SNIP
+ 1
+ VGFPEAT
+ 1
+ GDOOMED
+ 1
+ HTINT
+ 1
+ HGDOOMED
+ 1
+ GKEEPS
+ 1
+ 'TMAST
+ 1
+ ';LKJHGFMAX
+ 1
+ HGMAPS
+ 1
+ JH MAPS
+ 1
+ GMAPS
+ 1
+ GTENSE
+ 1
+ GSEEMS
+ 1
+ HPEAT
+ 1
+ DPEAT
+ 1
+ FSNIP
+ 1
+ GMEANT
+ 1
+ HTIME
+ 1
+ YDOOMED
+ 1
+ GF TINT
+ 1
+ FTENSE
+ 1
+ HTENSE
+ 1
+ JMAPS
+ 1
+ HMAPS
+ 1
+ HDOOMED
+ 1
+ BHMAST
+ 1
+ GMEANT
+ 1
+ 
+ 
+ DOOMED
+ 1
+ YGTENSE
+ 1
+ HPEAT
+ 1
+ GRED
+ 1
+ HPEAT
+ G
+ VF SEEMS
+ 1
+ HPEAT
+ 1
+ HTINT
+ 1
+ HDOOMED
+ 1
+ ';LKJHSEEMS
+ 1
+ HKEEPS'
+ 1'
+ 'L'
+ '
+ MAPS
+ 1
+ FDOOMED
+ 1
+ FMAX
+ 1
+ GF RED
+ 1
+ FDMAPS
+ 1
+ HTENSE
+ 1
+ FMEANT
+ `1
+ GMEANT
+ 1
+ GKEEPS
+ 1
+ YMEANT
+ 1
+ HTIME
+ 1
+ \UTENSE
+ 1
+ GFMEANT
+ 1
+ JHPEAT
+ 1
+ GMAX
+ 1
+ HMASK
+ 1
+ HY   PAN
+ 1
+ FGTENSE'
+ Q
+ HDOOMED
+ 12
+
+ 
+ KSEEMS
+ 1
+ GKEEPS
+ 1
+ HROOM
+ 1
+ FG
+%1/2/18
+%PSM pmalone333@gmail.com
+
+
+clear; %make sure to clear workspace 
+%get subject info
+number = input('\n\nEnter Subject NUMBER:\n\n','s');
+name = number;
+if isempty(name)
+    name = 'MR000';
+else
+    name = ['MR' name];
+end
+exptdesign.subNumber = number; 
+exptdesign.subName = name;
+WaitSecs(0.25);
+%check if the subject has a directory in data
+if exist(['./data/' number],'dir')
+else
+    mkdir(['./data/' number])
+end
+
+if exist(['./history/' number],'dir')
+else
+    mkdir(['./history/' number])
+end
+
+
+if exist(['./history/SUBJ' number 'training.mat'], 'file')
+    exptdesign.training=load(['./history/SUBJ' number 'training.mat']);
+    stimType = exptdesign.training.stimType;
+    %fprintf(['Subject has been here before, starting at level ' num2str(exptdesign.training.level)])
+    %stimType = stimType;
+else
+    fprintf('Subject has not been entered before, starting at level 1')
+    exptdesign.training.level=1; %changed this to one cas 08/10/15
+    exptdesign.training.history=[];
+    stimType = input('\n\nEnter stim type (1=GU algorithm, 2=FB algorithm):\n\n');
+end
+pause(2)
+
+exptdesign.numSessions = 4; %number of blocks
+exptdesign.numTrialsPerSession = 60;
+exptdesign.accuracyCutoff = 0.8; %accuracy required to advance level 
+
+exptdesign.fixationImage = 'imgsscaled/fixation.bmp';  % image for the fixation cross
+exptdesign.blankImage = 'imgsscaled/blank.bmp';        % image for the blank screen
+
+piezoDriver32('open','COM5');
+VT_speechTraining_openSet_experiment(name,exptdesign,stimType);
+sessDate = datestr(now, 'yyyymmdd_HHMM');
+%makeTrainingFigure(number,sessDate);
+piezoDriver32('close');
+clear
