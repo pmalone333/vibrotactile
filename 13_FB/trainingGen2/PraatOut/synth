@@ -1,0 +1,238 @@
+# ETA 6/7/18 -6/12/18
+# Praat script to do tts and then extract data for import to MATLAB
+#
+## set up initial parameters for the synthesis including word list
+## This script is to be run in PRAAT
+
+form Text to Speech (eSpeak)
+	boolean Prelisten_(press_Apply) 0
+	positive Sampling_frequency_(Hz) 12000.0
+	real Gap_between_words_(s) 0.2
+	positive Pitch_multiplier_(0.5-2.0) 1.0
+	real Pitch_range_multiplier_(0-2.0) 0.0
+	natural Words_per_minute_(80-450) 140
+	positive wordnum(1-30) 1
+endform
+
+wordlist$ [1] = "sand"
+wordlist$ [2] = "tanned"
+wordlist$ [3] = "mask"
+wordlist$ [4] = "teams"
+wordlist$ [5] = "toads"
+wordlist$ [6] = "dense"
+wordlist$ [7] = "most"
+wordlist$ [8] = "nest"
+wordlist$ [9] = "dance"
+wordlist$ [10] = "notes"
+wordlist$ [11] = "codes"
+wordlist$ [12] = "peaks"
+wordlist$ [13] = "test"
+wordlist$ [14] = "task"
+wordlist$ [15] = "mend"
+wordlist$ [16] = "tunes"
+wordlist$ [17] = "tones"
+wordlist$ [18] = "sets"
+wordlist$ [19] = "spit"
+wordlist$ [20] = "spin"
+wordlist$ [21] = "stoop"
+wordlist$ [22] = "speak"
+wordlist$ [23] = "steam"
+wordlist$ [24] = "snooze"
+wordlist$ [25] = "meat"
+wordlist$ [26] = "peace"
+wordlist$ [27] = "nose"
+wordlist$ [28] = "moon"
+wordlist$ [29] = "mood"
+wordlist$ [30] = "teak"
+
+# define the tts synthesizer parameters
+synthname$ = "English__America__John"
+pathname$ = "H:\projects\fbvoc\gen2\"
+ss = Create SpeechSynthesizer... "English (America)" John
+Speech output settings... 'sampling_frequency' 'gap_between_words' 'pitch_multiplier' 'pitch_range_multiplier' 'words_per_minute' Kirshenbaum_espeak
+
+# add the carrier phrase
+str$ = "say " + wordlist$ [wordnum]
+soundobnam$ = "Sound " + synthname$
+tgobnam$ = "TextGrid " + synthname$
+
+#for i from 2 to 30
+#str$ = str$ + " " + wordlist$ [i]
+#endfor
+
+#if prelisten
+#	Play text... 'str$'
+
+#else
+	To Sound... "'str$'" yes
+#endif
+
+# Stop here to collect the number of the first and last phoneme
+# also allows for the selection of the textGrid and the editing of the
+# transcription to PhLex notation.
+selectObject: "'tgobnam$'"
+
+beginPause: "edit Transcription in the textgrid"
+    integer: "phone1", 5  
+    integer: "phone2", 8
+endPause: "Click to continue",1
+
+#find the phoneme tier and get its number
+
+call GetTier "phoneme" tier1
+
+#find the number of intervals in the phoneme tier
+
+numberOfIntervals = Get number of intervals... tier1
+
+# get the starting time of the first phoneme in the word
+# set a marker 200 msec prior to that on both the word and phoneme tier
+istart = Get starting point... tier1 phone1	
+	istart = istart -0.200
+	Insert boundary... 3 istart 
+	Insert boundary... tier1 istart 
+
+# adjust for having added a new boundary on the phoneme tier
+phone2=phone2+1
+
+# get the ending time of the first phoneme in the word
+# set a marker 200 msec after that on both the word and phoneme tier
+
+iend = Get end point... tier1 phone2	
+	iend = iend + 0.200
+	Insert boundary... 3 iend 
+	Insert boundary... tier1 iend 
+
+# take out the original starting boundary for the word
+
+wdend = Get end point... 3 3
+Remove boundary at time... 3 wdend 
+
+# find the starting and ending times of the word with the 200 ms padding on each side
+selectObject: "'tgobnam$'"
+startTime = Get starting point: 3, 3
+endTime = Get end point: 3, 3
+
+
+# extract the waveform corresponding to the word window.
+relWidth = 1
+preserveTimes = 0
+selectObject: "'soundobnam$'"
+part = Extract part... startTime endTime rectangular relWidth preserveTimes
+
+newname$ = wordlist$ [wordnum]
+
+# scales the level of the audio to avoid potential clipping when saving the wav file.
+Scale intensity: 70
+Rename: "'newname$'"
+
+# extract the textgrid corresponding to the word window.
+selectObject: "'tgobnam$'"
+part = Extract part... startTime endTime no
+Rename: "'newname$'"
+
+# change the labels of the first and last intervals in the textgrid at the phoneme tier.
+numberOfIntervals = Get number of intervals... tier1
+Set interval text... tier1 1 #
+Set interval text... tier1 'numberOfIntervals' #
+
+newsobjname$ = "Sound " + wordlist$ [wordnum]
+newtgobjname$ = "TextGrid " + wordlist$ [wordnum]
+
+# write out the wav file
+outfileWV$ =  newname$ + ".wav"
+selectObject: "'newsobjname$'"
+Save as WAV file: outfileWV$
+To PointProcess (periodic, cc): 75, 200
+To TextGrid (vuv): 0.02, 0.01
+Rename: "vuv"
+
+
+selectObject: "'newtgobjname$'"
+plusObject: "TextGrid vuv"
+Merge
+
+selectObject: "TextGrid merged"
+Remove tier: 2
+Remove tier: 1
+Rename: "'newname$'"
+newtblobjname$ = "Table " + wordlist$ [wordnum]
+
+
+selectObject: "'newtgobjname$'"
+Save as text file: newname$
+outfileTG$ =  newname$ + "TG.csv"
+Down to Table: "no", 6, "yes", "no"
+selectObject: "'newtblobjname$'"
+Save as comma-separated file: outfileTG$
+#removeObject(table)
+
+
+#form Give the parameters for pause analysis
+#   comment soundname:
+#    text soundname H:\projects\fbvoc\gen2\sand.wav   
+#   comment outputFileName.csv:
+#    text outputFileName H:\projects\fbvoc\gen2\result.csv
+#endform
+
+
+min_f0 = 50
+max_f0 = 200
+
+#Read from file: soundname$
+
+selectObject: "'newsobjname$'"
+
+#select Sound 'soundname$'
+formant = To Formant (burg): 0, 5, 4800, 0.020, 50
+formantStep = Get time step
+
+
+selectObject: formant
+table = Down to Table: "no", "yes", 5, "yes", 3, "yes", 3, "no"
+numberOfRows = Get number of rows
+
+selectObject: "'newsobjname$'"
+
+pitch = To Pitch: 0, min_f0, max_f0
+
+selectObject: table
+Append column: "Pitch"
+
+for step to numberOfRows
+    selectObject: table
+    t = Get value: step, "time(s)"
+
+    selectObject: pitch
+    pitchValue = Get value at time: t, "Hertz", "Nearest"
+
+    selectObject: table
+    Set numeric value: step, "Pitch", pitchValue
+endfor
+
+
+#export to csv
+selectObject: table
+outfileF$ =  newname$ + "F.csv"
+
+Save as comma-separated file: outfileF$
+removeObject(table)
+
+
+
+
+
+procedure GetTier name$ variable$
+
+	numberOfTiers = Get number of tiers
+	itier = 1
+	repeat
+		tier$ = Get tier name... itier
+		itier = itier +1
+	until tier$ = name$ or itier > numberOfTiers
+	if tier$ <> name$
+		'variable$' = 0
+	else
+		'variable$' = itier -1
+	endif
+endproc	 
