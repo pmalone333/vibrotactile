@@ -1,21 +1,21 @@
-vcv_cfg_old;
+vcv_cfg;
 
 window = hamming(512); % window size of 512 points
 noverlap = 256; % number of points for repeating window 
 nfft=1024; % size of fft
-lookupf = [825,975,1125,1275,1425,1575,1725,1875,2025,2175,2325,2475,2625,3115]; % freqs for F2 vocoder algorithm
+lookupf = [825,975,1125,1275,1425,1575,1725,1875,2025,2175,2325,2475,2625,3115]; % freqs for vocoder algorithm
 offsets = [.032 .03 .04 .012 .016 .01 .012 .015 .012 .02 .03 .022 .015 .022 .02 .025 ...
    0 .028 .034 .05 0 .02 .05 .045];
 
 volAndGainSettings = 'outputgain35';
 volAndGainSettingsFileName = 'outputgain35';
 
-for i=1%:2:length(list_words)
+for i=1:2:length(list_words)
     
         audio_filename = ['audio\VCV_male\' list_words{i} '1_ampNorm.wav'];    
         %load audio
-        %[y,fs] = audioread(audio_filename);
-        %wavedata = y';
+        [y,fs] = audioread(audio_filename);
+        wavedata = y';
         vcv_label1 = ['sampledPulseFiles\VCVs_maleTalker_ampNorm\' volAndGainSettings '\' list_words{i} '1.mat'];
         vcv_plot1 = vibplot(vcv_label1,offsets(i));
 

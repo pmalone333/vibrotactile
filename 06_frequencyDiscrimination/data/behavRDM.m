@@ -76,3 +76,10 @@ for i=1:length(subjs)
    BDMs(isnan(BDMs)) = 0;
    meanBDM = mean(BDMs,3);
 end
+
+h_all = [];
+for s=1:length(subjs)
+    t=BDMs(:,:,s);
+    h=cosmo_corr(meanBDM(:),t(:));
+    h_all(s)=h;
+end
