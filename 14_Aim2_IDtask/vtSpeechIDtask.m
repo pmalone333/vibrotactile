@@ -28,5 +28,5 @@ exptdesign.blankImage = 'imgsscaled/blank.bmp';        % image for the blank scr
 stimGenPTB('open','COM1');
 vtSpeechIDtaskExperiment(name,exptdesign);
 sessDate = datestr(now, 'yyyymmdd_HHMM');
-makeTrainingFigure(number,sessDate);
+
 stimGenPTB('close');
