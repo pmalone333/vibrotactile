@@ -146,7 +146,8 @@ function vtSpeechIDtaskExperiment(name, exptdesign)
             else
                 accuracy=0;
             end
-            WaitSecs(1);
+
+
 
 %             %feedback
 %             if accuracy==0

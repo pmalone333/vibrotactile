@@ -19,7 +19,7 @@ else
     mkdir(['./data/' number])
 end
 
-exptdesign.numSessions = 10; %number of blocks
+exptdesign.numSessions = 9; %number of blocks
 exptdesign.numTrialsPerSession = 72;
 
 exptdesign.fixationImage = 'imgsscaled/fixation.bmp';  % image for the fixation cross
